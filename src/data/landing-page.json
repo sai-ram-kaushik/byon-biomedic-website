@@ -1,0 +1,40 @@
+{
+   "navbar": {
+      "navlinks": [
+         { "label": "Home", "path": "/" },
+         { "label": "About", "path": "/about" },
+         { "label": "Services", "path": "/services" },
+         { "label": "Medicines", "path": "/medicines" },
+         { "label": "News", "path": "/news" },
+         { "label": "Contact", "path": "/contact" }
+      ]
+   },
+
+   "home": {
+      "subHeading": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ad recusandae, possimus aut quo veniam reprehenderit quia suscipit enim et.",
+      "imageUrl": "/home.svg"
+   },
+
+   "about": {
+      "title": "About",
+      "imageUrl": "/about.png",
+      "subHeading": "Best Care for Your Good Health",
+      "benifits": [
+         { "label": "A Passion for Healing" },
+         { "label": "A Passion for Healing" },
+         { "label": "A Passion for Healing" },
+         { "label": "A Passion for Healing" },
+         { "label": "A Passion for Healing" },
+         { "label": "A Passion for Healing" }
+      ],
+      "para1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ad recusandae, possimus aut quo veniam reprehenderit quia suscipit enim et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ad recusandae, possimus aut quo veniam reprehenderit quia suscipit enim et.",
+      "para2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ad recusandae, possimus aut quo veniam reprehenderit quia suscipit enim et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ad recusandae, possimus aut quo veniam reprehenderit quia suscipit enim et.",
+      "teamMembers": [
+         { "name": "John", "imageUrl": "/lorem.png", "designation": "lorem" },
+         { "name": "John", "imageUrl": "/lorem.png", "designation": "lorem" },
+         { "name": "John", "imageUrl": "/lorem.png", "designation": "lorem" },
+         { "name": "John", "imageUrl": "/lorem.png", "designation": "lorem" },
+         { "name": "John", "imageUrl": "/lorem.png", "designation": "lorem" }
+      ]
+   }
+}
