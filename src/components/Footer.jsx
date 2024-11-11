@@ -42,8 +42,8 @@ const Footer = () => {
                   <div className="flex flex-col items-start gap-2">
                      <div className="flex items-center gap-2">
                         <IoMdMail size={15} className="text-secondary" />
-                        <a href="mailto:info@goolluck.in">
-                           <p>info@goolluck.in / goolluck1@outlook.com</p>
+                        <a href="mailto:byonbiomedic@gmail.com">
+                           <p>byonbiomedic@gmail.com</p>
                         </a>
                      </div>
 

@@ -1,9 +1,11 @@
 import React from "react";
+import TransitionEffect from "../utils/TransitionEffect";
 
 const About = ({ about }) => {
    const { imageUrl, subHeading, benifits, para1, para2, teamMembers } = about;
    return (
       <div className="w-full py-10 px-5 lg:px-10">
+         <TransitionEffect />
          <div className="flex flex-col lg:flex-row items-start justify-center w-full gap-5 mt-5">
             <img src={imageUrl} className="rounded-xl" />
             <div className="flex flex-col items-start gap-2 max-w-[446px]">

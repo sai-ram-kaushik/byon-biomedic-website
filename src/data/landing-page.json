@@ -36,5 +36,30 @@
          { "name": "John", "imageUrl": "/lorem.png", "designation": "lorem" },
          { "name": "John", "imageUrl": "/lorem.png", "designation": "lorem" }
       ]
+   },
+
+   "ourServices": {
+      "services": [
+         {
+            "name": "Free Checkup",
+            "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ad recusandae, possimus aut quo veniam reprehenderit quia suscipit enim et. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+            "imageUrl": "/service.png"
+         },
+         {
+            "name": "Free Checkup",
+            "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ad recusandae, possimus aut quo veniam reprehenderit quia suscipit enim et. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+            "imageUrl": "/service.png"
+         },
+         {
+            "name": "Free Checkup",
+            "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ad recusandae, possimus aut quo veniam reprehenderit quia suscipit enim et. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+            "imageUrl": "/service.png"
+         },
+         {
+            "name": "Free Checkup",
+            "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ad recusandae, possimus aut quo veniam reprehenderit quia suscipit enim et. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+            "imageUrl": "/service.png"
+         }
+      ]
    }
 }
