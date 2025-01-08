@@ -46,7 +46,7 @@ const About = ({ about }) => {
                      <div className="text-center text-gray-500">
                         <img
                            className="mx-auto mb-4 w-44 h-44 rounded-full"
-                           src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
+                           src={member.imageUrl}
                            alt="Bonnie Avatar"
                         />
                         <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900">

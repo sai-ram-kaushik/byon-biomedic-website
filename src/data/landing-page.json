@@ -3,38 +3,62 @@
       "navlinks": [
          { "label": "Home", "path": "/" },
          { "label": "About", "path": "/about" },
-         { "label": "Services", "path": "/services" },
          { "label": "Medicines", "path": "/medicines" },
-         { "label": "News", "path": "/news" },
-         { "label": "Contact", "path": "/contact" }
+         { "label": "Contact Us", "path": "/contact" }
       ]
    },
 
    "home": {
-      "subHeading": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ad recusandae, possimus aut quo veniam reprehenderit quia suscipit enim et.",
+      "subHeading": "We are combining the sciencetific Exellence of the Phyto-Science with the industry's Expertise in developing phyto- medicines. Together we can create phyto innovation that Matter. ",
       "imageUrl": "/home.svg"
    },
 
    "about": {
       "title": "About",
       "imageUrl": "/about.png",
-      "subHeading": "Best Care for Your Good Health",
+      "subHeading": "OUR MISSION & VISION",
       "benifits": [
-         { "label": "A Passion for Healing" },
-         { "label": "A Passion for Healing" },
-         { "label": "A Passion for Healing" },
-         { "label": "A Passion for Healing" },
-         { "label": "A Passion for Healing" },
-         { "label": "A Passion for Healing" }
+         {
+            "label": "Towards a safe Natural Forecaring Proactive Healthcare System. "
+         },
+         { "label": "Research, Develop and Advocacy in Phytopharmacology." },
+         {
+            "label": "Restoring the Phyto Hi Touch Healing into modern medicine."
+         },
+         {
+            "label": "Making phyto-Medicine Affordable & Accessible to Everyone"
+         },
+         {
+            "label": "Making Malaysia the Asian Hub for phyto Healthcare & Healing. "
+         }
       ],
-      "para1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ad recusandae, possimus aut quo veniam reprehenderit quia suscipit enim et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ad recusandae, possimus aut quo veniam reprehenderit quia suscipit enim et.",
-      "para2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ad recusandae, possimus aut quo veniam reprehenderit quia suscipit enim et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ad recusandae, possimus aut quo veniam reprehenderit quia suscipit enim et.",
+      "para1": "We believe that the health values must be shared with all Humanity, So we are now Embarking on a mission to bring these Amazing products to the global mass.",
       "teamMembers": [
-         { "name": "John", "imageUrl": "/lorem.png", "designation": "lorem" },
-         { "name": "John", "imageUrl": "/lorem.png", "designation": "lorem" },
-         { "name": "John", "imageUrl": "/lorem.png", "designation": "lorem" },
-         { "name": "John", "imageUrl": "/lorem.png", "designation": "lorem" },
-         { "name": "John", "imageUrl": "/lorem.png", "designation": "lorem" }
+         {
+            "name": "Datuk Dr. Mukundan Pillay",
+            "imageUrl": "/team/datuk.jpg",
+            "designation": "Chairman"
+         },
+         {
+            "name": "Govindaraju",
+            "imageUrl": "/team/govidaraju.jpg",
+            "designation": ""
+         },
+         {
+            "name": "Dr. Srivalli",
+            "imageUrl": "/team/srivalli.jpg",
+            "designation": "Director Research and Development"
+         },
+         {
+            "name": "M. Paramesswaran",
+            "imageUrl": "/team/param.jpg",
+            "designation": "Managing Director"
+         },
+         {
+            "name": "P. Vassanthan",
+            "imageUrl": "/team/vasan.jpg",
+            "designation": "Director Business Development"
+         }
       ]
    },
 
@@ -61,5 +85,10 @@
             "imageUrl": "/service.png"
          }
       ]
+   },
+
+   "medicines": {
+      "heading": "Our Medicines",
+      "products": [{ "name": "Damoxin", "imageUrl": "/products/damoxin.png" }]
    }
 }
