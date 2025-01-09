@@ -29,9 +29,9 @@ const Footer = () => {
                            About Us
                         </p>
                      </Link>
-                     <Link to="/services">
+                     <Link to="/medicines">
                         <p className="hover:text-primary cursor-pointer">
-                           Services
+                           Medicines
                         </p>
                      </Link>
                   </div>
