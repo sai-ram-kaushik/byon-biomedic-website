@@ -16,7 +16,7 @@
    "about": {
       "title": "About",
       "imageUrl": "/about.png",
-      "subHeading": "OUR MISSION & VISION",
+      "subHeading": "OUR VISION & MISSION",
       "benifits": [
          {
             "label": "Towards a safe Natural Forecaring Proactive Healthcare System. "
@@ -33,12 +33,19 @@
          }
       ],
       "para1": "We believe that the health values must be shared with all Humanity, So we are now Embarking on a mission to bring these Amazing products to the global mass.",
-      "teamMembers": [
+      "teamMembersPartOne": [
          {
             "name": "Datuk Dr. Mukundan Pillay",
             "imageUrl": "/team/datuk.jpg",
             "designation": "Chairman"
          },
+         {
+            "name": "M. Paramesswaran",
+            "imageUrl": "/team/param.jpg",
+            "designation": "Managing Director"
+         }
+      ],
+      "teamMembersPartSecond": [
          {
             "name": "Govindaraju",
             "imageUrl": "/team/govidaraju.jpg",
@@ -49,11 +56,7 @@
             "imageUrl": "/team/srivalli.jpg",
             "designation": "Director Research and Development"
          },
-         {
-            "name": "M. Paramesswaran",
-            "imageUrl": "/team/param.jpg",
-            "designation": "Managing Director"
-         },
+
          {
             "name": "P. Vassanthan",
             "imageUrl": "/team/vasan.jpg",
