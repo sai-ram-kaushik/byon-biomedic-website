@@ -1,5 +1,6 @@
 {
    "navbar": {
+      "logo": "/logo.svg",
       "navlinks": [
          { "label": "Home", "path": "/" },
          { "label": "About", "path": "/about" },

@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
 
 const Navbar = ({ navbar }) => {
-   const { navlinks } = navbar;
+   const { logo, navlinks } = navbar;
    const location = useLocation();
    const [nav, setNav] = useState(false);
 
@@ -15,9 +15,12 @@ const Navbar = ({ navbar }) => {
       <div className="w-full h-20 border-b-2">
          <div className="flex items-center justify-between w-full h-full px-5 lg:px-10">
             <Link to="/">
-               <h1 className="text-3xl lg:text-4xl font-bold">
-                  Byon <span className="text-secondary">Biomedic</span>
-               </h1>
+               <div className="flex items-center gap-2">
+                  <img src={logo} width={50} />
+                  <h1 className="text-3xl lg:text-4xl font-bold">
+                     Byon <span className="text-secondary">Biomedic</span>
+                  </h1>
+               </div>
             </Link>
 
             <div className="hidden lg:flex items-center gap-6 text-[18px] font-medium">
