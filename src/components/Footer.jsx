@@ -29,9 +29,9 @@ const Footer = () => {
                            About Us
                         </p>
                      </Link>
-                     <Link to="/services">
+                     <Link to="/medicines">
                         <p className="hover:text-primary cursor-pointer">
-                           Services
+                           Medicines
                         </p>
                      </Link>
                   </div>
@@ -43,20 +43,20 @@ const Footer = () => {
                      <div className="flex items-center gap-2">
                         <IoMdMail size={15} className="text-secondary" />
                         <a href="mailto:byonbiomedic@gmail.com">
-                           <p>byonbiomedic@gmail.com</p>
+                           <p>info@byonbiomedic.com</p>
                         </a>
                      </div>
 
                      <div className="flex items-start gap-2">
                         <FaPhoneAlt size={15} className="text-secondary" />
                         <div className="flex flex-col items-start">
-                           <p>+91 9999974265</p>
+                           <p>+603 62422746</p>
                         </div>
                      </div>
 
                      <div className="flex items-start gap-2">
                         <FaLocationDot size={20} className="text-secondary" />
-                        <p>Gurugram, India</p>
+                        <p>Suite 10-03, Mutiara Office Suites, 568, Jalan Sultan Azlan Shah, Kuala Lumpur, Malaysia</p>
                      </div>
                   </div>
                </div>
@@ -74,7 +74,7 @@ const Footer = () => {
             <hr className="mt-5" />
 
             <div className="flex flex-col lg:flex-row gap-3 items-center justify-between py-3">
-               <p>2024 - All Rights Reserved</p>
+               <p>2025 - All Rights Reserved</p>
             </div>
          </div>
       </div>

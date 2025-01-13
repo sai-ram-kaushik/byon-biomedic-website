@@ -16,7 +16,7 @@ const Home = ({ home }) => {
                </h2>
                <p className="lg:max-w-[800px] text-center">{subHeading}</p>
                <Link to="/medicines">
-                  <Button title="Buy Medicines" />
+                  <Button title="See Medicines" />
                </Link>
                {/* <img src={imageUrl} width={700} className="mt-10" /> */}
             </div>
