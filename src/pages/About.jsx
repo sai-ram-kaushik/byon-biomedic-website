@@ -5,11 +5,10 @@ const About = ({ about }) => {
    const {
       imageUrl,
       subHeading,
-      benifits,
-      para1,
-      para2,
       teamMembersPartOne,
       teamMembersPartSecond,
+      vision,
+      mission
    } = about;
    return (
       <div className="w-full py-10 px-5 lg:px-10">
@@ -17,32 +16,17 @@ const About = ({ about }) => {
          <div className="flex flex-col lg:flex-row items-start justify-center w-full gap-5 mt-5">
             <img src={imageUrl} className="rounded-xl" />
             <div className="flex flex-col items-start gap-2 max-w-[446px]">
-               <h3 className="text-[30px] lg:text-[48px] font-heading text-primary  leading-[3rem]">
+               <h3 className="text-[30px] lg:text-[48px] font-heading font-bold text-primary  leading-[3rem]">
                   {subHeading}
                </h3>
 
-               <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-center gap-4">
-                  {benifits.map((benifit, idx) => {
-                     return (
-                        <ul
-                           key={idx}
-                           role="list"
-                           className="marker:text-secondary list-disc ml-5"
-                        >
-                           <li>{benifit.label}</li>
-                        </ul>
-                     );
-                  })}
-               </div>
-
-               <p>{para1}</p>
-
-               <p>{para2}</p>
+               <p className="text-xl">{vision}</p>
+               <p className="text-xl">{mission}</p>
             </div>
          </div>
 
          <div className="flex items-center justify-center w-full py-10">
-            <h3 className="text-3xl lg:text-4xl font-heading">
+            <h3 className="text-3xl lg:text-4xl font-heading font-bold">
                Our <span>Team</span>
             </h3>
          </div>

@@ -17,8 +17,8 @@ const Navbar = ({ navbar }) => {
             <Link to="/">
                <div className="flex items-center gap-2">
                   <img src={logo} width={50} />
-                  <h1 className="text-3xl lg:text-4xl font-bold">
-                     Byon <span className="text-secondary">Biomedic</span>
+                  <h1 className="text-3xl lg:text-4xl font-bold text-secondary">
+                     Byon Biomedic
                   </h1>
                </div>
             </Link>

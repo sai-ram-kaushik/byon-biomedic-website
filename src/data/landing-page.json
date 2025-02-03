@@ -18,22 +18,8 @@
       "title": "About",
       "imageUrl": "/about.png",
       "subHeading": "OUR VISION & MISSION",
-      "benifits": [
-         {
-            "label": "Towards a safe Natural Forecaring Proactive Healthcare System. "
-         },
-         { "label": "Research, Develop and Advocacy in Phytopharmacology." },
-         {
-            "label": "Restoring the Phyto Hi Touch Healing into modern medicine."
-         },
-         {
-            "label": "Making phyto-Medicine Affordable & Accessible to Everyone"
-         },
-         {
-            "label": "Making Malaysia the Asian Hub for phyto Healthcare & Healing. "
-         }
-      ],
-      "para1": "We believe that the health values must be shared with all Humanity, So we are now Embarking on a mission to bring these Amazing products to the global mass.",
+      "vision": "To pioneer a transformative future in healthcare where plant-based medicines lead therapeutic Innovation , fostering global wellness and environmental sustainability for generations.",
+      "mission": "We are dedicated to advancing phytomedicines through the fusion of traditional botanical wisdom and modern scientific rigor. Committed to ethical sourcing and sustainable practices, we deliver safe, effective, and accessible natural therapies that enhance health outcomes while preserving our planet.",
       "teamMembersPartOne": [
          {
             "name": "Datuk Dr. Mukundan Pillay",

@@ -6,13 +6,13 @@ export default {
          colors: {
             background: "#FCFEFE",
             primary: "#1F2B6C",
-            secondary: "#159EEC",
+            secondary: "#235c84",
             accent: "#BFD2F8",
             black: "#212124",
          },
 
          fontFamily: {
-            heading: "Yeseva One",
+            heading: "Montserrat",
             bodyContent: "Work Sans",
          },
       },

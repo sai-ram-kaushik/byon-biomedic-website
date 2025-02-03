@@ -10,8 +10,8 @@ const Footer = () => {
             <div className="grid grid-cols-1 lg:grid-cols-4 items-center gap-5 lg:gap-16">
                <div className="flex flex-col items-start gap-3">
                   <Link to="/">
-                     <h2 className="text-3xl lg:text-4xl font-bold">
-                        Byon <span className="text-secondary">Biomedic</span>
+                     <h2 className="text-3xl lg:text-4xl font-bold text-secondary">
+                        Byon Biomedic
                      </h2>
                   </Link>
                </div>
@@ -56,7 +56,10 @@ const Footer = () => {
 
                      <div className="flex items-start gap-2">
                         <FaLocationDot size={20} className="text-secondary" />
-                        <p>Suite 10-03, Mutiara Office Suites, 568, Jalan Sultan Azlan Shah, Kuala Lumpur, Malaysia</p>
+                        <p>
+                           Suite 10-03, Mutiara Office Suites, 568, Jalan Sultan
+                           Azlan Shah, Kuala Lumpur, Malaysia
+                        </p>
                      </div>
                   </div>
                </div>
