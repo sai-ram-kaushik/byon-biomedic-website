@@ -8,7 +8,7 @@ const About = ({ about }) => {
       teamMembersPartOne,
       teamMembersPartSecond,
       vision,
-      mission
+      mission,
    } = about;
    return (
       <div className="w-full py-10 px-5 lg:px-10">
@@ -16,11 +16,9 @@ const About = ({ about }) => {
          <div className="flex flex-col lg:flex-row items-start justify-center w-full gap-5 mt-5">
             <img src={imageUrl} className="rounded-xl" />
             <div className="flex flex-col items-start gap-2 max-w-[446px]">
-               <h3 className="text-[30px] lg:text-[48px] font-heading font-bold text-primary  leading-[3rem]">
-                  {subHeading}
-               </h3>
-
+               <h3 className="text-3xl font-bold text-secondary">Vision</h3>
                <p className="text-xl">{vision}</p>
+               <h3 className="text-3xl font-bold text-secondary">Mission</h3>
                <p className="text-xl">{mission}</p>
             </div>
          </div>

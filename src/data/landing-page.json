@@ -10,7 +10,7 @@
    },
 
    "home": {
-      "subHeading": "We are combining the scientific exellence of the Phyto-Science with the Industry's Expertise in developing Phyto-Medicines. Together we can create Phyto-Innovation that matter. ",
+      "subHeading": "By synergizing cutting-edge phytoscientific research with industry-leading expertise, we are dedicated to pioneering the development of evidence-based phytotherapeutic solutions. Through collaborative innovation, we aim to deliver transformative phytomedical advancements that address unmet clinical needs and elevate patient care standards.",
       "imageUrl": "/home.svg"
    },
 
@@ -47,7 +47,7 @@
          {
             "name": "P. Vassanthan",
             "imageUrl": "/team/vasan.jpg",
-            "designation": "Director Business Development"
+            "designation": "Director, Coporate Operations"
          }
       ]
    },
