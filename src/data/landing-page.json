@@ -34,11 +34,6 @@
       ],
       "teamMembersPartSecond": [
          {
-            "name": "Govindaraju",
-            "imageUrl": "/team/govidaraju.jpg",
-            "designation": ""
-         },
-         {
             "name": "Dr. Srivalli",
             "imageUrl": "/team/srivalli.jpg",
             "designation": "Director Research and Development"
@@ -48,7 +43,14 @@
             "name": "P. Vassanthan",
             "imageUrl": "/team/vasan.jpg",
             "designation": "Director, Coporate Operations"
+         },
+
+         {
+            "name": "Govindaraju",
+            "imageUrl": "/team/govidaraju.jpg",
+            "designation": ""
          }
+         
       ]
    },
 
