@@ -17,7 +17,7 @@ const Footer = () => {
                </div>
 
                <div className="flex flex-col items-start gap-5">
-                  <p className="font-bold text-primary">About Us</p>
+                  <p className="font-bold text-primary">Quick Links</p>
                   <div className="flex flex-col items-start gap-2">
                      <Link to="/">
                         <p className="hover:text-primary cursor-pointer">
@@ -67,7 +67,7 @@ const Footer = () => {
                <div className="flex flex-col items-start gap-5">
                   <p className="font-bold text-primary">Privacy</p>
                   <div className="flex flex-col items-start gap-2">
-                     <p>FAQ</p>
+                     <p>FAQs</p>
                      <p>Terms</p>
                      <p>Privacy</p>
                   </div>
