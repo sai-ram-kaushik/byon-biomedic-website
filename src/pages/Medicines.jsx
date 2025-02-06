@@ -54,7 +54,7 @@ const Medicines = ({ medicines }) => {
                   {selectedProduct.name === "Damoxin" ? (
                      <div className="mt-4 text-gray-700 space-y-4">
                         <p>
-                           <strong>Statement on Damoxin:</strong> A Novel Phyto
+                            A Novel Phyto
                            Medicine for COVID-19 Treatment
                         </p>
                         <p>
