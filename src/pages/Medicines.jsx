@@ -32,7 +32,9 @@ const Medicines = ({ medicines }) => {
                      alt={product.name}
                      className="object-cover"
                   />
-                  <h3>{product.name}</h3>
+                  <h3>
+                     {product.name} <sup>{product.trademark}</sup>
+                  </h3>
                </div>
             ))}
          </div>
@@ -53,10 +55,8 @@ const Medicines = ({ medicines }) => {
                   {/* Damoxin Content */}
                   {selectedProduct.name === "Damoxin" ? (
                      <div className="mt-4 text-gray-700 space-y-4">
-                        <p>
-                            A Novel Phyto
-                           Medicine for COVID-19 Treatment
-                        </p>
+                        <img src={selectedProduct.productPackage} width={500}/>
+                        <p>A Novel Phyto Medicine for COVID-19 Treatment</p>
                         <p>
                            Damoxin is a groundbreaking phytomedicine derived
                            from a synergistic blend of bioactive plant
