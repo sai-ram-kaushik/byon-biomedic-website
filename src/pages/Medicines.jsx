@@ -75,7 +75,7 @@ Damoxin is an innovative herbal formulation developed through advanced phytophar
                               attachment and inhibits replication by targeting key viral enzymes (e.g., 3CL protease).
                            </li>
                            <li>
-                              <strong>Immunomodulation:</strong> Downregulates pro-inflammatory cytokines (lIL-6, TNF-a) while enhancing interferon production to balance immune responses.
+                              <strong>Immunomodulation:</strong> Downregulates pro-inflammatory cytokines (IL-6,TNF-α) while enhancing interferon production to balance immune responses.
                            </li>
                            <li>
                               <strong>Cellular Protection:</strong> Reduces
