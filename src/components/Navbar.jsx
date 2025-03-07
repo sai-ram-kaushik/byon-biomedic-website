@@ -17,7 +17,7 @@ const Navbar = ({ navbar }) => {
             <Link to="/">
                <div className="flex items-center gap-2">
                   <img src={logo} width={50} />
-                  <h1 className="text-3xl lg:text-4xl font-bold text-secondary">
+                  <h1 className="text-3xl font-logoHeading lg:text-4xl font-bold text-primary">
                      Byon Biomedic
                   </h1>
                </div>
@@ -28,11 +28,10 @@ const Navbar = ({ navbar }) => {
                   <Link
                      key={idx}
                      to={navlink.path}
-                     className={`${
-                        location.pathname === navlink.path
-                           ? "text-secondary"
-                           : ""
-                     }`}
+                     className={`${location.pathname === navlink.path
+                        ? "text-secondary"
+                        : ""
+                        }`}
                   >
                      {navlink.label}
                   </Link>
@@ -48,18 +47,16 @@ const Navbar = ({ navbar }) => {
          </div>
 
          <div
-            className={`lg:hidden fixed top-0 left-0 w-full h-screen bg-primary bg-opacity-95 text-background flex flex-col justify-center items-center transition-transform duration-300 ${
-               nav ? "translate-x-0" : "translate-x-full"
-            }`}
+            className={`lg:hidden fixed top-0 left-0 w-full h-screen bg-primary bg-opacity-95 text-background flex flex-col justify-center items-center transition-transform duration-300 ${nav ? "translate-x-0" : "translate-x-full"
+               }`}
          >
             {navlinks.map((navlink, idx) => (
                <Link
                   key={idx}
                   to={navlink.path}
                   onClick={() => setNav(false)}
-                  className={`py-4 text-2xl font-semibold ${
-                     location.pathname === navlink.path ? "text-accent" : ""
-                  }`}
+                  className={`py-4 text-2xl font-semibold ${location.pathname === navlink.path ? "text-accent" : ""
+                     }`}
                >
                   {navlink.label}
                </Link>

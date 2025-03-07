@@ -5,15 +5,14 @@ export default {
       extend: {
          colors: {
             background: "#FCFEFE",
-            primary: "#1F2B6C",
+            primary: "#182a40",
             secondary: "#235c84",
             accent: "#BFD2F8",
             black: "#212124",
          },
 
          fontFamily: {
-            heading: "Montserrat",
-            bodyContent: "Work Sans",
+            bodyContent: "Palatino",
          },
       },
    },

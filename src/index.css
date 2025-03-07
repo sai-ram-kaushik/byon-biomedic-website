@@ -10,13 +10,18 @@
    box-sizing: border-box;
 }
 
+@font-face {
+   font-family: Palatino;
+   src: url(./fonts/palr45w.ttf);
+}
+
 @layer base {
    body {
       @apply bg-background font-bodyContent text-black absolute inset-0 -z-10 h-full w-full bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]
    }
 
    h1 {
-      @apply font-heading text-3xl lg:text-4xl font-bold;
+      @apply text-3xl lg:text-4xl font-bold;
    }
 
    span {

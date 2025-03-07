@@ -68,8 +68,8 @@ const Footer = () => {
                   <p className="font-bold text-primary">Privacy</p>
                   <div className="flex flex-col items-start gap-2">
                      <p>FAQs</p>
-                     <p>Terms</p>
-                     <p>Privacy</p>
+                     <Link to={`/terms-and-conditions`}><p>Terms</p></Link>
+                     <Link to={`/privacy-policy`}> <p>Privacy</p></Link>
                   </div>
                </div>
             </div>

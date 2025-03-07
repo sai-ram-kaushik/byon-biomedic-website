@@ -8,6 +8,8 @@ import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import Medicines from "./pages/Medicines";
 import News from "./pages/News";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsAndConditions from "./pages/TermsAndConditions";
 
 const App = () => {
    return (
@@ -20,9 +22,11 @@ const App = () => {
                   path="/services"
                   element={<Services ourServices={data.ourServices} />}
                />
-               <Route path="/medicines" element={<Medicines medicines={data.medicines}/>} />
+               <Route path="/medicines" element={<Medicines medicines={data.medicines} />} />
                <Route path="/news" element={<News />} />
                <Route path="/contact" element={<Contact />} />
+               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+               <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
             </Routes>
          </Layout>
       </BrowserRouter>
