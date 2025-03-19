@@ -1,10 +1,10 @@
 {
    "navbar": {
-      "logo": "/logo.svg",
+      "logo": "/ByonLogo.png",
       "navlinks": [
          { "label": "Home", "path": "/" },
          { "label": "About", "path": "/about" },
-         { "label": "Medicines", "path": "/medicines" },
+         { "label": "Products", "path": "/products" },
          { "label": "Contact Us", "path": "/contact" }
       ]
    },
