@@ -4,7 +4,7 @@
       "navlinks": [
          { "label": "Home", "path": "/" },
          { "label": "About", "path": "/about" },
-         { "label": "Products", "path": "/products" },
+         { "label": "Products", "path": "/medicines" },
          { "label": "Contact Us", "path": "/contact" }
       ]
    },
@@ -81,7 +81,7 @@
    },
 
    "medicines": {
-      "heading": "Our Medicines",
+      "heading": "Our Products",
       "products": [
          {
             "name": "Damoxin",
