@@ -10,7 +10,7 @@ const Footer = () => {
             <div className="grid grid-cols-1 lg:grid-cols-4 items-center gap-5 lg:gap-16">
                <div className="flex flex-col items-start gap-3">
                   <Link to="/">
-                     <img src= "public/ByonfullLogo.png" />
+                     <img src= "/public/ByonfullLogo.png" />
                      {/* <h2 className="text-3xl lg:text-4xl font-bold text-secondary">
                         Byon Biomedic
                      </h2> */}
