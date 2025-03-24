@@ -30,7 +30,7 @@ const Medicines = ({ medicines }) => {
                   <img
                      src={product.imageUrl}
                      alt={product.name}
-                     className="object-cover"
+                     className="w-full max-w-[300px] h-auto mx-auto object-contain"
                   />
                   {/* <h3>
                      {product.name} <sup>{product.trademark}</sup>
