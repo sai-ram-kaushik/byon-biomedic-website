@@ -21,7 +21,7 @@ const Team = ({ about }) => {
          {/* Our Team Section */}
          <motion.div className="flex items-center justify-center w-full py-6" variants={fadeIn}>
             <h3 className="text-3xl lg:text-4xl font-heading font-bold">
-               Our <span>Team</span>
+               Core <span>Team</span>
             </h3>
          </motion.div>
 
