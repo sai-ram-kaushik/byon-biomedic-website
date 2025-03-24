@@ -10,7 +10,7 @@ const Home = ({ home }) => {
 
    return (
       <>
-         <div className="w-full px-5 md:px-10 py-20 md:py-32 min-h-screen flex flex-col justify-center">
+         <div className="w-full px-5 md:px-10 py-20 md:py-32 min-h-screen flex flex-col justify-center items-center">
             {/* Transition Effect */}
             <TransitionEffect />
 
@@ -20,7 +20,7 @@ const Home = ({ home }) => {
                animate={{ opacity: 1, y: 0 }}
                transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
             >
-               <div className="flex flex-col items-start gap-3 max-w-[800px]">
+               <div className="flex flex-col items-start gap-3 max-w-[800px] text-center lg:text-left">
                   <h2 className="text-3xl lg:text-4xl font-bold font-heading max-w-[1100px]">
                      Harnessing the Inherent Potential of{" "}
                      <span className="text-secondary">Natural Botanical</span>{" "}
@@ -44,11 +44,12 @@ const Home = ({ home }) => {
             </motion.div>
          </div>
 
-         {/* Animate FAQ Section */}
+         {/* FAQ Section with Proper Animation */}
          <motion.div
             initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1, duration: 0.8, ease: "easeOut" }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true }}
          >
             <Faq />
          </motion.div>
