@@ -1,24 +1,25 @@
 import React, { useState, useEffect } from "react";
 import TransitionEffect from "../utils/TransitionEffect";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 
 const Team = ({ about }) => {
    const { teamMembersPartOne, teamMembersPartSecond, advisoryGroupPartOne, advisoryGroupPartSecond } = about;
    const [selectedMember, setSelectedMember] = useState(null);
-   const [scrollTriggered, setScrollTriggered] = useState(false);
+   const controls = useAnimation();
 
    const teamMembers = [...teamMembersPartOne, ...teamMembersPartSecond];
    const advisoryMembers = [...advisoryGroupPartOne, ...advisoryGroupPartSecond];
 
    useEffect(() => {
-      if (!scrollTriggered) {
-         const timer = setTimeout(() => {
-            document.getElementById("technical-advisory-group").scrollIntoView({ behavior: "smooth" });
-            setScrollTriggered(true);
-         }, 1000);
-         return () => clearTimeout(timer);
-      }
-   }, [scrollTriggered]);
+      const handleScroll = () => {
+         const section = document.getElementById("technical-advisory-group");
+         if (section && window.scrollY + window.innerHeight >= section.offsetTop + 100) {
+            controls.start("visible");
+         }
+      };
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+   }, [controls]);
 
    const fadeIn = {
       hidden: { opacity: 0, y: 20 },
@@ -51,13 +52,13 @@ const Team = ({ about }) => {
          </motion.div>
 
          {/* Technical Advisory Group Section */}
-         <motion.div id="technical-advisory-group" className="flex items-center justify-center w-full py-10" variants={fadeIn}>
+         <motion.div id="technical-advisory-group" className="flex items-center justify-center w-full py-10" initial="hidden" animate={controls} variants={fadeIn}>
             <h3 className="text-3xl lg:text-4xl font-heading font-bold">
                Technical Advisory <span>Group</span>
             </h3>
          </motion.div>
 
-         <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10" variants={fadeIn}>
+         <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10" initial="hidden" animate={controls} variants={fadeIn}>
             {advisoryMembers.map((member, idx) => (
                <motion.div 
                   key={idx} 
