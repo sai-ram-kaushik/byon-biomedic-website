@@ -10,12 +10,12 @@ const Home = ({ home }) => {
 
    return (
       <>
-         <div className="w-full px-5 md:px-10 py-20 md:py-32 min-h-screen flex flex-col justify-center items-center">
+         <div className="w-full px-5 md:px-10 py-10 md:py-16 min-h-screen flex flex-col justify-center items-center">
             {/* Transition Effect */}
             <TransitionEffect />
 
             <motion.div 
-               className="flex flex-col lg:flex-row items-center justify-center gap-10 w-full"
+               className="flex flex-col lg:flex-row items-center justify-between gap-10 w-full max-w-6xl mx-auto flex-grow"
                initial={{ opacity: 0, y: 50 }}
                animate={{ opacity: 1, y: 0 }}
                transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
@@ -39,7 +39,7 @@ const Home = ({ home }) => {
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ delay: 0.7, duration: 0.8 }}
                >
-                  <img src="/medicine.svg" width={600} height={600} />
+                  <img src="/medicine.svg" width={500} height={500} className="max-w-full h-auto" />
                </motion.div>
             </motion.div>
          </div>
@@ -50,6 +50,7 @@ const Home = ({ home }) => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
+            className="w-full"
          >
             <Faq />
          </motion.div>
