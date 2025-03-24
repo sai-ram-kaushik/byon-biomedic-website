@@ -1,13 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import TransitionEffect from "../utils/TransitionEffect";
 import { motion } from "framer-motion";
 
 const Team = ({ about }) => {
    const { teamMembersPartOne, teamMembersPartSecond, advisoryGroupPartOne, advisoryGroupPartSecond } = about;
    const [selectedMember, setSelectedMember] = useState(null);
+   const [scrollTriggered, setScrollTriggered] = useState(false);
 
    const teamMembers = [...teamMembersPartOne, ...teamMembersPartSecond];
    const advisoryMembers = [...advisoryGroupPartOne, ...advisoryGroupPartSecond];
+
+   useEffect(() => {
+      if (!scrollTriggered) {
+         const timer = setTimeout(() => {
+            document.getElementById("technical-advisory-group").scrollIntoView({ behavior: "smooth" });
+            setScrollTriggered(true);
+         }, 1000);
+         return () => clearTimeout(timer);
+      }
+   }, [scrollTriggered]);
 
    const fadeIn = {
       hidden: { opacity: 0, y: 20 },
@@ -40,7 +51,7 @@ const Team = ({ about }) => {
          </motion.div>
 
          {/* Technical Advisory Group Section */}
-         <motion.div className="flex items-center justify-center w-full py-10" variants={fadeIn}>
+         <motion.div id="technical-advisory-group" className="flex items-center justify-center w-full py-10" variants={fadeIn}>
             <h3 className="text-3xl lg:text-4xl font-heading font-bold">
                Technical Advisory <span>Group</span>
             </h3>
