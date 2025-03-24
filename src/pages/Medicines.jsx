@@ -32,9 +32,9 @@ const Medicines = ({ medicines }) => {
                      alt={product.name}
                      className="object-cover"
                   />
-                  <h3>
+                  {/* <h3>
                      {product.name} <sup>{product.trademark}</sup>
-                  </h3>
+                  </h3> */}
                </div>
             ))}
          </div>

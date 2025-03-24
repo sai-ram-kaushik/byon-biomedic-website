@@ -84,9 +84,9 @@
       "heading": "Our Products",
       "products": [
          {
-            "name": "",
+            "name": "Damoxin",
             "imageUrl": "/products/damoxin.png",
-            "trademark": "",
+            "trademark": "TM",
             "productPackage": "/products/damoxinPackage.png"
          }
       ]
