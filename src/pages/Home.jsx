@@ -39,7 +39,7 @@ const Home = ({ home }) => {
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ delay: 0.6, duration: 0.7 }}
                >
-                  <img src="/medicine.svg" width={450} height={450} className="max-w-full h-auto" />
+                  <img src="/microscope.png" width={450} height={450} className="max-w-full h-auto" />
                </motion.div>
             </motion.div>
          </div>
