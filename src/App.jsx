@@ -10,6 +10,8 @@ import Medicines from "./pages/Medicines";
 import News from "./pages/News";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
+import TermsAndConditions from "./pages/Team";
+
 
 const App = () => {
    return (
