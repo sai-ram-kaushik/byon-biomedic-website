@@ -1,24 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import TransitionEffect from "../utils/TransitionEffect";
 import { motion } from "framer-motion";
 
 const Team = ({ about }) => {
    const { teamMembersPartOne, teamMembersPartSecond, advisoryGroupPartOne, advisoryGroupPartSecond } = about;
    const [selectedMember, setSelectedMember] = useState(null);
-   const [scrollTriggered, setScrollTriggered] = useState(false);
 
    const teamMembers = [...teamMembersPartOne, ...teamMembersPartSecond];
    const advisoryMembers = [...advisoryGroupPartOne, ...advisoryGroupPartSecond];
-
-   useEffect(() => {
-      if (!scrollTriggered) {
-         const timer = setTimeout(() => {
-            document.getElementById("technical-advisory-group").scrollIntoView({ behavior: "smooth" });
-            setScrollTriggered(true);
-         }, 1000);
-         return () => clearTimeout(timer);
-      }
-   }, [scrollTriggered]);
 
    const fadeIn = {
       hidden: { opacity: 0, y: 20 },
@@ -36,15 +25,15 @@ const Team = ({ about }) => {
             </h3>
          </motion.div>
 
-         <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" variants={fadeIn}>
+         <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" variants={fadeIn}>
             {teamMembers.map((member, idx) => (
                <motion.div 
                   key={idx} 
-                  className="text-center bg-white p-4 rounded-xl shadow-md hover:shadow-lg cursor-pointer transform transition-transform duration-300 hover:scale-105 border border-gray-200 backdrop-blur-md"
+                  className="text-center bg-white p-6 rounded-lg shadow-lg hover:shadow-xl cursor-pointer transform transition-transform duration-300 hover:scale-105 border border-gray-200 backdrop-blur-md flex flex-col items-center"
                   onClick={() => setSelectedMember(member)}
                   whileHover={{ scale: 1.05 }}>
-                  <img className="mx-auto mb-3 w-32 h-32 rounded-full transition-transform" src={member.imageUrl} alt={member.name} />
-                  <h3 className="mb-1 text-lg font-bold tracking-tight text-gray-900">{member.name}</h3>
+                  <img className="mb-4 w-24 h-24 rounded-full border-4 border-gray-300" src={member.imageUrl} alt={member.name} />
+                  <h3 className="text-lg font-semibold text-gray-900">{member.name}</h3>
                   <p className="text-sm text-gray-600">{member.designation}</p>
                </motion.div>
             ))}
@@ -57,15 +46,15 @@ const Team = ({ about }) => {
             </h3>
          </motion.div>
 
-         <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" variants={fadeIn}>
+         <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" variants={fadeIn}>
             {advisoryMembers.map((member, idx) => (
                <motion.div 
                   key={idx} 
-                  className="text-center bg-white p-4 rounded-xl shadow-md hover:shadow-lg cursor-pointer transform transition-transform duration-300 hover:scale-105 border border-gray-200 backdrop-blur-md"
+                  className="text-center bg-white p-6 rounded-lg shadow-lg hover:shadow-xl cursor-pointer transform transition-transform duration-300 hover:scale-105 border border-gray-200 backdrop-blur-md flex flex-col items-center"
                   onClick={() => setSelectedMember(member)}
                   whileHover={{ scale: 1.05 }}>
-                  <img className="mx-auto mb-3 w-32 h-32 rounded-full transition-transform" src={member.imageUrl} alt={member.name} />
-                  <h3 className="mb-1 text-lg font-bold tracking-tight text-gray-900">{member.name}</h3>
+                  <img className="mb-4 w-24 h-24 rounded-full border-4 border-gray-300" src={member.imageUrl} alt={member.name} />
+                  <h3 className="text-lg font-semibold text-gray-900">{member.name}</h3>
                   <p className="text-sm text-gray-600">{member.designation}</p>
                </motion.div>
             ))}
@@ -76,7 +65,7 @@ const Team = ({ about }) => {
             <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
                <div className="bg-white p-6 rounded-lg max-w-md relative">
                   <button className="absolute top-2 right-2 text-gray-500 hover:text-gray-800" onClick={() => setSelectedMember(null)}>✖</button>
-                  <img className="w-28 h-28 mx-auto rounded-full" src={selectedMember.imageUrl} alt={selectedMember.name} />
+                  <img className="w-28 h-28 mx-auto rounded-full border-4 border-gray-300" src={selectedMember.imageUrl} alt={selectedMember.name} />
                   <h2 className="text-lg font-bold mt-2">{selectedMember.name}</h2>
                   <p className="text-gray-700 text-sm">{selectedMember.designation}</p>
                   <p className="mt-2 text-sm">{selectedMember.bio}</p>
