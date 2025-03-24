@@ -25,8 +25,22 @@ const Team = ({ about }) => {
             </h3>
          </motion.div>
 
-         <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" variants={fadeIn}>
-            {teamMembers.map((member, idx) => (
+         <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6" variants={fadeIn}>
+            {teamMembers.slice(0, 2).map((member, idx) => (
+               <motion.div 
+                  key={idx} 
+                  className="text-center bg-white p-6 rounded-lg shadow-lg hover:shadow-xl cursor-pointer transform transition-transform duration-300 hover:scale-105 border border-gray-200 backdrop-blur-md flex flex-col items-center"
+                  onClick={() => setSelectedMember(member)}
+                  whileHover={{ scale: 1.05 }}>
+                  <img className="mb-4 w-24 h-24 rounded-full border-4 border-gray-300" src={member.imageUrl} alt={member.name} />
+                  <h3 className="text-lg font-semibold text-gray-900">{member.name}</h3>
+                  <p className="text-sm text-gray-600">{member.designation}</p>
+               </motion.div>
+            ))}
+         </motion.div>
+
+         <motion.div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 mt-6" variants={fadeIn}>
+            {teamMembers.slice(2, 5).map((member, idx) => (
                <motion.div 
                   key={idx} 
                   className="text-center bg-white p-6 rounded-lg shadow-lg hover:shadow-xl cursor-pointer transform transition-transform duration-300 hover:scale-105 border border-gray-200 backdrop-blur-md flex flex-col items-center"
