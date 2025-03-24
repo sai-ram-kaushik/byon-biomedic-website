@@ -16,8 +16,9 @@ const Navbar = ({ navbar }) => {
          <div className="flex items-center justify-between w-full h-full px-5 lg:px-10">
             <Link to="/">
                <div className="flex items-center gap-2">
-                  <img src={logo} width={50} />
-                  <h1 className="text-3xl font-logoHeading lg:text-4xl font-bold text-primary">
+                  <img src={logo} width={50} alt="Byon Biomedic Logo" />
+                  <h1 className="text-3xl lg:text-4xl font-bold" 
+                      style={{ fontFamily: "Palatino Linotype, serif", color: "#182A40" }}>
                      Byon Biomedic
                   </h1>
                </div>
@@ -28,35 +29,27 @@ const Navbar = ({ navbar }) => {
                   <Link
                      key={idx}
                      to={navlink.path}
-                     className={`${location.pathname === navlink.path
-                        ? "text-secondary"
-                        : ""
-                        }`}
+                     className={`${location.pathname === navlink.path ? "text-secondary" : ""}`}
                   >
                      {navlink.label}
                   </Link>
                ))}
             </div>
 
-            <div
-               className="block lg:hidden p-2 text-black"
-               onClick={toggleMenu}
-            >
+            <div className="block lg:hidden p-2 text-black" onClick={toggleMenu}>
                {nav ? <FiX size={28} /> : <FiMenu size={28} />}
             </div>
          </div>
 
          <div
-            className={`lg:hidden fixed top-0 left-0 w-full h-screen bg-primary bg-opacity-95 text-background flex flex-col justify-center items-center transition-transform duration-300 ${nav ? "translate-x-0" : "translate-x-full"
-               }`}
+            className={`lg:hidden fixed top-0 left-0 w-full h-screen bg-primary bg-opacity-95 text-background flex flex-col justify-center items-center transition-transform duration-300 ${nav ? "translate-x-0" : "translate-x-full"}`}
          >
             {navlinks.map((navlink, idx) => (
                <Link
                   key={idx}
                   to={navlink.path}
                   onClick={() => setNav(false)}
-                  className={`py-4 text-2xl font-semibold ${location.pathname === navlink.path ? "text-accent" : ""
-                     }`}
+                  className={`py-4 text-2xl font-semibold ${location.pathname === navlink.path ? "text-accent" : ""}`}
                >
                   {navlink.label}
                </Link>
