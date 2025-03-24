@@ -4,6 +4,7 @@
       "navlinks": [
          { "label": "Home", "path": "/" },
          { "label": "About", "path": "/about" },
+         { "label": "Team", "path": "/team" },
          { "label": "Products", "path": "/medicines" },
          { "label": "Contact Us", "path": "/contact" }
       ]
@@ -19,7 +20,11 @@
       "imageUrl": "/about.png",
       "subHeading": "OUR VISION & MISSION",
       "vision": "To pioneer a transformative future in healthcare where plant-based medicines lead therapeutic Innovation , fostering global wellness and environmental sustainability for generations.",
-      "mission": "We are dedicated to advancing phytomedicines through the fusion of traditional botanical wisdom and modern scientific rigor. Committed to ethical sourcing and sustainable practices, we deliver safe, effective, and accessible natural therapies that enhance health outcomes while preserving our planet.",
+      "mission": "We are dedicated to advancing phytomedicines through the fusion of traditional botanical wisdom and modern scientific rigor. Committed to ethical sourcing and sustainable practices, we deliver safe, effective, and accessible natural therapies that enhance health outcomes while preserving our planet."
+   },
+   
+   
+   "team":{ 
       "teamMembersPartOne": [
          {
             "name": "Datuk Dr. Mukundan Pillay",
