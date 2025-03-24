@@ -51,7 +51,42 @@
          {
             "name": "Govindaraju",
             "imageUrl": "/team/govidaraju.jpg",
-            "designation": ""
+            "designation": "Senior Quality Systems Manager",
+            "bio": "Leadership in GMP & Compliance: Extensive experience ensuring *Good Manufacturing Practice (GMP), ISO standards, and regulatory compliance in multinational manufacturing environments."
+         }
+      ],
+      "advisoryGroupPartOne": [
+         {
+            "name": "Datuk Dr. Mukundan Pillay",
+            "imageUrl": "/team/datuk.jpg",
+            "designation": "Chairman",
+            "bio": "Datuk Dr. Mukundan Pillay is a distinguished leader renowned for his transformative contributions to healthcare systems in Malaysia and globally. Over a 32-year career with the Malaysian Ministry of Health, he spearheaded critical initiatives in health infrastructure, policy, and research. Post-retirement, he extended his expertise to international organizations, including the World Bank in Bahrain and the World Health Organization (WHO) in China, while remaining actively engaged in advancing Malaysia’s healthcare landscape."
+         },
+         {
+            "name": "M. Paramesswaran",
+            "imageUrl": "/team/param.jpg",
+            "designation": "Managing Director"
+         }
+      ],
+      "advisoryGroupPartSecond": [
+         {
+            "name": "Dr. Srivalli",
+            "imageUrl": "/team/srivalli.jpg",
+            "designation": "Director Research and Development",
+            "bio": "Dr Srivalli, MBBS Madras University, India. Ph.D Complementary & Alternative Medicine. Honorary Doctorate in Natural Medicine.Weston Reserve University, Canada."
+         },
+
+         {
+            "name": "P. Vassanthan",
+            "imageUrl": "/team/vasan.jpg",
+            "designation": "Director, Coporate Operations"
+         },
+
+         {
+            "name": "Govindaraju",
+            "imageUrl": "/team/govidaraju.jpg",
+            "designation": "Senior Quality Systems Manager",
+            "bio": "Leadership in GMP & Compliance: Extensive experience ensuring *Good Manufacturing Practice (GMP), ISO standards, and regulatory compliance in multinational manufacturing environments."
          }
       ]
    },
