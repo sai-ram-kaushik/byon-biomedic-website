@@ -12,7 +12,7 @@ export default {
          },
 
          fontFamily: {
-            bodyContent: "Palatino",
+            bodyContent: ["Inter", "sans-serif"],
          },
       },
    },
