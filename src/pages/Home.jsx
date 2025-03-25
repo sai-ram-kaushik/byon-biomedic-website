@@ -19,8 +19,8 @@ const Home = ({ home }) => {
                backgroundPosition: "center",
             }}
          >
-            {/* Overlay to improve contrast */}
-            <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+            {/* Darker overlay to improve text visibility */}
+            <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
             {/* Transition Effect */}
             <TransitionEffect />
