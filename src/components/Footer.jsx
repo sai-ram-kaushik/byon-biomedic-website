@@ -28,19 +28,19 @@ const Footer = () => {
                   <p className="font-bold">Contact Us</p>
                   <div className="flex flex-col items-start gap-2">
                      <div className="flex items-center gap-2">
-                        <IoMdMail size={15} className="text-primary" />
+                        <IoMdMail size={15} className="text-white" />
                         <a href="mailto:byonbiomedic@gmail.com">
                            <p className="hover:text-gray-300">info@byonbiomedic.com</p>
                         </a>
                      </div>
 
                      <div className="flex items-start gap-2">
-                        <FaPhoneAlt size={15} className="text-primary" />
+                        <FaPhoneAlt size={15} className="text-white" />
                         <p>+603 62422746</p>
                      </div>
 
                      <div className="flex items-start gap-2">
-                        <FaLocationDot size={20} className="text-primary" />
+                        <FaLocationDot size={20} className="text-white" />
                         <p>
                            Suite 10-03, Mutiara Office Suites, 568, Jalan Sultan
                            Azlan Shah, Kuala Lumpur, Malaysia
