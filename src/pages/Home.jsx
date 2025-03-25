@@ -20,7 +20,7 @@ const Home = ({ home }) => {
             }}
          >
             {/* Darker overlay to improve text visibility */}
-            <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+            <div className="absolute inset-0 bg-black bg-opacity-70"></div>
 
             {/* Transition Effect */}
             <TransitionEffect />
