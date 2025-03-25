@@ -10,7 +10,7 @@ const Home = ({ home }) => {
 
    return (
       <>
-         <div className="w-full px-5 md:px-10 pt-16 lg:pt-20 min-h-[80vh] flex flex-col justify-center items-center">
+         <div className="w-full px-5 md:px-10 pt-16 lg:pt-20 min-h-[80vh] flex flex-col justify-center items-center bg-gradient-to-b from-gray-100 to-gray-300">
             {/* Transition Effect */}
             <TransitionEffect />
 
