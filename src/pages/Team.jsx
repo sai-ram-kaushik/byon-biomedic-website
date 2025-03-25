@@ -26,30 +26,30 @@ const Team = ({ about }) => {
          </motion.div>
 
          {/* 2 Members (Above) */}
-         <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-4" variants={fadeIn}>
+         <motion.div className="grid grid-cols-2 gap-2 md:gap-3 justify-center" variants={fadeIn}>
             {teamMembers.slice(0, 2).map((member, idx) => (
                <motion.div 
                   key={idx} 
-                  className="text-center max-w-[280px] bg-white/80 p-4 rounded-xl shadow-md hover:shadow-lg cursor-pointer transform transition-transform duration-300 hover:-translate-y-1 border border-gray-200/50 backdrop-blur-lg flex flex-col items-center mx-auto"
+                  className="text-center max-w-[240px] bg-white/80 p-3 rounded-lg shadow-md hover:shadow-lg cursor-pointer transform transition-transform duration-300 hover:-translate-y-1 border border-gray-200/50 backdrop-blur-lg flex flex-col items-center"
                   onClick={() => setSelectedMember(member)}
                   whileHover={{ scale: 1.05 }}>
-                  <img className="mb-3 w-20 h-20 rounded-full border-4 border-gray-300" src={member.imageUrl} alt={member.name} />
-                  <h3 className="text-md font-semibold text-gray-900">{member.name}</h3>
+                  <img className="mb-2 w-16 h-16 rounded-full border-2 border-gray-300" src={member.imageUrl} alt={member.name} />
+                  <h3 className="text-sm font-semibold text-gray-900">{member.name}</h3>
                   <p className="text-xs text-gray-600">{member.designation}</p>
                </motion.div>
             ))}
          </motion.div>
 
          {/* 3 Members (Below) */}
-         <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4" variants={fadeIn}>
+         <motion.div className="grid grid-cols-3 gap-2 md:gap-3 mt-3 justify-center" variants={fadeIn}>
             {teamMembers.slice(2, 5).map((member, idx) => (
                <motion.div 
                   key={idx} 
-                  className="text-center max-w-[280px] bg-white/80 p-4 rounded-xl shadow-md hover:shadow-lg cursor-pointer transform transition-transform duration-300 hover:-translate-y-1 border border-gray-200/50 backdrop-blur-lg flex flex-col items-center mx-auto"
+                  className="text-center max-w-[200px] bg-white/80 p-3 rounded-lg shadow-md hover:shadow-lg cursor-pointer transform transition-transform duration-300 hover:-translate-y-1 border border-gray-200/50 backdrop-blur-lg flex flex-col items-center"
                   onClick={() => setSelectedMember(member)}
                   whileHover={{ scale: 1.05 }}>
-                  <img className="mb-3 w-20 h-20 rounded-full border-4 border-gray-300" src={member.imageUrl} alt={member.name} />
-                  <h3 className="text-md font-semibold text-gray-900">{member.name}</h3>
+                  <img className="mb-2 w-16 h-16 rounded-full border-2 border-gray-300" src={member.imageUrl} alt={member.name} />
+                  <h3 className="text-sm font-semibold text-gray-900">{member.name}</h3>
                   <p className="text-xs text-gray-600">{member.designation}</p>
                </motion.div>
             ))}
@@ -62,15 +62,15 @@ const Team = ({ about }) => {
             </h3>
          </motion.div>
 
-         <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" variants={fadeIn}>
+         <motion.div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-3 justify-center" variants={fadeIn}>
             {advisoryMembers.map((member, idx) => (
                <motion.div 
                   key={idx} 
-                  className="text-center max-w-[280px] bg-white/80 p-4 rounded-xl shadow-md hover:shadow-lg cursor-pointer transform transition-transform duration-300 hover:-translate-y-1 border border-gray-200/50 backdrop-blur-lg flex flex-col items-center mx-auto"
+                  className="text-center max-w-[200px] bg-white/80 p-3 rounded-lg shadow-md hover:shadow-lg cursor-pointer transform transition-transform duration-300 hover:-translate-y-1 border border-gray-200/50 backdrop-blur-lg flex flex-col items-center"
                   onClick={() => setSelectedMember(member)}
                   whileHover={{ scale: 1.05 }}>
-                  <img className="mb-3 w-20 h-20 rounded-full border-4 border-gray-300" src={member.imageUrl} alt={member.name} />
-                  <h3 className="text-md font-semibold text-gray-900">{member.name}</h3>
+                  <img className="mb-2 w-16 h-16 rounded-full border-2 border-gray-300" src={member.imageUrl} alt={member.name} />
+                  <h3 className="text-sm font-semibold text-gray-900">{member.name}</h3>
                   <p className="text-xs text-gray-600">{member.designation}</p>
                </motion.div>
             ))}
@@ -79,13 +79,13 @@ const Team = ({ about }) => {
          {/* Popup Modal */}
          {selectedMember && (
             <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-               <div className="bg-white p-5 rounded-xl max-w-sm relative shadow-xl">
+               <div className="bg-white p-4 rounded-lg max-w-xs relative shadow-xl">
                   <button className="absolute top-2 right-2 text-gray-500 hover:text-gray-800" onClick={() => setSelectedMember(null)}>✖</button>
-                  <img className="w-24 h-24 mx-auto rounded-full border-4 border-gray-300" src={selectedMember.imageUrl} alt={selectedMember.name} />
-                  <h2 className="text-md font-bold mt-2">{selectedMember.name}</h2>
+                  <img className="w-20 h-20 mx-auto rounded-full border-2 border-gray-300" src={selectedMember.imageUrl} alt={selectedMember.name} />
+                  <h2 className="text-sm font-bold mt-2">{selectedMember.name}</h2>
                   <p className="text-gray-700 text-xs">{selectedMember.designation}</p>
                   <p className="mt-2 text-xs">{selectedMember.bio}</p>
-                  <button className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 text-xs" onClick={() => setSelectedMember(null)}>Close</button>
+                  <button className="mt-3 px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-700 text-xs" onClick={() => setSelectedMember(null)}>Close</button>
                </div>
             </div>
          )}
