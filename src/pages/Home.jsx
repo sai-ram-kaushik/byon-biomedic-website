@@ -20,7 +20,7 @@ const Home = ({ home }) => {
             }}
          >
             {/* Overlay to improve contrast */}
-            <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+            <div className="absolute inset-0 bg-black bg-opacity-30"></div>
 
             {/* Transition Effect */}
             <TransitionEffect />
@@ -34,7 +34,12 @@ const Home = ({ home }) => {
                <div className="flex flex-col items-start gap-4 max-w-[800px] text-center lg:text-left">
                   <h2 className="text-4xl lg:text-5xl font-bold font-heading max-w-[1100px] leading-tight text-white">
                      Harnessing the Inherent Potential of{" "}
-                     <span className="text-secondary font-extrabold underline decoration-[3px] decoration-secondary">
+                     <span
+                        className="text-[#FFD700] font-extrabold"
+                        style={{
+                           textShadow: "1px 1px 6px rgba(0, 0, 0, 0.6)",
+                        }}
+                     >
                         Natural Botanical
                      </span>{" "}
                      Resources to Advance Groundbreaking Phytomedical Innovations
