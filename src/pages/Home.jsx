@@ -10,9 +10,9 @@ const Home = ({ home }) => {
 
    return (
       <>
-         <div className="relative w-full px-5 md:px-10 pt-16 lg:pt-20 min-h-[80vh] flex flex-col justify-center items-center bg-[url('/hero-bg.webp')] bg-cover bg-center bg-gray-800">
-            {/* Darker Overlay with Blur Effect */}
-            <div className="absolute inset-0 bg-black bg-opacity-75 backdrop-blur-md"></div>
+         <div className="relative w-full px-5 md:px-10 pt-16 lg:pt-20 min-h-[80vh] flex flex-col justify-center items-center bg-[url('/hero-bg.webp')] bg-cover bg-center">
+            {/* Overlay (Darker but NO Blur) */}
+            <div className="absolute inset-0 bg-black bg-opacity-60"></div>
 
             {/* Transition Effect */}
             <TransitionEffect />
@@ -24,15 +24,13 @@ const Home = ({ home }) => {
                transition={{ delay: 0.4, duration: 0.6, ease: "easeOut" }}
             >
                <div className="flex flex-col items-start gap-4 max-w-[800px] text-center lg:text-left text-white">
-                  <h2 className="text-4xl lg:text-5xl font-bold font-heading max-w-[1100px] leading-tight shadow-lg">
+                  <h2 className="text-4xl lg:text-5xl font-bold font-heading max-w-[1100px] leading-tight">
                      Harnessing the Inherent Potential of{" "}
-                     <span className="text-yellow-400 font-light shadow-[0_0_10px_rgba(255,255,0,0.8)]">
-                        Natural Botanical
-                     </span>{" "}
+                     <span className="text-secondary font-semibold">Natural Botanical</span>{" "}
                      Resources to Advance Groundbreaking Phytomedical Innovations
                   </h2>
 
-                  <p className="text-lg text-gray-100 shadow-lg">{subHeading}</p>
+                  <p className="text-lg text-gray-200">{subHeading}</p>
 
                   <Link to={`/medicines`}>
                      <Button title="See Medicines" />
@@ -48,7 +46,7 @@ const Home = ({ home }) => {
                      src="/microscope.png"
                      width={450}
                      height={450}
-                     className="max-w-full h-auto drop-shadow-2xl"
+                     className="max-w-full h-auto"
                   />
                </motion.div>
             </motion.div>
