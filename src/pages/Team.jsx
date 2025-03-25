@@ -26,11 +26,11 @@ const Team = ({ about }) => {
          </motion.div>
 
          {/* 2 Members (Above) */}
-         <motion.div className="grid grid-cols-2 gap-2 md:gap-3 justify-center" variants={fadeIn}>
+         <motion.div className="flex flex-wrap justify-center gap-3" variants={fadeIn}>
             {teamMembers.slice(0, 2).map((member, idx) => (
                <motion.div 
                   key={idx} 
-                  className="text-center max-w-[240px] bg-white/80 p-3 rounded-lg shadow-md hover:shadow-lg cursor-pointer transform transition-transform duration-300 hover:-translate-y-1 border border-gray-200/50 backdrop-blur-lg flex flex-col items-center"
+                  className="text-center w-[200px] bg-white/80 p-3 rounded-lg shadow-md hover:shadow-lg cursor-pointer transform transition-transform duration-300 hover:-translate-y-1 border border-gray-200/50 backdrop-blur-lg flex flex-col items-center"
                   onClick={() => setSelectedMember(member)}
                   whileHover={{ scale: 1.05 }}>
                   <img className="mb-2 w-16 h-16 rounded-full border-2 border-gray-300" src={member.imageUrl} alt={member.name} />
@@ -41,11 +41,11 @@ const Team = ({ about }) => {
          </motion.div>
 
          {/* 3 Members (Below) */}
-         <motion.div className="grid grid-cols-3 gap-2 md:gap-3 mt-3 justify-center" variants={fadeIn}>
+         <motion.div className="flex flex-wrap justify-center gap-3 mt-3" variants={fadeIn}>
             {teamMembers.slice(2, 5).map((member, idx) => (
                <motion.div 
                   key={idx} 
-                  className="text-center max-w-[200px] bg-white/80 p-3 rounded-lg shadow-md hover:shadow-lg cursor-pointer transform transition-transform duration-300 hover:-translate-y-1 border border-gray-200/50 backdrop-blur-lg flex flex-col items-center"
+                  className="text-center w-[180px] bg-white/80 p-3 rounded-lg shadow-md hover:shadow-lg cursor-pointer transform transition-transform duration-300 hover:-translate-y-1 border border-gray-200/50 backdrop-blur-lg flex flex-col items-center"
                   onClick={() => setSelectedMember(member)}
                   whileHover={{ scale: 1.05 }}>
                   <img className="mb-2 w-16 h-16 rounded-full border-2 border-gray-300" src={member.imageUrl} alt={member.name} />
@@ -62,11 +62,11 @@ const Team = ({ about }) => {
             </h3>
          </motion.div>
 
-         <motion.div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-3 justify-center" variants={fadeIn}>
+         <motion.div className="flex flex-wrap justify-center gap-3" variants={fadeIn}>
             {advisoryMembers.map((member, idx) => (
                <motion.div 
                   key={idx} 
-                  className="text-center max-w-[200px] bg-white/80 p-3 rounded-lg shadow-md hover:shadow-lg cursor-pointer transform transition-transform duration-300 hover:-translate-y-1 border border-gray-200/50 backdrop-blur-lg flex flex-col items-center"
+                  className="text-center w-[180px] bg-white/80 p-3 rounded-lg shadow-md hover:shadow-lg cursor-pointer transform transition-transform duration-300 hover:-translate-y-1 border border-gray-200/50 backdrop-blur-lg flex flex-col items-center"
                   onClick={() => setSelectedMember(member)}
                   whileHover={{ scale: 1.05 }}>
                   <img className="mb-2 w-16 h-16 rounded-full border-2 border-gray-300" src={member.imageUrl} alt={member.name} />
