@@ -11,8 +11,8 @@ const Home = ({ home }) => {
    return (
       <>
          <div className="relative w-full px-5 md:px-10 pt-16 lg:pt-20 min-h-[80vh] flex flex-col justify-center items-center bg-[url('/hero-bg.webp')] bg-cover bg-center">
-            {/* Overlay (Darker but NO Blur) */}
-            <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+            {/* Overlay (Balanced Darkness) */}
+            <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
             {/* Transition Effect */}
             <TransitionEffect />
@@ -26,7 +26,9 @@ const Home = ({ home }) => {
                <div className="flex flex-col items-start gap-4 max-w-[800px] text-center lg:text-left text-white">
                   <h2 className="text-4xl lg:text-5xl font-bold font-heading max-w-[1100px] leading-tight">
                      Harnessing the Inherent Potential of{" "}
-                     <span className="text-secondary font-semibold">Natural Botanical</span>{" "}
+                     <span className="text-secondary bg-white bg-opacity-20 px-2 py-1 rounded-md">
+                        Natural Botanical
+                     </span>{" "}
                      Resources to Advance Groundbreaking Phytomedical Innovations
                   </h2>
 
