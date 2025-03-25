@@ -10,7 +10,7 @@ const Home = ({ home }) => {
 
    return (
       <>
-         <div className="relative w-full px-5 md:px-10 pt-16 lg:pt-20 min-h-[80vh] flex flex-col justify-center items-center bg-[url('/hero-bg.jpg')] bg-cover bg-center bg-gray-800">
+         <div className="relative w-full px-5 md:px-10 pt-16 lg:pt-20 min-h-[80vh] flex flex-col justify-center items-center bg-[url('/hero-bg.webp')] bg-cover bg-center bg-gray-800">
             {/* Darker Overlay for Better Readability */}
             <div className="absolute inset-0 bg-black bg-opacity-60"></div>
 
