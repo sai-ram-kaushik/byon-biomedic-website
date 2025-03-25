@@ -10,29 +10,37 @@ const Home = ({ home }) => {
 
    return (
       <>
-         <div className="relative w-full px-5 md:px-10 pt-16 lg:pt-20 min-h-[80vh] flex flex-col justify-center items-center bg-[url('/hero-bg.webp')] bg-cover bg-center">
-            {/* Overlay (Balanced Darkness) */}
-            <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+         <div
+            className="w-full px-5 md:px-10 pt-16 lg:pt-20 min-h-[80vh] flex flex-col justify-center items-center bg-cover bg-center relative"
+            style={{
+               backgroundImage: "url('/hero-bg.webp')",
+               backgroundAttachment: "fixed",
+               backgroundSize: "cover",
+               backgroundPosition: "center",
+            }}
+         >
+            {/* Overlay to improve contrast */}
+            <div className="absolute inset-0 bg-black bg-opacity-40"></div>
 
             {/* Transition Effect */}
             <TransitionEffect />
 
             <motion.div
-               className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-10 w-full max-w-6xl mx-auto flex-grow"
+               className="relative flex flex-col lg:flex-row items-center justify-between gap-10 w-full max-w-6xl mx-auto flex-grow"
                initial={{ opacity: 0, y: 30 }}
                animate={{ opacity: 1, y: 0 }}
                transition={{ delay: 0.4, duration: 0.6, ease: "easeOut" }}
             >
-               <div className="flex flex-col items-start gap-4 max-w-[800px] text-center lg:text-left text-white">
-                  <h2 className="text-4xl lg:text-5xl font-bold font-heading max-w-[1100px] leading-tight">
+               <div className="flex flex-col items-start gap-4 max-w-[800px] text-center lg:text-left">
+                  <h2 className="text-4xl lg:text-5xl font-bold font-heading max-w-[1100px] leading-tight text-white">
                      Harnessing the Inherent Potential of{" "}
-                     <span className="text-secondary bg-white bg-opacity-20 px-2 py-1 rounded-md">
+                     <span className="text-secondary font-extrabold underline decoration-[3px] decoration-secondary">
                         Natural Botanical
                      </span>{" "}
                      Resources to Advance Groundbreaking Phytomedical Innovations
                   </h2>
 
-                  <p className="text-lg text-gray-200">{subHeading}</p>
+                  <p className="text-gray-200">{subHeading}</p>
 
                   <Link to={`/medicines`}>
                      <Button title="See Medicines" />
@@ -48,7 +56,8 @@ const Home = ({ home }) => {
                      src="/microscope.png"
                      width={450}
                      height={450}
-                     className="max-w-full h-auto"
+                     className="max-w-full h-auto drop-shadow-xl"
+                     alt="Microscope"
                   />
                </motion.div>
             </motion.div>
