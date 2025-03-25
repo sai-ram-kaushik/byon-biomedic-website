@@ -1,9 +1,11 @@
 import React from "react";
 import TransitionEffect from "../utils/TransitionEffect";
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const About = ({ about }) => {
    const { imageUrl, vision, mission } = about;
+   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
 
    return (
       <motion.section 
@@ -16,8 +18,9 @@ const About = ({ about }) => {
 
          {/* About Us Section */}
          <motion.div 
+            ref={ref} 
             initial={{ opacity: 0, x: -50 }} 
-            animate={{ opacity: 1, x: 0 }} 
+            animate={inView ? { opacity: 1, x: 0 } : {}} 
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-center max-w-4xl mx-auto mb-12"
          >
@@ -29,8 +32,9 @@ const About = ({ about }) => {
 
          {/* Core Values Section */}
          <motion.div 
+            ref={ref} 
             initial={{ opacity: 0, x: 50 }} 
-            animate={{ opacity: 1, x: 0 }} 
+            animate={inView ? { opacity: 1, x: 0 } : {}} 
             transition={{ duration: 0.8, delay: 0.4 }}
             className="max-w-5xl mx-auto mb-12"
          >
@@ -50,12 +54,13 @@ const About = ({ about }) => {
                src={imageUrl} 
                className="rounded-xl max-w-sm shadow-xl"
                initial={{ opacity: 0, scale: 0.8 }}
-               animate={{ opacity: 1, scale: 1 }}
+               animate={inView ? { opacity: 1, scale: 1 } : {}}
                transition={{ duration: 0.8, delay: 0.6 }}
             />
             <motion.div 
+               ref={ref} 
                initial={{ opacity: 0, y: 50 }} 
-               animate={{ opacity: 1, y: 0 }} 
+               animate={inView ? { opacity: 1, y: 0 } : {}} 
                transition={{ duration: 0.8, delay: 0.8 }}
                className="flex flex-col items-start gap-6 max-w-lg"
             >
