@@ -10,24 +10,27 @@ const Home = ({ home }) => {
 
    return (
       <>
-         <div className="w-full px-5 md:px-10 pt-16 lg:pt-20 min-h-[80vh] flex flex-col justify-center items-center bg-gradient-to-b from-gray-100 to-gray-300">
+         <div className="relative w-full px-5 md:px-10 pt-16 lg:pt-20 min-h-[80vh] flex flex-col justify-center items-center bg-[url('/hero-bg.webp')] bg-cover bg-center">
+            {/* Dark Overlay for Better Readability */}
+            <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+
             {/* Transition Effect */}
             <TransitionEffect />
 
-            <motion.div 
-               className="flex flex-col lg:flex-row items-center justify-between gap-10 w-full max-w-6xl mx-auto flex-grow"
+            <motion.div
+               className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-10 w-full max-w-6xl mx-auto flex-grow"
                initial={{ opacity: 0, y: 30 }}
                animate={{ opacity: 1, y: 0 }}
                transition={{ delay: 0.4, duration: 0.6, ease: "easeOut" }}
             >
-               <div className="flex flex-col items-start gap-4 max-w-[800px] text-center lg:text-left">
-                  <h2 className="text-3xl lg:text-4xl font-bold font-heading max-w-[1100px] leading-tight">
+               <div className="flex flex-col items-start gap-4 max-w-[800px] text-center lg:text-left text-white">
+                  <h2 className="text-4xl lg:text-5xl font-bold font-heading max-w-[1100px] leading-tight">
                      Harnessing the Inherent Potential of{" "}
                      <span className="text-secondary">Natural Botanical</span>{" "}
                      Resources to Advance Groundbreaking Phytomedical Innovations
                   </h2>
 
-                  <p>{subHeading}</p>
+                  <p className="text-lg">{subHeading}</p>
 
                   <Link to={`/medicines`}>
                      <Button title="See Medicines" />
@@ -39,7 +42,12 @@ const Home = ({ home }) => {
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ delay: 0.6, duration: 0.7 }}
                >
-                  <img src="/microscope.png" width={450} height={450} className="max-w-full h-auto" />
+                  <img
+                     src="/microscope.png"
+                     width={450}
+                     height={450}
+                     className="max-w-full h-auto drop-shadow-lg"
+                  />
                </motion.div>
             </motion.div>
          </div>
