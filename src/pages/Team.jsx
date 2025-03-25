@@ -25,14 +25,30 @@ const Team = ({ about }) => {
             </h3>
          </motion.div>
 
-         <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" variants={fadeIn}>
-            {teamMembers.map((member, idx) => (
+         {/* 2 Members (Above) */}
+         <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6" variants={fadeIn}>
+            {teamMembers.slice(0, 2).map((member, idx) => (
                <motion.div 
                   key={idx} 
-                  className="text-center max-w-[280px] bg-white/80 p-6 rounded-xl shadow-lg hover:shadow-2xl cursor-pointer transform transition-transform duration-300 hover:-translate-y-1 border border-gray-300/50 backdrop-blur-lg flex flex-col items-center mx-auto"
+                  className="text-center max-w-[320px] bg-white/80 p-6 rounded-xl shadow-md hover:shadow-xl cursor-pointer transform transition-transform duration-300 hover:-translate-y-1 border border-gray-200/50 backdrop-blur-lg flex flex-col items-center mx-auto"
                   onClick={() => setSelectedMember(member)}
                   whileHover={{ scale: 1.05 }}>
-                  <img className="mb-4 w-20 h-20 rounded-full border-4 border-gray-300" src={member.imageUrl} alt={member.name} />
+                  <img className="mb-4 w-24 h-24 rounded-full border-4 border-gray-300" src={member.imageUrl} alt={member.name} />
+                  <h3 className="text-lg font-semibold text-gray-900">{member.name}</h3>
+                  <p className="text-sm text-gray-600">{member.designation}</p>
+               </motion.div>
+            ))}
+         </motion.div>
+
+         {/* 3 Members (Below) */}
+         <motion.div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 mt-6" variants={fadeIn}>
+            {teamMembers.slice(2, 5).map((member, idx) => (
+               <motion.div 
+                  key={idx} 
+                  className="text-center max-w-[320px] bg-white/80 p-6 rounded-xl shadow-md hover:shadow-xl cursor-pointer transform transition-transform duration-300 hover:-translate-y-1 border border-gray-200/50 backdrop-blur-lg flex flex-col items-center mx-auto"
+                  onClick={() => setSelectedMember(member)}
+                  whileHover={{ scale: 1.05 }}>
+                  <img className="mb-4 w-24 h-24 rounded-full border-4 border-gray-300" src={member.imageUrl} alt={member.name} />
                   <h3 className="text-lg font-semibold text-gray-900">{member.name}</h3>
                   <p className="text-sm text-gray-600">{member.designation}</p>
                </motion.div>
@@ -50,10 +66,10 @@ const Team = ({ about }) => {
             {advisoryMembers.map((member, idx) => (
                <motion.div 
                   key={idx} 
-                  className="text-center max-w-[280px] bg-white/80 p-6 rounded-xl shadow-lg hover:shadow-2xl cursor-pointer transform transition-transform duration-300 hover:-translate-y-1 border border-gray-300/50 backdrop-blur-lg flex flex-col items-center mx-auto"
+                  className="text-center max-w-[320px] bg-white/80 p-6 rounded-xl shadow-md hover:shadow-xl cursor-pointer transform transition-transform duration-300 hover:-translate-y-1 border border-gray-200/50 backdrop-blur-lg flex flex-col items-center mx-auto"
                   onClick={() => setSelectedMember(member)}
                   whileHover={{ scale: 1.05 }}>
-                  <img className="mb-4 w-20 h-20 rounded-full border-4 border-gray-300" src={member.imageUrl} alt={member.name} />
+                  <img className="mb-4 w-24 h-24 rounded-full border-4 border-gray-300" src={member.imageUrl} alt={member.name} />
                   <h3 className="text-lg font-semibold text-gray-900">{member.name}</h3>
                   <p className="text-sm text-gray-600">{member.designation}</p>
                </motion.div>
@@ -63,7 +79,7 @@ const Team = ({ about }) => {
          {/* Popup Modal */}
          {selectedMember && (
             <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-               <div className="bg-white p-6 rounded-xl max-w-md relative shadow-2xl">
+               <div className="bg-white p-6 rounded-xl max-w-md relative shadow-xl">
                   <button className="absolute top-2 right-2 text-gray-500 hover:text-gray-800" onClick={() => setSelectedMember(null)}>✖</button>
                   <img className="w-28 h-28 mx-auto rounded-full border-4 border-gray-300" src={selectedMember.imageUrl} alt={selectedMember.name} />
                   <h2 className="text-lg font-bold mt-2">{selectedMember.name}</h2>
