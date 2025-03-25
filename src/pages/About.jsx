@@ -6,11 +6,11 @@ const About = ({ about }) => {
    const { imageUrl, vision, mission } = about;
 
    return (
-      <motion.div 
+      <motion.section 
          initial={{ opacity: 0, y: 50 }} 
          animate={{ opacity: 1, y: 0 }} 
          transition={{ duration: 0.8 }}
-         className="w-full py-10 px-5 lg:px-10"
+         className="w-full py-16 px-6 lg:px-20 bg-gray-50"
       >
          <TransitionEffect />
 
@@ -19,10 +19,10 @@ const About = ({ about }) => {
             initial={{ opacity: 0, x: -50 }} 
             animate={{ opacity: 1, x: 0 }} 
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="mb-6"
+            className="text-center max-w-4xl mx-auto mb-12"
          >
-            <h3 className="text-3xl font-bold text-secondary">About Us</h3>
-            <p className="text-xl mt-2">
+            <h3 className="text-4xl font-extrabold text-secondary mb-4">About Us</h3>
+            <p className="text-lg leading-relaxed text-gray-700">
                At Byon Biomedic Malaysia Sdn. Bhd., we are committed to revolutionizing healthcare through the power of nature. By merging traditional botanical wisdom with modern scientific rigor, we develop innovative phytomedicines that are both safe and effective. Our approach is rooted in ethical sourcing, sustainability, and a steadfast dedication to improving global health. We believe that natural therapies can pave the way for transformative healing—benefiting communities, preserving our planet, and inspiring wellness for generations to come.
             </p>
          </motion.div>
@@ -32,10 +32,10 @@ const About = ({ about }) => {
             initial={{ opacity: 0, x: 50 }} 
             animate={{ opacity: 1, x: 0 }} 
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="mb-6"
+            className="max-w-5xl mx-auto mb-12"
          >
-            <h3 className="text-3xl font-bold text-secondary">Core Values</h3>
-            <ul className="list-disc list-inside text-xl mt-2">
+            <h3 className="text-4xl font-extrabold text-secondary mb-6 text-center">Core Values</h3>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-6 text-lg text-gray-700">
                <li><strong>Innovation:</strong> Constantly pushing the boundaries of phytomedicine through research and development.</li>
                <li><strong>Integrity:</strong> Upholding the highest standards of transparency, ethics, and scientific validation.</li>
                <li><strong>Sustainability:</strong> Committing to ethical wildcrafting and sustainable agricultural practices to protect our environment.</li>
@@ -45,10 +45,10 @@ const About = ({ about }) => {
          </motion.div>
 
          {/* Vision and Mission Section */}
-         <div className="flex flex-col lg:flex-row items-start justify-center w-full gap-5 mt-5">
+         <div className="flex flex-col lg:flex-row items-center justify-center w-full gap-10">
             <motion.img 
                src={imageUrl} 
-               className="rounded-xl max-w-lg shadow-lg"
+               className="rounded-xl max-w-sm shadow-xl"
                initial={{ opacity: 0, scale: 0.8 }}
                animate={{ opacity: 1, scale: 1 }}
                transition={{ duration: 0.8, delay: 0.6 }}
@@ -57,15 +57,19 @@ const About = ({ about }) => {
                initial={{ opacity: 0, y: 50 }} 
                animate={{ opacity: 1, y: 0 }} 
                transition={{ duration: 0.8, delay: 0.8 }}
-               className="flex flex-col items-start gap-2 max-w-[446px]"
+               className="flex flex-col items-start gap-6 max-w-lg"
             >
-               <h3 className="text-3xl font-bold text-secondary">Vision</h3>
-               <p className="text-xl">{vision}</p>
-               <h3 className="text-3xl font-bold text-secondary">Mission</h3>
-               <p className="text-xl">{mission}</p>
+               <div>
+                  <h3 className="text-3xl font-bold text-secondary mb-2">Vision</h3>
+                  <p className="text-lg text-gray-700 leading-relaxed">{vision}</p>
+               </div>
+               <div>
+                  <h3 className="text-3xl font-bold text-secondary mb-2">Mission</h3>
+                  <p className="text-lg text-gray-700 leading-relaxed">{mission}</p>
+               </div>
             </motion.div>
          </div>
-      </motion.div>
+      </motion.section>
    );
 };
 
