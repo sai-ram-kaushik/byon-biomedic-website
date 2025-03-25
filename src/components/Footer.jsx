@@ -11,7 +11,7 @@ const Footer = () => {
             <div className="grid grid-cols-1 lg:grid-cols-4 items-center gap-5 lg:gap-16">
                <div className="flex flex-col items-start gap-3">
                   <Link to="/">
-                     <img src="/ByonfullLogo.png" className="w-40 md:w-52 lg:w-60 h-auto" />
+                     <img src="/Byonlogowhite.png" className="w-40 md:w-52 lg:w-60 h-auto" />
                   </Link>
                </div>
 
