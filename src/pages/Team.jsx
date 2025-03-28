@@ -21,13 +21,13 @@ const Team = ({ about }) => {
          {/* Our Team Section */}
          <motion.div className="flex items-center justify-center w-full py-4" variants={fadeIn}>
             <h3 className="text-2xl lg:text-3xl font-heading font-bold">
-               Core <span className="text-primary">Team</span>
+               <span className="text-primary">Corporate </span> Management Team
             </h3>
          </motion.div>
 
          {/* Core Team Members */}
          <motion.div className="flex flex-wrap justify-center gap-4" variants={fadeIn}>
-            {teamMembers.slice(0, 5).map((member, idx) => (
+            {teamMembers.slice(0, 7).map((member, idx) => (
                <motion.div 
                   key={idx} 
                   className="text-center w-[220px] h-[300px] bg-white/80 p-4 rounded-lg shadow-md hover:shadow-lg cursor-pointer transform transition-transform duration-300 hover:-translate-y-1 border border-gray-200/50 backdrop-blur-lg flex flex-col items-center justify-center"
@@ -43,7 +43,7 @@ const Team = ({ about }) => {
          {/* Technical Advisory Group Section */}
          <motion.div id="technical-advisory-group" className="flex items-center justify-center w-full py-4 mt-6" variants={fadeIn}>
             <h3 className="text-2xl lg:text-3xl font-heading font-bold">
-               Technical Advisory <span className="text-primary">Group</span>
+               Technical and Advisory <span className="text-primary">Committee</span>
             </h3>
          </motion.div>
 
