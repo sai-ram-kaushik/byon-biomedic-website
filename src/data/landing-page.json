@@ -18,75 +18,74 @@
    "about": {
       "title": "About",
       "imageUrl": "/about.png",
-      "subHeading": "OUR VISION & MISSION",
-      "vision": "To pioneer a transformative future in healthcare where plant-based medicines lead therapeutic Innovation , fostering global wellness and environmental sustainability for generations.",
+      "subHeading": "Our Vision & Mission",
+      "vision": "To pioneer a transformative future in healthcare where plant-based medicines lead therapeutic innovation, fostering global wellness and environmental sustainability for generations.",
       "mission": "We are dedicated to advancing phytomedicines through the fusion of traditional botanical wisdom and modern scientific rigor. Committed to ethical sourcing and sustainable practices, we deliver safe, effective, and accessible natural therapies that enhance health outcomes while preserving our planet.",
+      
       "teamMembersPartOne": [
          {
             "name": "Datuk Dr. Mukundan Pillay",
             "imageUrl": "/team/datuk.jpg",
-            "designation": "Chairman",
-            "bio": "Datuk Dr. Mukundan Pillay is a distinguished leader renowned for his transformative contributions to healthcare systems in Malaysia and globally. Over a 32-year career with the Malaysian Ministry of Health, he spearheaded critical initiatives in health infrastructure, policy, and research. Post-retirement, he extended his expertise to international organizations, including the World Bank in Bahrain and the World Health Organization (WHO) in China, while remaining actively engaged in advancing Malaysia’s healthcare landscape."
+            "designation": "Chairman"
          },
          {
             "name": "M. Paramesswaran",
             "imageUrl": "/team/param.jpg",
             "designation": "Managing Director"
+         },
+         {
+            "name": "Dr. Furizat",
+            "imageUrl": "/team/furizat.jpg",
+            "designation": "Director of Product Innovation and Compliance"
          }
       ],
+      
       "teamMembersPartSecond": [
+         {
+            "name": "P. Vasanthan",
+            "imageUrl": "/team/vasan.jpg",
+            "designation": "Corporate Operations Director"
+         },
          {
             "name": "Dr. Srivalli",
             "imageUrl": "/team/srivalli.jpg",
-            "designation": "Director Research and Development",
-            "bio": "Dr Srivalli, MBBS Madras University, India. Ph.D Complementary & Alternative Medicine. Honorary Doctorate in Natural Medicine.Weston Reserve University, Canada."
+            "designation": "Director of Research and Studies"
          },
-
          {
-            "name": "P. Vassanthan",
-            "imageUrl": "/team/vasan.jpg",
-            "designation": "Director, Coporate Operations"
+            "name": "Dr. Krishnaveni Kunji Raman",
+            "imageUrl": "/team/krishnaveni.jpg",
+            "designation": "Director of Corporate Affairs & Communications"
          },
-
          {
-            "name": "Govindaraju",
-            "imageUrl": "/team/govidaraju.jpg",
-            "designation": "Senior Quality Systems Manager",
-            "bio": "Leadership in GMP & Compliance: Extensive experience ensuring *Good Manufacturing Practice (GMP), ISO standards, and regulatory compliance in multinational manufacturing environments."
+            "name": "Govind",
+            "imageUrl": "/team/govindaraju.jpg",
+            "designation": "Senior Quality Systems Manager"
          }
       ],
+
       "advisoryGroupPartOne": [
+         {
+            "name": "Dr. Parasuraman",
+            "imageUrl": "/team/parasuraman.jpg",
+            "designation": "Technical and Advisory Committee Member"
+         },
          {
             "name": "Datuk Dr. Mukundan Pillay",
             "imageUrl": "/team/datuk.jpg",
-            "designation": "Chairman",
-            "bio": "Datuk Dr. Mukundan Pillay is a distinguished leader renowned for his transformative contributions to healthcare systems in Malaysia and globally. Over a 32-year career with the Malaysian Ministry of Health, he spearheaded critical initiatives in health infrastructure, policy, and research. Post-retirement, he extended his expertise to international organizations, including the World Bank in Bahrain and the World Health Organization (WHO) in China, while remaining actively engaged in advancing Malaysia’s healthcare landscape."
-         },
-         {
-            "name": "M. Paramesswaran",
-            "imageUrl": "/team/param.jpg",
-            "designation": "Managing Director"
+            "designation": "Technical and Advisory Committee Member"
          }
       ],
+      
       "advisoryGroupPartSecond": [
          {
-            "name": "Dr. Srivalli",
-            "imageUrl": "/team/srivalli.jpg",
-            "designation": "Director Research and Development",
-            "bio": "Dr Srivalli, MBBS Madras University, India. Ph.D Complementary & Alternative Medicine. Honorary Doctorate in Natural Medicine.Weston Reserve University, Canada."
+            "name": "Prof. Gurjeet Kaur Chawla",
+            "imageUrl": "/team/gurjeet.jpg",
+            "designation": "Technical and Advisory Committee Member"
          },
-
          {
-            "name": "P. Vassanthan",
-            "imageUrl": "/team/vasan.jpg",
-            "designation": "Director, Coporate Operations"
-         },
-
-         {
-            "name": "Govindaraju",
-            "imageUrl": "/team/govidaraju.jpg",
-            "designation": "Senior Quality Systems Manager",
-            "bio": "Leadership in GMP & Compliance: Extensive experience ensuring *Good Manufacturing Practice (GMP), ISO standards, and regulatory compliance in multinational manufacturing environments."
+            "name": "Dr. Sunita",
+            "imageUrl": "/team/sunita.jpg",
+            "designation": "Technical and Advisory Committee Member"
          }
       ]
    },
@@ -95,22 +94,22 @@
       "services": [
          {
             "name": "Free Checkup",
-            "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ad recusandae, possimus aut quo veniam reprehenderit quia suscipit enim et. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+            "desc": "We offer free medical checkups to ensure early diagnosis and preventive care.",
             "imageUrl": "/service.png"
          },
          {
-            "name": "Free Checkup",
-            "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ad recusandae, possimus aut quo veniam reprehenderit quia suscipit enim et. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+            "name": "Expert Consultation",
+            "desc": "Consult with our experienced professionals for the best medical guidance.",
             "imageUrl": "/service.png"
          },
          {
-            "name": "Free Checkup",
-            "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ad recusandae, possimus aut quo veniam reprehenderit quia suscipit enim et. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+            "name": "Personalized Treatment",
+            "desc": "Get treatments tailored to your specific health needs and conditions.",
             "imageUrl": "/service.png"
          },
          {
-            "name": "Free Checkup",
-            "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ad recusandae, possimus aut quo veniam reprehenderit quia suscipit enim et. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+            "name": "Advanced Diagnostics",
+            "desc": "Utilizing cutting-edge technology for precise and accurate medical diagnostics.",
             "imageUrl": "/service.png"
          }
       ]
