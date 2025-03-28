@@ -39,19 +39,19 @@ const About = ({ about }) => {
          >
             <h3 className="text-4xl font-extrabold text-primary mb-8 text-center tracking-tight">Core Values</h3>
             <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-lg text-gray-700">
-               <motion.li whileHover={{ scale: 1.05 }} className="p-6 bg-white shadow-xl rounded-xl border-l-4 border-primary">
+               <motion.li whileHover={{ scale: 1.05 }} className="p-6 bg-white shadow-xl rounded-xl">
                   <strong className="text-gray-900">🚀 Innovation:</strong> Pioneering the future of phytomedicine through <span className="font-bold text-gray-900">cutting-edge research</span> and development.
                </motion.li>
-               <motion.li whileHover={{ scale: 1.05 }} className="p-6 bg-white shadow-xl rounded-xl border-l-4 border-primary">
+               <motion.li whileHover={{ scale: 1.05 }} className="p-6 bg-white shadow-xl rounded-xl">
                   <strong className="text-gray-900">🛡️ Integrity:</strong> Upholding the <span className="font-bold text-gray-900">highest standards</span> of transparency, ethics, and scientific validation.
                </motion.li>
-               <motion.li whileHover={{ scale: 1.05 }} className="p-6 bg-white shadow-xl rounded-xl border-l-4 border-primary">
+               <motion.li whileHover={{ scale: 1.05 }} className="p-6 bg-white shadow-xl rounded-xl">
                   <strong className="text-gray-900">🌱 Sustainability:</strong> Committed to <span className="font-bold text-gray-900">ethical wildcrafting</span> and sustainable agriculture for a greener future.
                </motion.li>
-               <motion.li whileHover={{ scale: 1.05 }} className="p-6 bg-white shadow-xl rounded-xl border-l-4 border-primary">
+               <motion.li whileHover={{ scale: 1.05 }} className="p-6 bg-white shadow-xl rounded-xl">
                   <strong className="text-gray-900">🤝 Collaboration:</strong> Partnering with <span className="font-bold text-gray-900">leading researchers</span> and industry experts to merge tradition with science.
                </motion.li>
-               <motion.li whileHover={{ scale: 1.05 }} className="p-6 bg-white shadow-xl rounded-xl border-l-4 border-primary">
+               <motion.li whileHover={{ scale: 1.05 }} className="p-6 bg-white shadow-xl rounded-xl">
                   <strong className="text-gray-900">🏆 Excellence:</strong> Striving for <span className="font-bold text-gray-900">superior quality</span> in every formulation, every breakthrough, and every outcome.
                </motion.li>
             </ul>
@@ -61,7 +61,7 @@ const About = ({ about }) => {
          <div className="flex flex-col lg:flex-row items-center justify-center w-full gap-16">
             <motion.img
                src={imageUrl}
-               className="rounded-xl max-w-xs md:max-w-sm lg:max-w-md shadow-2xl border-4 border-primary"
+               className="rounded-xl max-w-xs md:max-w-sm lg:max-w-md shadow-2xl"
                whileInView={{ opacity: 1, scale: 1 }}
                initial={{ opacity: 0, scale: 0.8 }}
                transition={{ duration: 0.8 }}
@@ -72,11 +72,11 @@ const About = ({ about }) => {
                transition={{ duration: 0.8 }}
                className="flex flex-col items-start gap-10 max-w-xl"
             >
-               <div className="p-6 bg-white shadow-xl rounded-xl border-l-4 border-primary">
+               <div className="p-6 bg-white shadow-xl rounded-xl">
                   <h3 className="text-3xl font-bold text-primary mb-2">🌍 Vision</h3>
                   <p className="text-lg text-gray-700 leading-relaxed">{vision}</p>
                </div>
-               <div className="p-6 bg-white shadow-xl rounded-xl border-l-4 border-primary">
+               <div className="p-6 bg-white shadow-xl rounded-xl">
                   <h3 className="text-3xl font-bold text-primary mb-2">🎯 Mission</h3>
                   <p className="text-lg text-gray-700 leading-relaxed">{mission}</p>
                </div>
