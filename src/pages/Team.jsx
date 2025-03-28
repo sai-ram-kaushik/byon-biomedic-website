@@ -6,7 +6,6 @@ const Team = ({ about }) => {
    const { teamMembersPartOne, teamMembersPartSecond, advisoryGroupPartOne, advisoryGroupPartSecond } = about;
    const [selectedMember, setSelectedMember] = useState(null);
 
-   const teamMembers = [...teamMembersPartOne, ...teamMembersPartSecond];
    const advisoryMembers = [...advisoryGroupPartOne, ...advisoryGroupPartSecond];
 
    const fadeIn = {
@@ -27,17 +26,35 @@ const Team = ({ about }) => {
 
          {/* Core Team Members */}
          <motion.div className="flex flex-wrap justify-center gap-4" variants={fadeIn}>
-            {teamMembers.slice(0, 7).map((member, idx) => (
-               <motion.div 
-                  key={idx} 
-                  className="text-center w-[220px] h-[300px] bg-white/80 p-4 rounded-lg shadow-md hover:shadow-lg cursor-pointer transform transition-transform duration-300 hover:-translate-y-1 border border-gray-200/50 backdrop-blur-lg flex flex-col items-center justify-center"
-                  onClick={() => setSelectedMember(member)}
-                  whileHover={{ scale: 1.05 }}>
-                  <img className="mb-3 w-24 h-24 rounded-full border-2 border-gray-300" src={member.imageUrl} alt={member.name} />
-                  <h3 className="text-lg font-semibold text-gray-900">{member.name}</h3>
-                  <p className="text-sm text-gray-600">{member.designation}</p>
-               </motion.div>
-            ))}
+            {/* First row */}
+            <div className="flex justify-center gap-4 w-full">
+               {teamMembersPartOne.map((member, idx) => (
+                  <motion.div 
+                     key={idx} 
+                     className="text-center w-[220px] h-[300px] bg-white/80 p-4 rounded-lg shadow-md hover:shadow-lg cursor-pointer transform transition-transform duration-300 hover:-translate-y-1 border border-gray-200/50 backdrop-blur-lg flex flex-col items-center justify-center"
+                     onClick={() => setSelectedMember(member)}
+                     whileHover={{ scale: 1.05 }}>
+                     <img className="mb-3 w-24 h-24 rounded-full border-2 border-gray-300" src={member.imageUrl} alt={member.name} />
+                     <h3 className="text-lg font-semibold text-gray-900">{member.name}</h3>
+                     <p className="text-sm text-gray-600">{member.designation}</p>
+                  </motion.div>
+               ))}
+            </div>
+
+            {/* Second row */}
+            <div className="flex justify-center gap-4 w-full mt-4">
+               {teamMembersPartSecond.map((member, idx) => (
+                  <motion.div 
+                     key={idx} 
+                     className="text-center w-[220px] h-[300px] bg-white/80 p-4 rounded-lg shadow-md hover:shadow-lg cursor-pointer transform transition-transform duration-300 hover:-translate-y-1 border border-gray-200/50 backdrop-blur-lg flex flex-col items-center justify-center"
+                     onClick={() => setSelectedMember(member)}
+                     whileHover={{ scale: 1.05 }}>
+                     <img className="mb-3 w-24 h-24 rounded-full border-2 border-gray-300" src={member.imageUrl} alt={member.name} />
+                     <h3 className="text-lg font-semibold text-gray-900">{member.name}</h3>
+                     <p className="text-sm text-gray-600">{member.designation}</p>
+                  </motion.div>
+               ))}
+            </div>
          </motion.div>
 
          {/* Technical Advisory Group Section */}
