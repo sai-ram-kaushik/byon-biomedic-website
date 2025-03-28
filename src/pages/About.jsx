@@ -24,9 +24,9 @@ const About = ({ about }) => {
             <h3 className="text-5xl font-extrabold text-primary mb-6 tracking-tight">About Us</h3>
             <p className="text-lg leading-relaxed text-gray-700 max-w-3xl mx-auto">
                At <span className="font-semibold text-primary">Byon Biomedic Malaysia Sdn. Bhd.</span>, we are committed to revolutionizing healthcare through the power of nature. 
-               By merging traditional botanical wisdom with modern scientific rigor, we develop **innovative phytomedicines** that are both safe and effective.
-               Our mission extends beyond medicine—we uphold ethical sourcing, sustainability, and a steadfast dedication to **improving global health**. 
-               Through natural therapies, we aspire to shape a future where **healing is holistic, accessible, and transformative**.
+               By merging traditional botanical wisdom with modern scientific rigor, we develop <span className="font-bold text-gray-900">innovative phytomedicines</span> that are both safe and effective.
+               Our mission extends beyond medicine—we uphold <span className="font-bold text-gray-900">ethical sourcing</span>, <span className="font-bold text-gray-900">sustainability</span>, and a steadfast dedication to <span className="font-bold text-gray-900">improving global health</span>. 
+               Through natural therapies, we aspire to shape a future where <span className="font-bold text-gray-900">healing is holistic, accessible, and transformative</span>.
             </p>
          </motion.div>
 
@@ -40,19 +40,19 @@ const About = ({ about }) => {
             <h3 className="text-4xl font-extrabold text-primary mb-8 text-center tracking-tight">Core Values</h3>
             <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-lg text-gray-700">
                <motion.li whileHover={{ scale: 1.05 }} className="p-6 bg-white shadow-xl rounded-xl border-l-4 border-primary">
-                  <strong>🚀 Innovation:</strong> Pioneering the future of phytomedicine through **cutting-edge research** and development.
+                  <strong className="text-gray-900">🚀 Innovation:</strong> Pioneering the future of phytomedicine through <span className="font-bold text-gray-900">cutting-edge research</span> and development.
                </motion.li>
                <motion.li whileHover={{ scale: 1.05 }} className="p-6 bg-white shadow-xl rounded-xl border-l-4 border-primary">
-                  <strong>🛡️ Integrity:</strong> Upholding the **highest standards** of transparency, ethics, and scientific validation.
+                  <strong className="text-gray-900">🛡️ Integrity:</strong> Upholding the <span className="font-bold text-gray-900">highest standards</span> of transparency, ethics, and scientific validation.
                </motion.li>
                <motion.li whileHover={{ scale: 1.05 }} className="p-6 bg-white shadow-xl rounded-xl border-l-4 border-primary">
-                  <strong>🌱 Sustainability:</strong> Committed to **ethical wildcrafting** and sustainable agriculture for a greener future.
+                  <strong className="text-gray-900">🌱 Sustainability:</strong> Committed to <span className="font-bold text-gray-900">ethical wildcrafting</span> and sustainable agriculture for a greener future.
                </motion.li>
                <motion.li whileHover={{ scale: 1.05 }} className="p-6 bg-white shadow-xl rounded-xl border-l-4 border-primary">
-                  <strong>🤝 Collaboration:</strong> Partnering with **leading researchers** and industry experts to merge tradition with science.
+                  <strong className="text-gray-900">🤝 Collaboration:</strong> Partnering with <span className="font-bold text-gray-900">leading researchers</span> and industry experts to merge tradition with science.
                </motion.li>
                <motion.li whileHover={{ scale: 1.05 }} className="p-6 bg-white shadow-xl rounded-xl border-l-4 border-primary">
-                  <strong>🏆 Excellence:</strong> Striving for **superior quality** in every formulation, every breakthrough, and every outcome.
+                  <strong className="text-gray-900">🏆 Excellence:</strong> Striving for <span className="font-bold text-gray-900">superior quality</span> in every formulation, every breakthrough, and every outcome.
                </motion.li>
             </ul>
          </motion.div>
