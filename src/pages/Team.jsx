@@ -31,17 +31,16 @@ const Team = ({ about }) => {
                {teamMembersPartOne.map((member, idx) => (
                   <motion.div 
                      key={idx} 
-                     className="text-center w-[220px] h-[300px] bg-white/80 p-4 rounded-lg shadow-md hover:shadow-lg cursor-pointer transform transition-transform duration-300 hover:-translate-y-1 border border-gray-200/50 backdrop-blur-lg flex flex-col items-center justify-center"
+                     className="text-center w-[220px] h-[320px] bg-white/80 p-4 rounded-lg shadow-md hover:shadow-lg cursor-pointer transform transition-transform duration-300 hover:-translate-y-1 border border-gray-200/50 backdrop-blur-lg flex flex-col items-center justify-center"
                      onClick={() => setSelectedMember(member)}
                      whileHover={{ scale: 1.05 }}>
                      <img className="mb-3 w-24 h-24 rounded-full border-2 border-gray-300" src={member.imageUrl} alt={member.name} />
                      <h3 className="text-lg font-semibold text-gray-900 min-h-[48px] flex items-center justify-center text-center px-2">
                         {member.name}
                      </h3>
-                     <p className="text-sm text-gray-600 min-h-[36px] flex items-center justify-center text-center px-2">
+                     <p className="text-sm text-gray-600 min-h-[48px] flex items-center justify-center text-center px-2">
                         {member.designation}
                      </p>
-
                   </motion.div>
                ))}
             </div>
@@ -51,12 +50,16 @@ const Team = ({ about }) => {
                {teamMembersPartSecond.map((member, idx) => (
                   <motion.div 
                      key={idx} 
-                     className="text-center w-[220px] h-[300px] bg-white/80 p-4 rounded-lg shadow-md hover:shadow-lg cursor-pointer transform transition-transform duration-300 hover:-translate-y-1 border border-gray-200/50 backdrop-blur-lg flex flex-col items-center justify-center"
+                     className="text-center w-[220px] h-[320px] bg-white/80 p-4 rounded-lg shadow-md hover:shadow-lg cursor-pointer transform transition-transform duration-300 hover:-translate-y-1 border border-gray-200/50 backdrop-blur-lg flex flex-col items-center justify-center"
                      onClick={() => setSelectedMember(member)}
                      whileHover={{ scale: 1.05 }}>
                      <img className="mb-3 w-24 h-24 rounded-full border-2 border-gray-300" src={member.imageUrl} alt={member.name} />
-                     <h3 className="text-lg font-semibold text-gray-900">{member.name}</h3>
-                     <p className="text-sm text-gray-600">{member.designation}</p>
+                     <h3 className="text-lg font-semibold text-gray-900 min-h-[48px] flex items-center justify-center text-center px-2">
+                        {member.name}
+                     </h3>
+                     <p className="text-sm text-gray-600 min-h-[48px] flex items-center justify-center text-center px-2">
+                        {member.designation}
+                     </p>
                   </motion.div>
                ))}
             </div>
@@ -73,12 +76,16 @@ const Team = ({ about }) => {
             {advisoryMembers.map((member, idx) => (
                <motion.div 
                   key={idx} 
-                  className="text-center w-[220px] h-[300px] bg-white/80 p-4 rounded-lg shadow-md hover:shadow-lg cursor-pointer transform transition-transform duration-300 hover:-translate-y-1 border border-gray-200/50 backdrop-blur-lg flex flex-col items-center justify-center"
+                  className="text-center w-[220px] h-[320px] bg-white/80 p-4 rounded-lg shadow-md hover:shadow-lg cursor-pointer transform transition-transform duration-300 hover:-translate-y-1 border border-gray-200/50 backdrop-blur-lg flex flex-col items-center justify-center"
                   onClick={() => setSelectedMember(member)}
                   whileHover={{ scale: 1.05 }}>
                   <img className="mb-3 w-24 h-24 rounded-full border-2 border-gray-300" src={member.imageUrl} alt={member.name} />
-                  <h3 className="text-lg font-semibold text-gray-900">{member.name}</h3>
-                  <p className="text-sm text-gray-600">{member.designation}</p>
+                  <h3 className="text-lg font-semibold text-gray-900 min-h-[48px] flex items-center justify-center text-center px-2">
+                     {member.name}
+                  </h3>
+                  <p className="text-sm text-gray-600 min-h-[48px] flex items-center justify-center text-center px-2">
+                     {member.designation}
+                  </p>
                </motion.div>
             ))}
          </motion.div>
