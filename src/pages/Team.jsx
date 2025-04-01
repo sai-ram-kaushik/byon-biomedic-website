@@ -14,20 +14,20 @@ const Team = ({ about }) => {
    };
 
    return (
-      <motion.div className="w-full py-10 px-4 lg:px-8" initial="hidden" animate="visible">
+      <motion.div className="w-full py-10 px-4 lg:px-8 bg-gray-50" initial="hidden" animate="visible">
          <TransitionEffect />
 
          {/* Section Title */}
          <motion.div className="text-center py-6" variants={fadeIn}>
-            <h3 className="text-3xl lg:text-4xl font-bold text-gray-900">
+            <h3 className="text-4xl font-extrabold text-gray-900">
                <span className="text-primary">Corporate </span> Management Team
             </h3>
          </motion.div>
 
          {/* Team Members */}
-         <motion.div className="flex flex-wrap justify-center gap-8" variants={fadeIn}>
+         <motion.div className="flex flex-wrap justify-center gap-6" variants={fadeIn}>
             {[teamMembersPartOne, teamMembersPartSecond].map((team, index) => (
-               <div key={index} className="flex justify-center gap-8 w-full">
+               <div key={index} className="flex justify-center gap-6 w-full">
                   {team.map((member, idx) => (
                      <motion.div 
                         key={idx} 
