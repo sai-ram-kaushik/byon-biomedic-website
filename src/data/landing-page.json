@@ -21,17 +21,19 @@
       "subHeading": "Our Vision & Mission",
       "vision": "To pioneer a transformative future in healthcare where plant-based medicines lead therapeutic innovation, fostering global wellness and environmental sustainability for generations.",
       "mission": "We are dedicated to advancing phytomedicines through the fusion of traditional botanical wisdom and modern scientific rigor. Committed to ethical sourcing and sustainable practices, we deliver safe, effective, and accessible natural therapies that enhance health outcomes while preserving our planet.",
-      
+
       "teamMembersPartOne": [
          {
             "name": "Datuk Dr. Mukundan Pillay",
             "imageUrl": "/team/datuk.jpg",
-            "designation": "Chairman"
+            "designation": "Chairman",
+            "bio": "Datuk Dr. Mukundan Pillay is a distinguished leader renowned for his transformative contributions to healthcare systems in Malaysia and globally. Over a 32-year career with the Malaysian Ministry of Health, he spearheaded critical initiatives in health infrastructure, policy, and research. Post-retirement, he extended his expertise to international organizations, including the World Bank in Bahrain and the World Health Organization (WHO) in China, while remaining actively engaged in advancing Malaysia’s healthcare landscape."
          },
          {
             "name": "M. Paramesswaran",
             "imageUrl": "/team/param.jpg",
-            "designation": "Managing Director"
+            "designation": "Managing Director",
+            "bio": "Public Health Advocate.\n\n- Spearheaded community-based health initiatives for 15+ years, promoting plant-based wellness and preventive care as sustainable, accessible alternatives to conventional healthcare, reaching 500+ individuals annually through workshops, seminars, and one-on-one consultations.\n- Collaborated with local NGOs, wellness centers, and holistic health practitioners to design culturally sensitive educational programs on phyto-based medicine, improving health literacy in underserved communities.\n- Advocated for integrative health policies by partnering with regional public health coalitions, contributing research on phytotherapy’s role in chronic disease prevention to inform community health strategies."
          },
          {
             "name": "Dr. Furizat",
@@ -39,7 +41,7 @@
             "designation": "Director of Product Innovation and Compliance"
          }
       ],
-      
+
       "teamMembersPartSecond": [
          {
             "name": "P. Vasanthan",
@@ -49,17 +51,20 @@
          {
             "name": "Dr. Srivalli",
             "imageUrl": "/team/srivalli.jpg",
-            "designation": "Director of Research and Studies"
+            "designation": "Director of Research and Studies",
+            "bio": "Dr Srivalli, MBBS Madras University, India. Ph.D Complementary & Alternative Medicine. Honorary Doctorate in Natural Medicine.Weston Reserve University, Canada."
          },
          {
             "name": "Dr. Krishnaveni Kunji Raman",
             "imageUrl": "/team/krishnaveni.jpg",
-            "designation": "Director of Corporate Affairs & Communications"
+            "designation": "Director of Corporate Affairs & Communications",
+            "bio": "Qualifications:\n- Doctorate in Business Administration, Lincoln University College (DBA)\n- EMBA (Open University Malaysia)\n\nExperience & Achievements:\n- 30+ Years’ Experience: Leading corporate communications, brand strategy, and stakeholder engagement for multinational organizations like Sime Darby (Caterpillar).\n- Global Leadership: Directed APAC-wide communication strategies for 23+ branches, aligning brands like Caterpillar with regional markets.\n- Award-Winning Expertise: Inspirational LinkedIn Icons (Malaysia).\n- Top Corporate Communication Voice."
          },
          {
             "name": "Mr. Govindaraju",
             "imageUrl": "/team/govindaraju.jpg",
-            "designation": "Senior Quality Systems Manager"
+            "designation": "Senior Quality Systems Manager",
+            "bio": "Leadership in GMP & Compliance: Extensive experience ensuring *Good Manufacturing Practice (GMP), ISO standards, and regulatory compliance in multinational manufacturing environments."
          }
       ],
 
@@ -72,10 +77,11 @@
          {
             "name": "Datuk Dr. Mukundan Pillay",
             "imageUrl": "/team/datuk.jpg",
-            "designation": "Technical and Advisory Committee Member"
+            "designation": "Technical and Advisory Committee Member",
+            "bio": "Datuk Dr. Mukundan Pillay is a distinguished leader renowned for his transformative contributions to healthcare systems in Malaysia and globally. Over a 32-year career with the Malaysian Ministry of Health, he spearheaded critical initiatives in health infrastructure, policy, and research. Post-retirement, he extended his expertise to international organizations, including the World Bank in Bahrain and the World Health Organization (WHO) in China, while remaining actively engaged in advancing Malaysia’s healthcare landscape."
          }
       ],
-      
+
       "advisoryGroupPartSecond": [
          {
             "name": "Prof. Gurjeet Kaur Chawla",
