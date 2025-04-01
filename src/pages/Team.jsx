@@ -35,8 +35,8 @@ const Team = ({ about }) => {
                         onClick={() => setSelectedMember(member)}
                         whileHover={{ scale: 1.03 }}>
 
-                        {/* Profile Image (Circular, No Cropping Issues) */}
-                        <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-gray-300">
+                        {/* Profile Image (Rounded Rectangle) */}
+                        <div className="w-40 h-48 rounded-2xl overflow-hidden border-4 border-gray-300">
                            <img 
                               className="w-full h-full object-cover" 
                               src={member.imageUrl} 
@@ -45,8 +45,8 @@ const Team = ({ about }) => {
                         </div>
 
                         {/* Member Info */}
-                        <h3 className="text-lg font-semibold text-gray-900 mt-4">{member.name}</h3>
-                        <p className="text-sm text-gray-600 mt-1">{member.designation}</p>
+                        <h3 className="text-lg font-semibold text-gray-900 mt-4 text-center">{member.name}</h3>
+                        <p className="text-sm text-gray-600 mt-1 text-center">{member.designation}</p>
                      </motion.div>
                   ))}
                </div>
@@ -69,8 +69,8 @@ const Team = ({ about }) => {
                   onClick={() => setSelectedMember(member)}
                   whileHover={{ scale: 1.03 }}>
 
-                  {/* Profile Image */}
-                  <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-gray-300">
+                  {/* Profile Image (Rounded Rectangle) */}
+                  <div className="w-40 h-48 rounded-2xl overflow-hidden border-4 border-gray-300">
                      <img 
                         className="w-full h-full object-cover" 
                         src={member.imageUrl} 
@@ -79,8 +79,8 @@ const Team = ({ about }) => {
                   </div>
 
                   {/* Member Info */}
-                  <h3 className="text-lg font-semibold text-gray-900 mt-4">{member.name}</h3>
-                  <p className="text-sm text-gray-600 mt-1">{member.designation}</p>
+                  <h3 className="text-lg font-semibold text-gray-900 mt-4 text-center">{member.name}</h3>
+                  <p className="text-sm text-gray-600 mt-1 text-center">{member.designation}</p>
                </motion.div>
             ))}
          </motion.div>
@@ -90,11 +90,11 @@ const Team = ({ about }) => {
             <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
                <div className="bg-white p-6 rounded-lg max-w-sm relative shadow-xl">
                   <button className="absolute top-3 right-3 text-gray-500 hover:text-gray-800" onClick={() => setSelectedMember(null)}>✖</button>
-                  <img className="w-28 h-28 mx-auto rounded-full border-4 border-gray-300" src={selectedMember.imageUrl} alt={selectedMember.name} />
-                  <h2 className="text-xl font-bold mt-4">{selectedMember.name}</h2>
-                  <p className="text-gray-700 text-sm">{selectedMember.designation}</p>
-                  <p className="mt-3 text-sm text-gray-600 whitespace-pre-line">{selectedMember.bio}</p>
-                  <button className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 text-sm" onClick={() => setSelectedMember(null)}>Close</button>
+                  <img className="w-32 h-40 mx-auto rounded-2xl border-4 border-gray-300" src={selectedMember.imageUrl} alt={selectedMember.name} />
+                  <h2 className="text-xl font-bold mt-4 text-center">{selectedMember.name}</h2>
+                  <p className="text-gray-700 text-sm text-center">{selectedMember.designation}</p>
+                  <p className="mt-3 text-sm text-gray-600 whitespace-pre-line text-center">{selectedMember.bio}</p>
+                  <button className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 text-sm w-full" onClick={() => setSelectedMember(null)}>Close</button>
                </div>
             </div>
          )}
