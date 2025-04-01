@@ -31,13 +31,13 @@ const Team = ({ about }) => {
                   {team.map((member, idx) => (
                      <motion.div 
                         key={idx} 
-                        className="text-center w-[220px] h-[320px] bg-white/80 p-4 rounded-lg shadow-md hover:shadow-lg cursor-pointer transform transition-transform duration-300 hover:-translate-y-1 border border-gray-200/50 backdrop-blur-lg flex flex-col items-center justify-between"
+                        className="text-center w-[250px] h-[350px] bg-white/80 p-4 rounded-lg shadow-md hover:shadow-lg cursor-pointer transform transition-transform duration-300 hover:-translate-y-1 border border-gray-200/50 backdrop-blur-lg flex flex-col items-center justify-between"
                         onClick={() => setSelectedMember(member)}
                         whileHover={{ scale: 1.05 }}>
                         
                         {/* Image (Fixed Size, No Shrinking) */}
                         <img 
-                           className="w-24 h-24 rounded-full border-2 border-gray-300 flex-shrink-0" 
+                           className="w-28 h-28 rounded-full border-2 border-gray-300 flex-shrink-0" 
                            src={member.imageUrl} 
                            alt={member.name} 
                         />
@@ -47,8 +47,8 @@ const Team = ({ about }) => {
                            {member.name}
                         </h3>
 
-                        {/* Designation (Fixed Height, No Overflow) */}
-                        <p className="text-sm text-gray-600 h-[40px] flex items-center justify-center text-center px-2 overflow-hidden">
+                        {/* Designation with Proper Overflow Handling */}
+                        <p className="text-sm text-gray-600 h-[48px] flex items-center justify-center text-center px-2 overflow-hidden overflow-ellipsis">
                            {member.designation}
                         </p>
                      </motion.div>
@@ -68,13 +68,13 @@ const Team = ({ about }) => {
             {advisoryMembers.map((member, idx) => (
                <motion.div 
                   key={idx} 
-                  className="text-center w-[220px] h-[320px] bg-white/80 p-4 rounded-lg shadow-md hover:shadow-lg cursor-pointer transform transition-transform duration-300 hover:-translate-y-1 border border-gray-200/50 backdrop-blur-lg flex flex-col items-center justify-between"
+                  className="text-center w-[250px] h-[350px] bg-white/80 p-4 rounded-lg shadow-md hover:shadow-lg cursor-pointer transform transition-transform duration-300 hover:-translate-y-1 border border-gray-200/50 backdrop-blur-lg flex flex-col items-center justify-between"
                   onClick={() => setSelectedMember(member)}
                   whileHover={{ scale: 1.05 }}>
                   
                   {/* Image (Fixed Size, No Shrinking) */}
                   <img 
-                     className="w-24 h-24 rounded-full border-2 border-gray-300 flex-shrink-0" 
+                     className="w-28 h-28 rounded-full border-2 border-gray-300 flex-shrink-0" 
                      src={member.imageUrl} 
                      alt={member.name} 
                   />
@@ -84,8 +84,8 @@ const Team = ({ about }) => {
                      {member.name}
                   </h3>
 
-                  {/* Designation (Fixed Height, No Overflow) */}
-                  <p className="text-sm text-gray-600 h-[40px] flex items-center justify-center text-center px-2 overflow-hidden">
+                  {/* Designation with Proper Overflow Handling */}
+                  <p className="text-sm text-gray-600 h-[48px] flex items-center justify-center text-center px-2 overflow-hidden overflow-ellipsis">
                      {member.designation}
                   </p>
                </motion.div>
