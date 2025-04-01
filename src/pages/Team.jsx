@@ -35,8 +35,13 @@ const Team = ({ about }) => {
                      onClick={() => setSelectedMember(member)}
                      whileHover={{ scale: 1.05 }}>
                      <img className="mb-3 w-24 h-24 rounded-full border-2 border-gray-300" src={member.imageUrl} alt={member.name} />
-                     <h3 className="text-lg font-semibold text-gray-900">{member.name}</h3>
-                     <p className="text-sm text-gray-600">{member.designation}</p>
+                     <h3 className="text-lg font-semibold text-gray-900 min-h-[48px] flex items-center justify-center text-center px-2">
+                        {member.name}
+                     </h3>
+                     <p className="text-sm text-gray-600 min-h-[36px] flex items-center justify-center text-center px-2">
+                        {member.designation}
+                     </p>
+
                   </motion.div>
                ))}
             </div>
