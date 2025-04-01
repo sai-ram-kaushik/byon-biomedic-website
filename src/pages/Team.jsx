@@ -25,32 +25,28 @@ const Team = ({ about }) => {
          </motion.div>
 
          {/* Core Team Members */}
-         <motion.div className="flex flex-wrap justify-center gap-4" variants={fadeIn}>
+         <motion.div className="flex flex-wrap justify-center gap-6" variants={fadeIn}>
             {[teamMembersPartOne, teamMembersPartSecond].map((team, index) => (
-               <div key={index} className="flex justify-center gap-4 w-full mt-4">
+               <div key={index} className="flex justify-center gap-6 w-full mt-4">
                   {team.map((member, idx) => (
                      <motion.div 
                         key={idx} 
-                        className="text-center w-[250px] h-[350px] bg-white/80 p-4 rounded-lg shadow-md hover:shadow-lg cursor-pointer transform transition-transform duration-300 hover:-translate-y-1 border border-gray-200/50 backdrop-blur-lg flex flex-col items-center justify-between"
+                        className="text-center w-[280px] h-[380px] bg-white p-6 rounded-xl shadow-lg hover:shadow-xl cursor-pointer transform transition-transform duration-300 hover:-translate-y-1 border border-gray-200/50 backdrop-blur-lg flex flex-col items-center justify-between"
                         onClick={() => setSelectedMember(member)}
                         whileHover={{ scale: 1.05 }}>
                         
-                        {/* Image (Fixed Size, No Shrinking) */}
+                        {/* Image (Preserve Aspect Ratio) */}
                         <img 
-                           className="w-28 h-28 rounded-full border-2 border-gray-300 flex-shrink-0" 
+                           className="w-32 h-32 rounded-full border-4 border-gray-300 object-cover" 
                            src={member.imageUrl} 
                            alt={member.name} 
                         />
 
-                        {/* Name (Fixed Height, No Overflow) */}
-                        <h3 className="text-lg font-semibold text-gray-900 h-[48px] flex items-center justify-center text-center px-2 overflow-hidden">
-                           {member.name}
-                        </h3>
+                        {/* Name */}
+                        <h3 className="text-lg font-semibold text-gray-900 mt-4">{member.name}</h3>
 
-                        {/* Designation with Proper Overflow Handling */}
-                        <p className="text-sm text-gray-600 h-[48px] flex items-center justify-center text-center px-2 overflow-hidden overflow-ellipsis">
-                           {member.designation}
-                        </p>
+                        {/* Designation with Overflow Handling */}
+                        <p className="text-sm text-gray-600 mt-2 text-center overflow-hidden overflow-ellipsis">{member.designation}</p>
                      </motion.div>
                   ))}
                </div>
@@ -64,30 +60,26 @@ const Team = ({ about }) => {
             </h3>
          </motion.div>
 
-         <motion.div className="flex flex-wrap justify-center gap-4" variants={fadeIn}>
+         <motion.div className="flex flex-wrap justify-center gap-6" variants={fadeIn}>
             {advisoryMembers.map((member, idx) => (
                <motion.div 
                   key={idx} 
-                  className="text-center w-[250px] h-[350px] bg-white/80 p-4 rounded-lg shadow-md hover:shadow-lg cursor-pointer transform transition-transform duration-300 hover:-translate-y-1 border border-gray-200/50 backdrop-blur-lg flex flex-col items-center justify-between"
+                  className="text-center w-[280px] h-[380px] bg-white p-6 rounded-xl shadow-lg hover:shadow-xl cursor-pointer transform transition-transform duration-300 hover:-translate-y-1 border border-gray-200/50 backdrop-blur-lg flex flex-col items-center justify-between"
                   onClick={() => setSelectedMember(member)}
                   whileHover={{ scale: 1.05 }}>
                   
-                  {/* Image (Fixed Size, No Shrinking) */}
+                  {/* Image (Preserve Aspect Ratio) */}
                   <img 
-                     className="w-28 h-28 rounded-full border-2 border-gray-300 flex-shrink-0" 
+                     className="w-32 h-32 rounded-full border-4 border-gray-300 object-cover" 
                      src={member.imageUrl} 
                      alt={member.name} 
                   />
 
-                  {/* Name (Fixed Height, No Overflow) */}
-                  <h3 className="text-lg font-semibold text-gray-900 h-[48px] flex items-center justify-center text-center px-2 overflow-hidden">
-                     {member.name}
-                  </h3>
+                  {/* Name */}
+                  <h3 className="text-lg font-semibold text-gray-900 mt-4">{member.name}</h3>
 
-                  {/* Designation with Proper Overflow Handling */}
-                  <p className="text-sm text-gray-600 h-[48px] flex items-center justify-center text-center px-2 overflow-hidden overflow-ellipsis">
-                     {member.designation}
-                  </p>
+                  {/* Designation with Overflow Handling */}
+                  <p className="text-sm text-gray-600 mt-2 text-center overflow-hidden overflow-ellipsis">{member.designation}</p>
                </motion.div>
             ))}
          </motion.div>
