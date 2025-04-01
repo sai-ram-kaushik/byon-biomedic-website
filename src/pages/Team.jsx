@@ -31,12 +31,12 @@ const Team = ({ about }) => {
                   {team.map((member, idx) => (
                      <motion.div 
                         key={idx} 
-                        className="w-[280px] bg-white/80 backdrop-blur-md p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col items-center border border-gray-200/50 cursor-pointer"
+                        className="w-[280px] bg-white/90 backdrop-blur-lg p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col items-center border border-gray-300 cursor-pointer"
                         onClick={() => setSelectedMember(member)}
                         whileHover={{ scale: 1.05 }}>
 
                         {/* Profile Image (Rounded Rectangle) */}
-                        <div className="w-40 h-48 rounded-xl overflow-hidden border-4 border-gray-200 shadow-md">
+                        <div className="w-40 h-48 rounded-xl overflow-hidden border-2 border-gray-300 shadow-md">
                            <img 
                               className="w-full h-full object-cover" 
                               src={member.imageUrl} 
@@ -45,7 +45,7 @@ const Team = ({ about }) => {
                         </div>
 
                         {/* Member Info */}
-                        <h3 className="text-lg font-semibold text-gray-900 mt-4 text-center">{member.name}</h3>
+                        <h3 className="text-lg font-semibold text-gray-900 mt-3 text-center">{member.name}</h3>
                         <p className="text-sm text-gray-500 mt-1 text-center">{member.designation}</p>
                      </motion.div>
                   ))}
@@ -65,12 +65,12 @@ const Team = ({ about }) => {
             {advisoryMembers.map((member, idx) => (
                <motion.div 
                   key={idx} 
-                  className="w-[280px] bg-white/80 backdrop-blur-md p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col items-center border border-gray-200/50 cursor-pointer"
+                  className="w-[280px] bg-white/90 backdrop-blur-lg p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col items-center border border-gray-300 cursor-pointer"
                   onClick={() => setSelectedMember(member)}
                   whileHover={{ scale: 1.05 }}>
 
                   {/* Profile Image (Rounded Rectangle) */}
-                  <div className="w-40 h-48 rounded-xl overflow-hidden border-4 border-gray-200 shadow-md">
+                  <div className="w-40 h-48 rounded-xl overflow-hidden border-2 border-gray-300 shadow-md">
                      <img 
                         className="w-full h-full object-cover" 
                         src={member.imageUrl} 
@@ -79,7 +79,7 @@ const Team = ({ about }) => {
                   </div>
 
                   {/* Member Info */}
-                  <h3 className="text-lg font-semibold text-gray-900 mt-4 text-center">{member.name}</h3>
+                  <h3 className="text-lg font-semibold text-gray-900 mt-3 text-center">{member.name}</h3>
                   <p className="text-sm text-gray-500 mt-1 text-center">{member.designation}</p>
                </motion.div>
             ))}
@@ -88,15 +88,15 @@ const Team = ({ about }) => {
          {/* Popup Modal */}
          {selectedMember && (
             <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 px-4">
-               <div className="bg-white p-6 rounded-xl max-w-md relative shadow-2xl w-full">
-                  <button className="absolute top-3 right-3 text-gray-500 hover:text-gray-800" onClick={() => setSelectedMember(null)}>✖</button>
-                  <div className="w-40 h-48 mx-auto rounded-xl overflow-hidden border-4 border-gray-200 shadow-md">
+               <div className="bg-white p-6 rounded-2xl max-w-lg relative shadow-2xl w-full text-center">
+                  <button className="absolute top-3 right-3 text-gray-500 hover:text-gray-800 text-lg" onClick={() => setSelectedMember(null)}>✖</button>
+                  <div className="w-44 h-52 mx-auto rounded-xl overflow-hidden border-2 border-gray-300 shadow-md">
                      <img className="w-full h-full object-cover" src={selectedMember.imageUrl} alt={selectedMember.name} />
                   </div>
-                  <h2 className="text-xl font-bold mt-4 text-center">{selectedMember.name}</h2>
-                  <p className="text-gray-700 text-sm text-center">{selectedMember.designation}</p>
-                  <p className="mt-3 text-sm text-gray-600 whitespace-pre-line text-center">{selectedMember.bio}</p>
-                  <button className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 text-sm w-full" onClick={() => setSelectedMember(null)}>Close</button>
+                  <h2 className="text-2xl font-bold mt-4 text-gray-900">{selectedMember.name}</h2>
+                  <p className="text-gray-600 text-sm mt-1">{selectedMember.designation}</p>
+                  <p className="mt-3 text-sm text-gray-700 leading-relaxed whitespace-pre-line">{selectedMember.bio}</p>
+                  <button className="mt-5 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 text-sm w-full" onClick={() => setSelectedMember(null)}>Close</button>
                </div>
             </div>
          )}
