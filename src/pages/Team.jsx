@@ -31,13 +31,13 @@ const Team = ({ about }) => {
                   {team.map((member, idx) => (
                      <motion.div 
                         key={idx} 
-                        className="text-center w-[280px] h-[380px] bg-white p-6 rounded-xl shadow-lg hover:shadow-xl cursor-pointer transform transition-transform duration-300 hover:-translate-y-1 border border-gray-200/50 backdrop-blur-lg flex flex-col items-center justify-between"
+                        className="text-center w-[260px] h-[380px] bg-white p-5 rounded-2xl shadow-lg hover:shadow-xl cursor-pointer transform transition-transform duration-300 hover:-translate-y-1 border border-gray-200/50 backdrop-blur-lg flex flex-col items-center justify-between"
                         onClick={() => setSelectedMember(member)}
                         whileHover={{ scale: 1.05 }}>
                         
-                        {/* Image (Preserve Aspect Ratio) */}
+                        {/* Image (Centered, No Cropping, Object-Fit to Cover) */}
                         <img 
-                           className="w-32 h-32 rounded-full border-4 border-gray-300 object-cover" 
+                           className="w-32 h-32 rounded-full border-4 border-gray-300 object-cover object-center"
                            src={member.imageUrl} 
                            alt={member.name} 
                         />
@@ -45,8 +45,8 @@ const Team = ({ about }) => {
                         {/* Name */}
                         <h3 className="text-lg font-semibold text-gray-900 mt-4">{member.name}</h3>
 
-                        {/* Designation with Overflow Handling */}
-                        <p className="text-sm text-gray-600 mt-2 text-center overflow-hidden overflow-ellipsis">{member.designation}</p>
+                        {/* Designation with Reduced Space */}
+                        <p className="text-sm text-gray-600 mt-2">{member.designation}</p>
                      </motion.div>
                   ))}
                </div>
@@ -64,13 +64,13 @@ const Team = ({ about }) => {
             {advisoryMembers.map((member, idx) => (
                <motion.div 
                   key={idx} 
-                  className="text-center w-[280px] h-[380px] bg-white p-6 rounded-xl shadow-lg hover:shadow-xl cursor-pointer transform transition-transform duration-300 hover:-translate-y-1 border border-gray-200/50 backdrop-blur-lg flex flex-col items-center justify-between"
+                  className="text-center w-[260px] h-[380px] bg-white p-5 rounded-2xl shadow-lg hover:shadow-xl cursor-pointer transform transition-transform duration-300 hover:-translate-y-1 border border-gray-200/50 backdrop-blur-lg flex flex-col items-center justify-between"
                   onClick={() => setSelectedMember(member)}
                   whileHover={{ scale: 1.05 }}>
                   
-                  {/* Image (Preserve Aspect Ratio) */}
+                  {/* Image (Centered, No Cropping, Object-Fit to Cover) */}
                   <img 
-                     className="w-32 h-32 rounded-full border-4 border-gray-300 object-cover" 
+                     className="w-32 h-32 rounded-full border-4 border-gray-300 object-cover object-center"
                      src={member.imageUrl} 
                      alt={member.name} 
                   />
@@ -78,8 +78,8 @@ const Team = ({ about }) => {
                   {/* Name */}
                   <h3 className="text-lg font-semibold text-gray-900 mt-4">{member.name}</h3>
 
-                  {/* Designation with Overflow Handling */}
-                  <p className="text-sm text-gray-600 mt-2 text-center overflow-hidden overflow-ellipsis">{member.designation}</p>
+                  {/* Designation with Reduced Space */}
+                  <p className="text-sm text-gray-600 mt-2">{member.designation}</p>
                </motion.div>
             ))}
          </motion.div>
