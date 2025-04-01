@@ -17,36 +17,36 @@ const Team = ({ about }) => {
       <motion.div className="w-full py-10 px-4 lg:px-8" initial="hidden" animate="visible">
          <TransitionEffect />
 
-         {/* Our Team Section */}
-         <motion.div className="flex items-center justify-center w-full py-4" variants={fadeIn}>
-            <h3 className="text-2xl lg:text-3xl font-heading font-bold">
+         {/* Section Title */}
+         <motion.div className="text-center py-6" variants={fadeIn}>
+            <h3 className="text-3xl lg:text-4xl font-bold text-gray-900">
                <span className="text-primary">Corporate </span> Management Team
             </h3>
          </motion.div>
 
-         {/* Core Team Members */}
-         <motion.div className="flex flex-wrap justify-center gap-6" variants={fadeIn}>
+         {/* Team Members */}
+         <motion.div className="flex flex-wrap justify-center gap-8" variants={fadeIn}>
             {[teamMembersPartOne, teamMembersPartSecond].map((team, index) => (
-               <div key={index} className="flex justify-center gap-6 w-full mt-4">
+               <div key={index} className="flex justify-center gap-8 w-full">
                   {team.map((member, idx) => (
                      <motion.div 
                         key={idx} 
-                        className="text-center w-[260px] h-[380px] bg-white p-5 rounded-2xl shadow-lg hover:shadow-xl cursor-pointer transform transition-transform duration-300 hover:-translate-y-1 border border-gray-200/50 backdrop-blur-lg flex flex-col items-center justify-between"
+                        className="w-[280px] bg-white/80 backdrop-blur-lg p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 flex flex-col items-center border border-gray-200/50 cursor-pointer"
                         onClick={() => setSelectedMember(member)}
-                        whileHover={{ scale: 1.05 }}>
-                        
-                        {/* Image (Centered, No Cropping, Object-Fit to Cover) */}
-                        <img 
-                           className="w-32 h-32 rounded-full border-4 border-gray-300 object-cover object-center"
-                           src={member.imageUrl} 
-                           alt={member.name} 
-                        />
+                        whileHover={{ scale: 1.03 }}>
 
-                        {/* Name */}
+                        {/* Profile Image (Circular, No Cropping Issues) */}
+                        <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-gray-300">
+                           <img 
+                              className="w-full h-full object-cover" 
+                              src={member.imageUrl} 
+                              alt={member.name} 
+                           />
+                        </div>
+
+                        {/* Member Info */}
                         <h3 className="text-lg font-semibold text-gray-900 mt-4">{member.name}</h3>
-
-                        {/* Designation with Reduced Space */}
-                        <p className="text-sm text-gray-600 mt-2">{member.designation}</p>
+                        <p className="text-sm text-gray-600 mt-1">{member.designation}</p>
                      </motion.div>
                   ))}
                </div>
@@ -54,32 +54,33 @@ const Team = ({ about }) => {
          </motion.div>
 
          {/* Technical Advisory Group Section */}
-         <motion.div id="technical-advisory-group" className="flex items-center justify-center w-full py-4 mt-6" variants={fadeIn}>
-            <h3 className="text-2xl lg:text-3xl font-heading font-bold">
+         <motion.div className="text-center py-10 mt-6" variants={fadeIn}>
+            <h3 className="text-3xl lg:text-4xl font-bold text-gray-900">
                Technical and Advisory <span className="text-primary">Committee</span>
             </h3>
          </motion.div>
 
-         <motion.div className="flex flex-wrap justify-center gap-6" variants={fadeIn}>
+         {/* Advisory Members */}
+         <motion.div className="flex flex-wrap justify-center gap-8" variants={fadeIn}>
             {advisoryMembers.map((member, idx) => (
                <motion.div 
                   key={idx} 
-                  className="text-center w-[260px] h-[380px] bg-white p-5 rounded-2xl shadow-lg hover:shadow-xl cursor-pointer transform transition-transform duration-300 hover:-translate-y-1 border border-gray-200/50 backdrop-blur-lg flex flex-col items-center justify-between"
+                  className="w-[280px] bg-white/80 backdrop-blur-lg p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 flex flex-col items-center border border-gray-200/50 cursor-pointer"
                   onClick={() => setSelectedMember(member)}
-                  whileHover={{ scale: 1.05 }}>
-                  
-                  {/* Image (Centered, No Cropping, Object-Fit to Cover) */}
-                  <img 
-                     className="w-32 h-32 rounded-full border-4 border-gray-300 object-cover object-center"
-                     src={member.imageUrl} 
-                     alt={member.name} 
-                  />
+                  whileHover={{ scale: 1.03 }}>
 
-                  {/* Name */}
+                  {/* Profile Image */}
+                  <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-gray-300">
+                     <img 
+                        className="w-full h-full object-cover" 
+                        src={member.imageUrl} 
+                        alt={member.name} 
+                     />
+                  </div>
+
+                  {/* Member Info */}
                   <h3 className="text-lg font-semibold text-gray-900 mt-4">{member.name}</h3>
-
-                  {/* Designation with Reduced Space */}
-                  <p className="text-sm text-gray-600 mt-2">{member.designation}</p>
+                  <p className="text-sm text-gray-600 mt-1">{member.designation}</p>
                </motion.div>
             ))}
          </motion.div>
@@ -87,13 +88,13 @@ const Team = ({ about }) => {
          {/* Popup Modal */}
          {selectedMember && (
             <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-               <div className="bg-white p-5 rounded-lg max-w-xs relative shadow-xl">
-                  <button className="absolute top-2 right-2 text-gray-500 hover:text-gray-800" onClick={() => setSelectedMember(null)}>✖</button>
-                  <img className="w-24 h-24 mx-auto rounded-full border-2 border-gray-300" src={selectedMember.imageUrl} alt={selectedMember.name} />
-                  <h2 className="text-lg font-bold mt-3">{selectedMember.name}</h2>
+               <div className="bg-white p-6 rounded-lg max-w-sm relative shadow-xl">
+                  <button className="absolute top-3 right-3 text-gray-500 hover:text-gray-800" onClick={() => setSelectedMember(null)}>✖</button>
+                  <img className="w-28 h-28 mx-auto rounded-full border-4 border-gray-300" src={selectedMember.imageUrl} alt={selectedMember.name} />
+                  <h2 className="text-xl font-bold mt-4">{selectedMember.name}</h2>
                   <p className="text-gray-700 text-sm">{selectedMember.designation}</p>
-                  <p className="mt-2 text-sm whitespace-pre-line">{selectedMember.bio}</p>
-                  <button className="mt-3 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 text-sm" onClick={() => setSelectedMember(null)}>Close</button>
+                  <p className="mt-3 text-sm text-gray-600 whitespace-pre-line">{selectedMember.bio}</p>
+                  <button className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 text-sm" onClick={() => setSelectedMember(null)}>Close</button>
                </div>
             </div>
          )}
