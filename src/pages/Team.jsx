@@ -86,7 +86,7 @@ const Team = ({ about }) => {
                   <img className="w-24 h-24 mx-auto rounded-full border-2 border-gray-300" src={selectedMember.imageUrl} alt={selectedMember.name} />
                   <h2 className="text-lg font-bold mt-3">{selectedMember.name}</h2>
                   <p className="text-gray-700 text-sm">{selectedMember.designation}</p>
-                  <p className="mt-2 text-sm">{selectedMember.bio}</p>
+                  <p className="mt-2 text-sm whitespace-pre-line">{selectedMember.bio}</p>
                   <button className="mt-3 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 text-sm" onClick={() => setSelectedMember(null)}>Close</button>
                </div>
             </div>
