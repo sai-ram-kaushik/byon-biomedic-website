@@ -31,14 +31,24 @@ const Team = ({ about }) => {
                   {team.map((member, idx) => (
                      <motion.div 
                         key={idx} 
-                        className="text-center w-[220px] h-[320px] bg-white/80 p-4 rounded-lg shadow-md hover:shadow-lg cursor-pointer transform transition-transform duration-300 hover:-translate-y-1 border border-gray-200/50 backdrop-blur-lg flex flex-col items-center justify-center"
+                        className="text-center w-[220px] h-[320px] bg-white/80 p-4 rounded-lg shadow-md hover:shadow-lg cursor-pointer transform transition-transform duration-300 hover:-translate-y-1 border border-gray-200/50 backdrop-blur-lg flex flex-col items-center justify-between"
                         onClick={() => setSelectedMember(member)}
                         whileHover={{ scale: 1.05 }}>
-                        <img className="mb-3 w-24 h-24 rounded-full border-2 border-gray-300" src={member.imageUrl} alt={member.name} />
-                        <h3 className="text-lg font-semibold text-gray-900 h-[48px] flex items-center justify-center text-center px-2">
+                        
+                        {/* Image (Fixed Size, No Shrinking) */}
+                        <img 
+                           className="w-24 h-24 rounded-full border-2 border-gray-300 flex-shrink-0" 
+                           src={member.imageUrl} 
+                           alt={member.name} 
+                        />
+
+                        {/* Name (Fixed Height, No Overflow) */}
+                        <h3 className="text-lg font-semibold text-gray-900 h-[48px] flex items-center justify-center text-center px-2 overflow-hidden">
                            {member.name}
                         </h3>
-                        <p className="text-sm text-gray-600 h-[40px] flex items-center justify-center text-center px-2">
+
+                        {/* Designation (Fixed Height, No Overflow) */}
+                        <p className="text-sm text-gray-600 h-[40px] flex items-center justify-center text-center px-2 overflow-hidden">
                            {member.designation}
                         </p>
                      </motion.div>
@@ -58,14 +68,24 @@ const Team = ({ about }) => {
             {advisoryMembers.map((member, idx) => (
                <motion.div 
                   key={idx} 
-                  className="text-center w-[220px] h-[320px] bg-white/80 p-4 rounded-lg shadow-md hover:shadow-lg cursor-pointer transform transition-transform duration-300 hover:-translate-y-1 border border-gray-200/50 backdrop-blur-lg flex flex-col items-center justify-center"
+                  className="text-center w-[220px] h-[320px] bg-white/80 p-4 rounded-lg shadow-md hover:shadow-lg cursor-pointer transform transition-transform duration-300 hover:-translate-y-1 border border-gray-200/50 backdrop-blur-lg flex flex-col items-center justify-between"
                   onClick={() => setSelectedMember(member)}
                   whileHover={{ scale: 1.05 }}>
-                  <img className="mb-3 w-24 h-24 rounded-full border-2 border-gray-300" src={member.imageUrl} alt={member.name} />
-                  <h3 className="text-lg font-semibold text-gray-900 h-[48px] flex items-center justify-center text-center px-2">
+                  
+                  {/* Image (Fixed Size, No Shrinking) */}
+                  <img 
+                     className="w-24 h-24 rounded-full border-2 border-gray-300 flex-shrink-0" 
+                     src={member.imageUrl} 
+                     alt={member.name} 
+                  />
+
+                  {/* Name (Fixed Height, No Overflow) */}
+                  <h3 className="text-lg font-semibold text-gray-900 h-[48px] flex items-center justify-center text-center px-2 overflow-hidden">
                      {member.name}
                   </h3>
-                  <p className="text-sm text-gray-600 h-[40px] flex items-center justify-center text-center px-2">
+
+                  {/* Designation (Fixed Height, No Overflow) */}
+                  <p className="text-sm text-gray-600 h-[40px] flex items-center justify-center text-center px-2 overflow-hidden">
                      {member.designation}
                   </p>
                </motion.div>
