@@ -166,7 +166,7 @@ const Medicines = ({ medicines }) => {
          {/* Coming Soon Card */}
          <div className="py-24 px-6 md:px-0 flex justify-center bg-gradient-to-b from-[#e9f3fc] to-[#f9fafc]">
             <motion.div
-               className="backdrop-blur-md bg-white/30 border border-gray-300 shadow-xl rounded-2xl px-10 py-8 text-center max-w-lg"
+               className="backdrop-blur-md bg-gradient-to-br from-white/60 to-white/30 border border-gray-200 shadow-2xl rounded-3xl px-10 py-8 text-center max-w-lg transition-all duration-500 hover:shadow-3xl hover:scale-[1.03]"
                initial={{ opacity: 0, y: 30 }}
                whileInView={{ opacity: 1, y: 0 }}
                transition={{ duration: 0.8 }}
