@@ -5,129 +5,116 @@ const Medicines = ({ medicines }) => {
    const { heading, products } = medicines;
    const [selectedProduct, setSelectedProduct] = useState(null);
 
-   const openPopup = (product) => {
-      setSelectedProduct(product);
-   };
-
-   const closePopup = () => {
-      setSelectedProduct(null);
-   };
+   const openPopup = (product) => setSelectedProduct(product);
+   const closePopup = () => setSelectedProduct(null);
 
    return (
-      <div className="w-full py-10">
+      <div className="w-full py-16 bg-gray-50">
          <TransitionEffect />
-         <div className="flex justify-center">
-            <h2 className="font-heading text-3xl">{heading}</h2>
+         
+         {/* Heading */}
+         <div className="text-center">
+            <h2 className="font-heading text-4xl md:text-5xl font-bold text-gray-900 tracking-tight">
+               {heading}
+            </h2>
+            <p className="mt-2 text-gray-500 text-lg">
+               Explore our innovative phytomedicines
+            </p>
          </div>
 
-         <div className="flex flex-wrap items-start justify-center w-full py-10">
+         {/* Product Grid */}
+         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 px-6 md:px-20">
             {products.map((product, idx) => (
                <div
                   key={idx}
-                  className="flex flex-col items-center gap-2 cursor-pointer"
                   onClick={() => openPopup(product)}
+                  className="bg-white shadow-lg rounded-2xl overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
                >
                   <img
                      src={product.imageUrl}
                      alt={product.name}
-                     className="w-full max-w-[300px] h-auto mx-auto object-contain"
+                     className="w-full h-64 object-contain p-4"
                   />
-                  {/* <h3>
-                     {product.name} <sup>{product.trademark}</sup>
-                  </h3> */}
+                  <div className="p-4 text-center">
+                     <h3 className="text-lg font-semibold text-gray-800">
+                        {product.name}
+                     </h3>
+                     <p className="text-sm text-gray-500 mt-1">
+                        {product.tagline || "Click to learn more"}
+                     </p>
+                  </div>
                </div>
             ))}
          </div>
 
-         {/* Product Popup */}
+         {/* Popup Modal */}
          {selectedProduct && (
-            <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-               <div className="bg-white p-6 rounded-lg w-[90%] max-w-2xl relative max-h-[90vh] overflow-y-auto">
+            <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60 backdrop-blur-sm px-4">
+               <div className="relative bg-white rounded-xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-xl p-6">
                   <button
-                     className="absolute top-2 right-2 text-lg font-bold"
                      onClick={closePopup}
+                     className="absolute top-4 right-4 text-gray-700 text-2xl font-bold hover:text-red-600 transition duration-200"
+                     aria-label="Close"
                   >
-                     ✕
+                     &times;
                   </button>
 
-                  <h2 className="text-2xl font-bold">{selectedProduct.name}</h2>
+                  <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
+                     {selectedProduct.name}
+                  </h2>
 
-                  {/* Damoxin Content */}
+                  {/* Damoxin Special Content */}
                   {selectedProduct.name === "Damoxin" ? (
-                     <div className="mt-4 text-gray-700 space-y-4">
-                        <img src={selectedProduct.productPackage} width={500}/>
-                        <p>A Novel Phyto Medicine for COVID-19 Treatment</p>
-                        <p>
-                           Damoxin is a groundbreaking phytomedicine derived from a synergistic blend of bioactive plant compounds, specifically formulated target SARS-CoV-2 and mitigate COVID-19 symptoms. Leveraging nature's antiviral and anti-inflammatory properties, Damoxin offers a holistic, science-backed approach to reducing viral load, modulating hyperimmune responses, and accelerating recovery. Its unique multi-target mechanism positions it as a promising adjunct therapy in the global fight against COVID-19.
-                        </p>
-                        <h3 className="text-lg font-semibold mt-4">
-                           Detailed Description of Damoxin
-                        </h3>
-                        <p>
-Damoxin is an innovative herbal formulation developed through advanced phytopharmaceutical research, combining traditional medicinal wisdom with modern scientific validation. Designed to address both the viral pathogenesis and inflammatory complications of COVID-19, Damoxin represents a paradigm shift in integrative antiviral therapy.
-                        </p>
-                        <h3 className="text-lg font-semibold mt-4">
-                           Mechanism of Action
-                        </h3>
-                        <ul className="list-disc pl-5">
-                           <li>
-                              <strong>Antiviral Activity:</strong> Blocks viral
-                              attachment and inhibits replication by targeting key viral enzymes (e.g., 3CL protease).
-                           </li>
-                           <li>
-                              <strong>Immunomodulation:</strong> Downregulates pro-inflammatory cytokines (IL-6,TNF-α) while enhancing interferon production to balance immune responses.
-                           </li>
-                           <li>
-                              <strong>Cellular Protection:</strong> Reduces
-                              oxidative damage to lung tissue and endothelial cells, preventing acute respiratory distress syndrome (ARDS).
-                           </li>
-                        </ul>
+                     <div className="space-y-6 text-gray-700 text-base leading-relaxed">
+                        <img
+                           src={selectedProduct.productPackage}
+                           alt="Damoxin Packaging"
+                           className="rounded-lg mx-auto max-w-full max-h-64 object-contain"
+                        />
 
-                        <h3 className="text-lg font-semibold mt-4">
-                           Clinical Benefits
-                        </h3>
-                        <ul className="list-disc pl-5">
-                           <li>
-                              Speeds up symptom resolution (fever, cough,
-                              fatigue).
-                           </li>
-                           <li>Reduces risk of severe complications (e.g. pneumonia, thrombosis).</li>
-                           <li>Shortens viral shedding duration, potentially reducing transmission.</li>
-                           <li>Safe for use in mild-to-severe cases, with minimal side effects compared to synthetic drugs.</li>
-                        </ul>
-
-                        <h3 className="text-lg font-semibold mt-4">
-                           Safety Profile
-                        </h3>
                         <p>
-                           Damoxin's plant-based composition ensures high tolerability. Preclinical and early-phase trials report no significant adverse effects, making it suitable for long-term prophylactic or therapeutic use.
+                           <strong>Damoxin</strong> is a groundbreaking phytomedicine formulated to target COVID-19 using nature’s most potent bioactive compounds. It blends scientific rigor with ancient wisdom to offer a multi-targeted, safe, and holistic remedy.
                         </p>
 
-                        <h3 className="text-lg font-semibold mt-4">
-                           Complementary Role
-                        </h3>
-                        <p>
-                           While not a replacement for vaccines or emergency antivirals, Damoxin bridges gaps in outpatient care and post-infection recovery. It synergizes with standard therapies to enhance efficacy and reduce dependency on immunosuppressive drugs.
-                        </p>
+                        <section>
+                           <h3 className="font-semibold text-lg mt-4">Mechanism of Action</h3>
+                           <ul className="list-disc list-inside space-y-2">
+                              <li><strong>Antiviral:</strong> Inhibits replication by blocking 3CL protease and viral attachment.</li>
+                              <li><strong>Immunomodulation:</strong> Balances cytokine storms by regulating IL-6, TNF-α, and IFN levels.</li>
+                              <li><strong>Cellular Protection:</strong> Shields lung and endothelial cells from oxidative stress.</li>
+                           </ul>
+                        </section>
 
-                        <h3 className="text-lg font-semibold mt-4">
-                           Sustainability
-                        </h3>
-                        <p>
-                           Sourced through ethical wildcrafting and sustainable agriculture, Damoxin emphasizes environmental stewardship and supports biodiversity conservation.
-                        </p>
+                        <section>
+                           <h3 className="font-semibold text-lg mt-4">Clinical Benefits</h3>
+                           <ul className="list-disc list-inside space-y-2">
+                              <li>Speeds up recovery from COVID-19 symptoms like fever and fatigue.</li>
+                              <li>Reduces risk of complications such as pneumonia or clotting.</li>
+                              <li>Shortens viral shedding period.</li>
+                              <li>Minimal side effects, even in moderate-to-severe cases.</li>
+                           </ul>
+                        </section>
 
-                        <h3 className="text-lg font-semibold mt-4">
-                           Conclusion
-                        </h3>
-                        <p>
-                           Damoxin exemplifies the convergence of traditional herbal medicine and cutting-edge virology, offering a safe, accessible, and multi-faceted tool against COVID-19. By addressing both the virus and its inflammatory aftermath, it embodies a holistic strategy for pandemic management, with potential applications in future coronavirus variants.
+                        <section>
+                           <h3 className="font-semibold text-lg mt-4">Sustainability & Ethics</h3>
+                           <p>
+                              Damoxin is sourced through eco-friendly wildcrafting and sustainable agriculture, ensuring both environmental balance and pharmaceutical efficacy.
+                           </p>
+                        </section>
+
+                        <p className="italic text-gray-600">
+                           “An evolution in herbal science for pandemic-era healthcare.”
                         </p>
                      </div>
                   ) : (
-                     <p className="mt-4 text-gray-600">
-                        {selectedProduct.description}
-                     </p>
+                     <div className="text-gray-700 text-base leading-relaxed">
+                        <img
+                           src={selectedProduct.productPackage}
+                           alt={`${selectedProduct.name} Package`}
+                           className="rounded-lg mx-auto max-w-full max-h-64 object-contain mb-4"
+                        />
+                        <p>{selectedProduct.description}</p>
+                     </div>
                   )}
                </div>
             </div>
