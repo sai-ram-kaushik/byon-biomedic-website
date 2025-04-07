@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import TransitionEffect from "../utils/TransitionEffect";
-import { FaVirus, FaLungs, FaLeaf, FaBolt, FaShieldAlt, FaFlask } from "react-icons/fa";
+import { FaVirus, FaLungs, FaLeaf, FaBolt, FaShieldAlt } from "react-icons/fa";
 
 const Medicines = ({ medicines }) => {
    const { heading, products } = medicines;
@@ -119,8 +119,8 @@ const Medicines = ({ medicines }) => {
             </div>
          </div>
 
-         {/* Other Products Grid */}
-         <div className="bg-gradient-to-b from-white to-gray-100 pt-24 pb-24 px-6 md:px-20">
+         {/* Other Products */}
+         <div className="bg-gradient-to-b from-white to-gray-100 pt-24 pb-6 px-6 md:px-20">
             <h3 className="text-center text-3xl font-bold text-gray-800 mb-12">
                Explore Other Products
             </h3>
@@ -148,30 +148,31 @@ const Medicines = ({ medicines }) => {
                      </div>
                   </motion.div>
                ))}
-
-               {/* Premium Glassy Coming Soon Card */}
-               <motion.div
-                  className="relative flex flex-col items-center justify-center p-6 backdrop-blur-xl border border-gray-300/40 rounded-2xl bg-white/30 shadow-2xl transition hover:shadow-inner group overflow-hidden"
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8 }}
-               >
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-white/5 group-hover:scale-105 transition-transform rounded-2xl pointer-events-none" />
-                  <FaFlask className="text-4xl text-blue-700 mb-4 z-10" />
-                  <h4 className="text-xl font-semibold text-gray-800 z-10">
-                     Experimental Formula
-                  </h4>
-                  <p className="text-sm text-gray-600 mt-1 z-10 text-center">
-                     Research in progress — unlocking soon.
-                  </p>
-                  <span className="text-xs text-blue-900 mt-4 opacity-70 z-10 italic">
-                     COMING SOON
-                  </span>
-               </motion.div>
             </div>
          </div>
 
-         {/* Popup Modal */}
+         {/* 🔥 Elite Glassy Coming Soon Card */}
+         <div className="mt-12 mb-20 flex justify-center px-6">
+            <motion.div
+               className="relative backdrop-blur-2xl bg-white/10 border border-white/30 shadow-2xl rounded-2xl px-10 py-8 max-w-xl text-center transition-all duration-300 hover:shadow-[0_0_40px_#a0c4ff88]"
+               initial={{ opacity: 0, y: 30 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               transition={{ duration: 1 }}
+            >
+               <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-100/20 via-white/10 to-purple-100/20 rounded-2xl pointer-events-none z-0" />
+               <div className="relative z-10">
+                  <h4 className="text-xl font-semibold text-gray-900 mb-2">
+                     🧪 Classified Research Underway
+                  </h4>
+                  <p className="text-gray-700 text-base">
+                     A new formulation is in the works. Engineered for precision, tested for tomorrow. <br />
+                     <span className="font-medium text-blue-500">Coming Soon...</span>
+                  </p>
+               </div>
+            </motion.div>
+         </div>
+
+         {/* Product Modal */}
          {selectedProduct && (
             <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60 backdrop-blur-sm px-4">
                <div className="relative bg-white rounded-xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-xl p-6">
