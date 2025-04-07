@@ -18,28 +18,18 @@ const Medicines = ({ medicines }) => {
 
          {/* Hero Section */}
          <div
-            className="relative text-center py-28 px-6 md:px-20 bg-cover bg-center"
+            className="relative text-center py-20 px-6 md:px-20 bg-cover bg-center"
             style={{ backgroundImage: 'url(/product-bg.jpg)' }}
          >
-            {/* Cinematic overlay: dark radial vignette + gradient blend */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60 z-0">
-               <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.6)_0%,transparent_70%)]" />
-            </div>
-
-            {/* Motion-enhanced text */}
-            <motion.div
-               className="relative z-10"
-               initial={{ opacity: 0, y: 20 }}
-               whileInView={{ opacity: 1, y: 0 }}
-               transition={{ duration: 1 }}
-            >
-               <h1 className="text-4xl md:text-6xl font-bold font-heading tracking-tight text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.7)]">
+            <div className="relative z-10">
+               <h1 className="text-4xl md:text-6xl font-bold font-heading tracking-tight text-white drop-shadow-md">
                   {heading}
                </h1>
-               <p className="mt-4 text-xl text-gray-300 max-w-2xl mx-auto drop-shadow-[0_1px_6px_rgba(0,0,0,0.5)] italic">
-                  Nature remembered. Science reimagined.
+               <p className="mt-4 text-xl text-gray-200 max-w-2xl mx-auto drop-shadow-sm">
+                  A new era of phytomedicine rooted in ancient wisdom and scientific precision.
                </p>
-            </motion.div>
+            </div>
+            <div className="absolute inset-0 bg-black/30 z-0" />
          </div>
 
          {/* Featured Damoxin Section */}
@@ -72,7 +62,6 @@ const Medicines = ({ medicines }) => {
 
             {/* Damoxin Details */}
             <div className="mt-16 grid md:grid-cols-3 gap-12">
-               {/* Mechanism of Action */}
                <motion.div
                   className="space-y-4"
                   initial={{ opacity: 0, y: 30 }}
@@ -89,7 +78,6 @@ const Medicines = ({ medicines }) => {
                   </ul>
                </motion.div>
 
-               {/* Clinical Benefits */}
                <motion.div
                   className="space-y-4"
                   initial={{ opacity: 0, y: 30 }}
@@ -107,7 +95,6 @@ const Medicines = ({ medicines }) => {
                   </ul>
                </motion.div>
 
-               {/* Sustainability */}
                <motion.div
                   className="space-y-4"
                   initial={{ opacity: 0, y: 30 }}
@@ -155,11 +142,19 @@ const Medicines = ({ medicines }) => {
                ))}
             </div>
 
-            {/* Elite Placeholder Below Grid */}
-            <div className="mt-20 text-center">
-               <div className="inline-block bg-gradient-to-r from-blue-600 to-teal-500 text-white text-lg font-semibold px-8 py-4 rounded-full shadow-lg animate-pulse">
-                  🚀 More breakthroughs loading... Stay tuned.
-               </div>
+            {/* Cinematic Placeholder */}
+            <div className="mt-24 text-center">
+               <motion.div
+                  className="inline-block px-10 py-6 rounded-2xl bg-gradient-to-r from-gray-800 via-black to-gray-800 text-white font-semibold text-lg tracking-wide shadow-2xl border border-gray-700 relative overflow-hidden"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1 }}
+               >
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-shimmer [background-size:200%_100%] z-0" />
+                  <span className="relative z-10">
+                     🧪 A new formulation is on the way — Coming Soon.
+                  </span>
+               </motion.div>
             </div>
          </div>
 
