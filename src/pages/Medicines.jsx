@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import TransitionEffect from "../utils/TransitionEffect";
-import { FaVirus, FaLungs, FaLeaf, FaBolt, FaShieldAlt } from "react-icons/fa";
+import { FaVirus, FaLungs, FaLeaf, FaBolt, FaShieldAlt, FaFlask } from "react-icons/fa";
 
 const Medicines = ({ medicines }) => {
    const { heading, products } = medicines;
@@ -21,10 +21,12 @@ const Medicines = ({ medicines }) => {
             className="relative text-center py-28 px-6 md:px-20 bg-cover bg-center"
             style={{ backgroundImage: 'url(/product-bg.jpg)' }}
          >
+            {/* Cinematic overlay: dark radial vignette + gradient blend */}
             <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60 z-0">
                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.6)_0%,transparent_70%)]" />
             </div>
 
+            {/* Motion-enhanced text */}
             <motion.div
                className="relative z-10"
                initial={{ opacity: 0, y: 20 }}
@@ -43,20 +45,14 @@ const Medicines = ({ medicines }) => {
          {/* Featured Damoxin Section */}
          <div className="relative bg-white py-20 px-6 md:px-28 rounded-t-3xl shadow-inner z-10">
             <div className="grid md:grid-cols-2 gap-10 items-center">
-               <motion.div
+               <motion.img
+                  src={damoxin.productPackage}
+                  alt="Damoxin"
+                  className="max-h-[400px] object-contain rounded-2xl drop-shadow-xl"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8 }}
-               >
-                  <img
-                     src={damoxin.productPackage}
-                     alt="Damoxin"
-                     className="max-h-[400px] object-contain rounded-2xl drop-shadow-xl mx-auto"
-                  />
-                  <p className="text-xs italic text-gray-500 text-center mt-2">
-                     Image shown is a conceptual representation and may not reflect the final product packaging or design.
-                  </p>
-               </motion.div>
+               />
 
                <motion.div
                   className="space-y-6"
@@ -74,8 +70,13 @@ const Medicines = ({ medicines }) => {
                </motion.div>
             </div>
 
+            <p className="text-sm text-gray-400 mt-6 italic text-center">
+               Image shown is a conceptual representation and may not reflect the final product packaging or design.
+            </p>
+
             {/* Damoxin Details */}
             <div className="mt-16 grid md:grid-cols-3 gap-12">
+               {/* Mechanism of Action */}
                <motion.div
                   className="space-y-4"
                   initial={{ opacity: 0, y: 30 }}
@@ -92,6 +93,7 @@ const Medicines = ({ medicines }) => {
                   </ul>
                </motion.div>
 
+               {/* Clinical Benefits */}
                <motion.div
                   className="space-y-4"
                   initial={{ opacity: 0, y: 30 }}
@@ -109,6 +111,7 @@ const Medicines = ({ medicines }) => {
                   </ul>
                </motion.div>
 
+               {/* Sustainability */}
                <motion.div
                   className="space-y-4"
                   initial={{ opacity: 0, y: 30 }}
@@ -126,7 +129,7 @@ const Medicines = ({ medicines }) => {
          </div>
 
          {/* Other Products Grid */}
-         <div className="bg-gradient-to-b from-white to-gray-100 pt-24 pb-16 px-6 md:px-20">
+         <div className="bg-gradient-to-b from-white to-gray-100 pt-24 pb-10 px-6 md:px-20">
             <h3 className="text-center text-3xl font-bold text-gray-800 mb-12">
                Explore Other Products
             </h3>
@@ -157,24 +160,28 @@ const Medicines = ({ medicines }) => {
             </div>
          </div>
 
-         {/* Coming Soon Card */}
-         <div className="mt-16 flex justify-center px-6 md:px-0">
-            <motion.div
-               className="relative backdrop-blur-md bg-white/30 border border-gray-200 shadow-2xl rounded-2xl px-8 py-6 text-center max-w-xl"
-               initial={{ opacity: 0, y: 30 }}
-               whileInView={{ opacity: 1, y: 0 }}
-               transition={{ duration: 0.8 }}
-            >
-               <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-blue-500 to-teal-400 text-white text-xs px-4 py-1 rounded-full shadow-md uppercase tracking-wide">
-                  R&D Pipeline
-               </div>
-               <p className="text-gray-900 font-medium text-lg mt-2">
-                  🧪 A new formulation is under classified research.
-               </p>
-               <p className="text-gray-600 text-sm mt-1">
-                  Coming Soon — stay tuned for what's next.
-               </p>
-            </motion.div>
+         {/* Coming Soon Section */}
+         <div className="bg-gradient-to-b from-gray-100 to-white pt-12 pb-24 px-6 md:px-20">
+            <div className="text-center mb-10">
+               <h4 className="text-xl font-semibold text-blue-700 flex justify-center items-center gap-2">
+                  <FaFlask className="text-blue-500" /> Upcoming Innovation
+               </h4>
+            </div>
+            <div className="flex justify-center">
+               <motion.div
+                  className="relative backdrop-blur-md bg-white/30 border border-gray-300 shadow-2xl rounded-2xl px-8 py-6 text-center max-w-md hover:shadow-blue-200/50 transition duration-300"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8 }}
+               >
+                  <p className="text-gray-800 font-medium text-lg">
+                     🧪 A new formulation is under classified research.
+                  </p>
+                  <p className="text-gray-600 text-sm mt-1">
+                     Coming Soon — stay tuned for what's next.
+                  </p>
+               </motion.div>
+            </div>
          </div>
 
          {/* Popup Modal */}
