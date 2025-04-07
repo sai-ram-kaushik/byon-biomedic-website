@@ -16,19 +16,31 @@ const Medicines = ({ medicines }) => {
       <div className="w-full bg-gradient-to-br from-[#f3f4f6] to-[#e0ecf7] text-gray-900 overflow-x-hidden">
          <TransitionEffect />
 
-         {/* Hero Section */}
-         <div className="relative text-center py-20 px-6 md:px-20">
-            <h1 className="text-4xl md:text-6xl font-bold font-heading tracking-tight">
-               {heading}
-            </h1>
-            <p className="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">
-               A new era of phytomedicine rooted in ancient wisdom and scientific precision.
-            </p>
+         {/* --- Hero Section with Background Image --- */}
+         <div
+            className="relative text-center py-20 px-6 md:px-20 bg-cover bg-center bg-no-repeat"
+            style={{
+               backgroundImage: `url('/product-bg.jpg')`,
+            }}
+         >
+            {/* Overlay for better text readability */}
+            <div className="absolute inset-0 bg-white bg-opacity-70 backdrop-blur-sm z-0" />
+
+            {/* Hero Content */}
+            <div className="relative z-10">
+               <h1 className="text-4xl md:text-6xl font-bold font-heading tracking-tight text-gray-900">
+                  {heading}
+               </h1>
+               <p className="mt-4 text-xl text-gray-700 max-w-2xl mx-auto">
+                  A new era of phytomedicine rooted in ancient wisdom and scientific precision.
+               </p>
+            </div>
          </div>
 
-         {/* Featured Damoxin Section */}
+         {/* --- Featured Damoxin Section --- */}
          <div className="relative bg-white py-20 px-6 md:px-28 rounded-t-3xl shadow-inner z-10">
             <div className="grid md:grid-cols-2 gap-10 items-center">
+               {/* Damoxin Image */}
                <motion.img
                   src={damoxin.productPackage}
                   alt="Damoxin"
@@ -38,6 +50,7 @@ const Medicines = ({ medicines }) => {
                   transition={{ duration: 0.8 }}
                />
 
+               {/* Damoxin Description */}
                <motion.div
                   className="space-y-6"
                   initial={{ opacity: 0, y: 30 }}
@@ -54,7 +67,7 @@ const Medicines = ({ medicines }) => {
                </motion.div>
             </div>
 
-            {/* Damoxin Details */}
+            {/* Damoxin Details Grid */}
             <div className="mt-16 grid md:grid-cols-3 gap-12">
                {/* Mechanism of Action */}
                <motion.div
@@ -91,7 +104,7 @@ const Medicines = ({ medicines }) => {
                   </ul>
                </motion.div>
 
-               {/* Sustainability */}
+               {/* Sustainability & Ethics */}
                <motion.div
                   className="space-y-4"
                   initial={{ opacity: 0, y: 30 }}
@@ -108,7 +121,7 @@ const Medicines = ({ medicines }) => {
             </div>
          </div>
 
-         {/* Other Products Grid */}
+         {/* --- Other Products Grid --- */}
          <div className="bg-gradient-to-b from-white to-gray-100 pt-24 pb-32 px-6 md:px-20">
             <h3 className="text-center text-3xl font-bold text-gray-800 mb-12">
                Explore Other Products
@@ -140,7 +153,7 @@ const Medicines = ({ medicines }) => {
             </div>
          </div>
 
-         {/* Popup Modal */}
+         {/* --- Popup Modal --- */}
          {selectedProduct && (
             <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60 backdrop-blur-sm px-4">
                <div className="relative bg-white rounded-xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-xl p-6">
