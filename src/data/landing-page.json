@@ -1,135 +1,141 @@
 {
    "navbar": {
-      "logo": "/ByonLogo.png",
-      "navlinks": [
-         { "label": "Home", "path": "/" },
-         { "label": "About", "path": "/about" },
-         { "label": "Team", "path": "/team" },
-         { "label": "Products", "path": "/medicines" },
-         { "label": "Contact Us", "path": "/contact" }
-      ]
+     "logo": "/ByonLogo.png",
+     "navlinks": [
+       { "label": "Home", "path": "/" },
+       { "label": "About", "path": "/about" },
+       { "label": "Team", "path": "/team" },
+       { "label": "Products", "path": "/medicines" },
+       { "label": "Contact Us", "path": "/contact" }
+     ]
    },
-
+ 
    "home": {
-      "subHeading": "By synergizing cutting-edge phytoscientific research with industry-leading expertise, we are dedicated to pioneering the development of evidence-based phytotherapeutic solutions. Through collaborative innovation, we aim to deliver transformative phytomedical advancements that address unmet clinical needs and elevate patient care standards.",
-      "imageUrl": "/home.svg"
+     "subHeading": "By synergizing cutting-edge phytoscientific research with industry-leading expertise, we are dedicated to pioneering the development of evidence-based phytotherapeutic solutions. Through collaborative innovation, we aim to deliver transformative phytomedical advancements that address unmet clinical needs and elevate patient care standards.",
+     "imageUrl": "/home.svg"
    },
-
+ 
    "about": {
-      "title": "About",
-      "imageUrl": "/about.png",
-      "subHeading": "Our Vision & Mission",
-      "vision": "To pioneer a transformative future in healthcare where plant-based medicines lead therapeutic innovation, fostering global wellness and environmental sustainability for generations.",
-      "mission": "We are dedicated to advancing phytomedicines through the fusion of traditional botanical wisdom and modern scientific rigor. Committed to ethical sourcing and sustainable practices, we deliver safe, effective, and accessible natural therapies that enhance health outcomes while preserving our planet.",
-
-      "teamMembersPartOne": [
-         {
-            "name": "Datuk Dr. Mukundan Pillay",
-            "imageUrl": "/team/datuk.jpg",
-            "designation": "Chairman",
-            "bio": "Datuk Dr. Mukundan Pillay is a distinguished leader renowned for his transformative contributions to healthcare systems in Malaysia and globally. Over a 32-year career with the Malaysian Ministry of Health, he spearheaded critical initiatives in health infrastructure, policy, and research. Post-retirement, he extended his expertise to international organizations, including the World Bank in Bahrain and the World Health Organization (WHO) in China, while remaining actively engaged in advancing Malaysia’s healthcare landscape."
-         },
-         {
-            "name": "M. Paramesswaran",
-            "imageUrl": "/team/param.jpg",
-            "designation": "Managing Director",
-            "bio": "Public Health Advocate.\n\n- Spearheaded community-based health initiatives for 15+ years, promoting plant-based wellness and preventive care as sustainable, accessible alternatives to conventional healthcare, reaching 500+ individuals annually through workshops, seminars, and one-on-one consultations.\n- Collaborated with local NGOs, wellness centers, and holistic health practitioners to design culturally sensitive educational programs on phyto-based medicine, improving health literacy in underserved communities.\n- Advocated for integrative health policies by partnering with regional public health coalitions, contributing research on phytotherapy’s role in chronic disease prevention to inform community health strategies."
-         },
-         {
-            "name": "Dr. Furizat",
-            "imageUrl": "/team/furizat.jpg",
-            "designation": "Director of Product Innovation and Compliance"
-         }
-      ],
-
-      "teamMembersPartSecond": [
-         {
-            "name": "P. Vasanthan",
-            "imageUrl": "/team/vasan.jpg",
-            "designation": "Corporate Operations Director"
-         },
-         {
-            "name": "Dr. Srivalli",
-            "imageUrl": "/team/srivalli.jpg",
-            "designation": "Director of Research and Studies",
-            "bio": "Dr Srivalli, MBBS Madras University, India. Ph.D Complementary & Alternative Medicine. Honorary Doctorate in Natural Medicine.Weston Reserve University, Canada."
-         },
-         {
-            "name": "Dr. Krishnaveni Kunji Raman",
-            "imageUrl": "/team/krishnaveni.jpg",
-            "designation": "Director of Corporate Affairs & Communications",
-            "bio": "Qualifications:\n- Doctorate in Business Administration, Lincoln University College (DBA)\n- EMBA (Open University Malaysia)\n\nExperience & Achievements:\n- 30+ Years’ Experience: Leading corporate communications, brand strategy, and stakeholder engagement for multinational organizations like Sime Darby (Caterpillar).\n- Global Leadership: Directed APAC-wide communication strategies for 23+ branches, aligning brands like Caterpillar with regional markets.\n- Award-Winning Expertise: Inspirational LinkedIn Icons (Malaysia).\n- Top Corporate Communication Voice."
-         },
-         {
-            "name": "Mr. Govindaraju",
-            "imageUrl": "/team/govindaraju.jpg",
-            "designation": "Senior Quality Systems Manager",
-            "bio": "Leadership in GMP & Compliance: Extensive experience ensuring *Good Manufacturing Practice (GMP), ISO standards, and regulatory compliance in multinational manufacturing environments."
-         }
-      ],
-
-      "advisoryGroupPartOne": [
-         {
-            "name": "Dr. Parasuraman",
-            "imageUrl": "/team/parasuraman.jpg",
-            "designation": "Technical and Advisory Committee Member"
-         },
-         {
-            "name": "Datuk Dr. Mukundan Pillay",
-            "imageUrl": "/team/datuk.jpg",
-            "designation": "Technical and Advisory Committee Member",
-            "bio": "Datuk Dr. Mukundan Pillay is a distinguished leader renowned for his transformative contributions to healthcare systems in Malaysia and globally. Over a 32-year career with the Malaysian Ministry of Health, he spearheaded critical initiatives in health infrastructure, policy, and research. Post-retirement, he extended his expertise to international organizations, including the World Bank in Bahrain and the World Health Organization (WHO) in China, while remaining actively engaged in advancing Malaysia’s healthcare landscape."
-         }
-      ],
-
-      "advisoryGroupPartSecond": [
-         {
-            "name": "Prof. Gurjeet Kaur Chawla",
-            "imageUrl": "/team/gurjeet.jpg",
-            "designation": "Technical and Advisory Committee Member"
-         },
-         {
-            "name": "Dr. Sunita",
-            "imageUrl": "/team/sunita.jpg",
-            "designation": "Technical and Advisory Committee Member"
-         }
-      ]
+     "title": "About",
+     "imageUrl": "/about.png",
+     "subHeading": "Our Vision & Mission",
+     "vision": "To pioneer a transformative future in healthcare where plant-based medicines lead therapeutic innovation, fostering global wellness and environmental sustainability for generations.",
+     "mission": "We are dedicated to advancing phytomedicines through the fusion of traditional botanical wisdom and modern scientific rigor. Committed to ethical sourcing and sustainable practices, we deliver safe, effective, and accessible natural therapies that enhance health outcomes while preserving our planet.",
+ 
+     "teamMembersPartOne": [
+       {
+         "name": "Datuk Dr. Mukundan Pillay",
+         "imageUrl": "/team/datuk.jpg",
+         "designation": "Chairman",
+         "bio": "Datuk Dr. Mukundan Pillay is a distinguished leader renowned for his transformative contributions to healthcare systems in Malaysia and globally. Over a 32-year career with the Malaysian Ministry of Health, he spearheaded critical initiatives in health infrastructure, policy, and research. Post-retirement, he extended his expertise to international organizations, including the World Bank in Bahrain and the World Health Organization (WHO) in China, while remaining actively engaged in advancing Malaysia’s healthcare landscape."
+       },
+       {
+         "name": "M. Paramesswaran",
+         "imageUrl": "/team/param.jpg",
+         "designation": "Managing Director",
+         "bio": "Public Health Advocate.\n\n- Spearheaded community-based health initiatives for 15+ years, promoting plant-based wellness and preventive care as sustainable, accessible alternatives to conventional healthcare, reaching 500+ individuals annually through workshops, seminars, and one-on-one consultations.\n- Collaborated with local NGOs, wellness centers, and holistic health practitioners to design culturally sensitive educational programs on phyto-based medicine, improving health literacy in underserved communities.\n- Advocated for integrative health policies by partnering with regional public health coalitions, contributing research on phytotherapy’s role in chronic disease prevention to inform community health strategies."
+       },
+       {
+         "name": "Dr. Furizat",
+         "imageUrl": "/team/furizat.jpg",
+         "designation": "Director of Product Innovation and Compliance",
+         "bio": "Dr. Furizat Yahya, PhD\nN.D., D.H.D (AM), D.O.H.M. (AM), ABE (London)\n\nPioneer in Phytomedicine Innovation & Natural Healthcare Leadership.\n\nDr. Furizat Yahya is a distinguished leader in phytomedicine and natural healthcare, renowned for her expertise in merging traditional knowledge with modern scientific rigor, and a Doctor of Natural Medicine (N.D.) from the Indian Board of Alternative Medicine, she specializes in sustainable commercialization strategies for plant-derived medicines.\n\nProfessional Leadership:\n- Co-Founder & Chief Scientific Officer, Bio-Spectra, a trailblazing brand delivering evidence-based, plant-derived therapeutic solutions.\n- Secretary General, Malaysia Association of Natural Medicine Practitioners (MANMP) – Championing ethical standards, education, and policy reform in natural healthcare.\n\nKey Contributions:\n- Spearheaded the design and commercialization of breakthrough phytopharmaceutical formulations.\n- Advocate for regulatory advancements in Southeast Asia’s natural medicine sector.\n\nResearch Focus:\n- Clinical validation of traditional phytomedicines.\n- Scalable business models for natural product industries.\n- Integrative approaches to holistic healthcare."
+       }
+     ],
+ 
+     "teamMembersPartSecond": [
+       {
+         "name": "P. Vasanthan",
+         "imageUrl": "/team/vasan.jpg",
+         "designation": "Corporate Operations Director",
+         "bio": "With over a decade of experience in corporate operations and business strategy, Vasanthan specializes in driving efficiency, optimizing processes, and ensuring seamless cross-functional collaboration. He holds a Diploma in Corporate Operations & Business Management and is a certified expert in corporate strategy and process optimization.\n\nAs a leader in operational efficiency and process innovation, he has successfully streamlined workflows, reduced costs, and implemented automation strategies that boosted productivity. His expertise extends to stakeholder management, corporate governance, supply chain optimization, and crisis mitigation, ensuring business continuity in dynamic environments.\n\nVasanthan’s strategic vision and leadership enable organizations to scale efficiently while maintaining operational excellence."
+       },
+       {
+         "name": "Dr. Srivalli",
+         "imageUrl": "/team/srivalli.jpg",
+         "designation": "Director of Research and Studies",
+         "bio": "Dr. Srivalli Narayanaswamy is a distinguished expert in integrative and natural medicine, with over four decades of experience in the field. Her educational background includes an M.B.B.S. from Madras Medical University, Tamil Nadu, India, a Ph.D. in Alternative Medicine with a specialization in Phytomedicine, a Doctor of Science (D.Sc.) in Naturopathy from Sri Lanka, and an Honorary Doctorate in Natural Medicine from Weston Reserve University, Canada.\n\nAs a professional leader, Dr. Narayanaswamy has been an active member of the Malaysian Red Crescent Society for 45 years, serving since 1970. She holds the position of Chapter Leader for Naturopathy and is a Council Member of the Malaysian Society for Complementary Medicine. Additionally, she is a member of the International Scientific and Research Council for Complementary Medicine.\n\nThroughout her career, Dr. Narayanaswamy has been recognized for her lifelong dedication to advancing natural and integrative therapies, contributing significantly to the development of complementary medicine on both national and international platforms."
+       },
+       {
+         "name": "Dr. Krishnaveni Kunji Raman",
+         "imageUrl": "/team/krishnaveni.jpg",
+         "designation": "Director of Corporate Affairs & Communications",
+         "bio": "Qualifications:\n- Doctorate in Business Administration, Lincoln University College (DBA)\n- EMBA (Open University Malaysia)\n\nExperience & Achievements:\n- 30+ Years’ Experience: Leading corporate communications, brand strategy, and stakeholder engagement for multinational organizations like Sime Darby (Caterpillar).\n- Global Leadership: Directed APAC-wide communication strategies for 23+ branches, aligning brands like Caterpillar with regional markets.\n- Award-Winning Expertise: Inspirational LinkedIn Icons (Malaysia).\n- Top Corporate Communication Voice."
+       },
+       {
+         "name": "Mr. Govindaraju",
+         "imageUrl": "/team/govindaraju.jpg",
+         "designation": "Senior Quality Systems Manager",
+         "bio": "Leadership in GMP & Compliance: Extensive experience ensuring *Good Manufacturing Practice (GMP), ISO standards, and regulatory compliance in multinational manufacturing environments."
+       }
+     ],
+ 
+     "advisoryGroupPartOne": [
+       {
+         "name": "Dr. Parasuraman",
+         "imageUrl": "/team/parasuraman.jpg",
+         "designation": "Technical and Advisory Committee Member",
+         "bio": "Dr. N. Parasuraman is a distinguished scientist specializing in sustainable agriculture policy, biodiversity conservation, and rural development. He has held key leadership roles, including serving on the Planning Boards of Pondicherry and Periyar Universities and as a Senate Member for Bharathiar, Madras, and Bharathidasan Universities.\n\nHe has contributed to national policy as a member of the National Biodiversity Authority of India and the Tamil Nadu Government's 12th Five-Year Plan Committee. Internationally, he is a long-standing member of the International Water Resources Association and a Fellow of the Indian Academy of Social Sciences.\n\nDr. Parasuraman actively advises governments and institutions on agriculture, environment, and rural development, reinforcing his commitment to sustainable growth and youth empowerment. He is also affiliated with the Indian Science Congress Association, the Centre for Agriculture & Rural Development, and ICAR-NRC on Biotechnology."
+       },
+       {
+         "name": "Datuk Dr. Mukundan Pillay",
+         "imageUrl": "/team/datuk.jpg",
+         "designation": "Technical and Advisory Committee Member",
+         "bio": "Datuk Dr. Mukundan Pillay is a distinguished leader renowned for his transformative contributions to healthcare systems in Malaysia and globally. Over a 32-year career with the Malaysian Ministry of Health, he spearheaded critical initiatives in health infrastructure, policy, and research. Post-retirement, he extended his expertise to international organizations, including the World Bank in Bahrain and the World Health Organization (WHO) in China, while remaining actively engaged in advancing Malaysia’s healthcare landscape."
+       }
+     ],
+ 
+     "advisoryGroupPartSecond": [
+       {
+         "name": "Prof. Gurjeet Kaur Chawla",
+         "imageUrl": "/team/gurjeet.jpg",
+         "designation": "Technical and Advisory Committee Member",
+         "bio": "PROFESSOR (DR.) GURJEET KAUR CHAWLA\nHealth Promotion Leader | Global Collaborator\n\n- PhD (Health Promotion) | MBA, MSc, BSc, B.Ed (First Division)\n- Certifications: Imperial College London, Yale University, HarvardX\n\n- Professor & Dean (Student Welfare), MRIIRS Faridabad.\n- Advisor, Foundation of Global Community Health (USA)\n- Speaker: WHO, GoFPEP Forums (Turkey/South Africa)\n- Research Lead: UNICEF/NDDB-Funded Public Health Projects\n\nAWARDS & RECOGNITION\n- Best Research Proposal Award (University of Tsukuba, Japan)\n- Commendations: Indian Red Cross (COVID-19 Relief), Faridabad Administration (Public Safety)\n\n- Workplace Wellness Strategies | Nutrition Interventions | COVID-19 Lifestyle Impact Studies\n\n25+ years driving public health innovation through research, education, and grassroots advocacy. Pioneered social change via community radio and global health partnerships."
+       },
+       {
+         "name": "Dr. Sunita",
+         "imageUrl": "/team/sunita.jpg",
+         "designation": "Technical and Advisory Committee Member",
+         "bio": "Dr. Sunita Vidyarthi is a leading expert in sustainable energy and crisis leadership, with a PhD in Solar Energy from Uttarakhand Technical University and an Honorary PhD in Sustainable Development from Maryland State University, USA. She holds dual M.Tech degrees in Renewable Energy (NIT Kurukshetra) and Control Systems (GEU, Dehradun).\n\nAs the Regional Coordinator for I-STEM (IISc, Bengaluru), she plays a key role in advancing STEM innovation and infrastructure across India.\n\nDuring the COVID-19 pandemic, Dr. Vidyarthi demonstrated leadership by facilitating national virtual conferences and spearheading digital outreach initiatives for crisis communication. Her expertise spans renewable energy systems, STEM policy, and strategic communication in high-impact scenarios."
+       }
+     ]
    },
-
+ 
    "ourServices": {
-      "services": [
-         {
-            "name": "Free Checkup",
-            "desc": "We offer free medical checkups to ensure early diagnosis and preventive care.",
-            "imageUrl": "/service.png"
-         },
-         {
-            "name": "Expert Consultation",
-            "desc": "Consult with our experienced professionals for the best medical guidance.",
-            "imageUrl": "/service.png"
-         },
-         {
-            "name": "Personalized Treatment",
-            "desc": "Get treatments tailored to your specific health needs and conditions.",
-            "imageUrl": "/service.png"
-         },
-         {
-            "name": "Advanced Diagnostics",
-            "desc": "Utilizing cutting-edge technology for precise and accurate medical diagnostics.",
-            "imageUrl": "/service.png"
-         }
-      ]
+     "services": [
+       {
+         "name": "Free Checkup",
+         "desc": "We offer free medical checkups to ensure early diagnosis and preventive care.",
+         "imageUrl": "/service.png"
+       },
+       {
+         "name": "Expert Consultation",
+         "desc": "Consult with our experienced professionals for the best medical guidance.",
+         "imageUrl": "/service.png"
+       },
+       {
+         "name": "Personalized Treatment",
+         "desc": "Get treatments tailored to your specific health needs and conditions.",
+         "imageUrl": "/service.png"
+       },
+       {
+         "name": "Advanced Diagnostics",
+         "desc": "Utilizing cutting-edge technology for precise and accurate medical diagnostics.",
+         "imageUrl": "/service.png"
+       }
+     ]
    },
-
+ 
    "medicines": {
-      "heading": "Our Products",
-      "products": [
-         {
-            "name": "Damoxin",
-            "imageUrl": "/products/damoxin.png",
-            "trademark": "TM",
-            "productPackage": "/products/damoxinPackage.png"
-         }
-      ]
+     "heading": "Our Products",
+     "products": [
+       {
+         "name": "Damoxin",
+         "imageUrl": "/products/damoxin.png",
+         "trademark": "TM",
+         "productPackage": "/products/damoxinPackage.png"
+       }
+     ]
    }
-}
+ }
+ 
