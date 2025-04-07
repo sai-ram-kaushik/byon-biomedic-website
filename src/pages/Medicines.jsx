@@ -155,17 +155,10 @@ const Medicines = ({ medicines }) => {
                ))}
             </div>
 
-            {/* Elite Placeholder Below Grid */}
-            {/* <div className="mt-20 text-center">
-               <div className="inline-block bg-gradient-to-r from-blue-600 to-teal-500 text-white text-lg font-semibold px-8 py-4 rounded-full shadow-lg animate-pulse">
-                  🚀 More breakthroughs loading... Stay tuned.
-               </div>
-            </div>*/}
-         </div> 
-         {/* ✅ GLASSY "COMING SOON" CARD */}
-            <div className="mt-24 flex justify-center">
+            {/* ✅ GLASSY "COMING SOON" CARD - Moved inside this section */}
+            <div className="mt-20 text-center">
                <motion.div
-                  className="backdrop-blur-md bg-white/30 border border-gray-300 shadow-xl rounded-xl px-8 py-6 text-center max-w-md"
+                  className="inline-block backdrop-blur-md bg-white/30 border border-gray-300 shadow-xl rounded-xl px-8 py-6 text-center max-w-md"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8 }}
@@ -178,7 +171,7 @@ const Medicines = ({ medicines }) => {
                   </p>
                </motion.div>
             </div>
-         {/* </section> */}
+         </div>
 
          {/* Popup Modal */}
          {selectedProduct && (
