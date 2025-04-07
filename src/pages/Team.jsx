@@ -27,7 +27,7 @@ const Team = ({ about }) => {
          {/* Team Members */}
          <motion.div className="flex flex-wrap justify-center gap-8" variants={fadeIn}>
             {[teamMembersPartOne, teamMembersPartSecond].map((team, index) => (
-               <div key={index} className="flex justify-center gap-8 w-full">
+               <div key={index} className="flex justify-center gap-8 w-full flex-wrap">
                   {team.map((member, idx) => (
                      <motion.div 
                         key={idx} 
@@ -35,7 +35,7 @@ const Team = ({ about }) => {
                         onClick={() => setSelectedMember(member)}
                         whileHover={{ scale: 1.05 }}>
 
-                        {/* Profile Image (Rounded Rectangle) */}
+                        {/* Profile Image */}
                         <div className="w-40 h-48 rounded-xl overflow-hidden border-2 border-gray-300 shadow-md">
                            <img 
                               className="w-full h-full object-cover" 
@@ -69,7 +69,7 @@ const Team = ({ about }) => {
                   onClick={() => setSelectedMember(member)}
                   whileHover={{ scale: 1.05 }}>
 
-                  {/* Profile Image (Rounded Rectangle) */}
+                  {/* Profile Image */}
                   <div className="w-40 h-48 rounded-xl overflow-hidden border-2 border-gray-300 shadow-md">
                      <img 
                         className="w-full h-full object-cover" 
@@ -87,15 +87,15 @@ const Team = ({ about }) => {
 
          {/* Popup Modal */}
          {selectedMember && (
-            <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 px-4">
-               <div className="bg-white p-6 rounded-2xl max-w-lg relative shadow-2xl w-full text-center">
+            <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 px-2 sm:px-4 overflow-auto z-50">
+               <div className="bg-white p-4 sm:p-6 rounded-2xl w-full max-w-md sm:max-w-lg relative shadow-2xl text-center my-8 max-h-[90vh] overflow-y-auto">
                   <button className="absolute top-3 right-3 text-gray-500 hover:text-gray-800 text-lg" onClick={() => setSelectedMember(null)}>✖</button>
-                  <div className="w-44 h-52 mx-auto rounded-xl overflow-hidden border-2 border-gray-300 shadow-md">
+                  <div className="w-32 h-40 sm:w-44 sm:h-52 mx-auto rounded-xl overflow-hidden border-2 border-gray-300 shadow-md">
                      <img className="w-full h-full object-cover" src={selectedMember.imageUrl} alt={selectedMember.name} />
                   </div>
-                  <h2 className="text-2xl font-bold mt-4 text-gray-900">{selectedMember.name}</h2>
-                  <p className="text-gray-600 text-sm mt-1">{selectedMember.designation}</p>
-                  <p className="mt-3 text-sm text-gray-700 leading-relaxed whitespace-pre-line">{selectedMember.bio}</p>
+                  <h2 className="text-xl sm:text-2xl font-bold mt-4 text-gray-900">{selectedMember.name}</h2>
+                  <p className="text-sm sm:text-base text-gray-600 mt-1">{selectedMember.designation}</p>
+                  <p className="mt-3 text-sm sm:text-base text-gray-700 leading-relaxed whitespace-pre-line">{selectedMember.bio}</p>
                   <button className="mt-5 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 text-sm w-full" onClick={() => setSelectedMember(null)}>Close</button>
                </div>
             </div>
