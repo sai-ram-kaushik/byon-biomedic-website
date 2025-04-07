@@ -19,20 +19,21 @@ const Home = ({ home }) => {
                backgroundPosition: "center",
             }}
          >
-            {/* Darker overlay to improve text visibility */}
-            <div className="absolute inset-0 bg-black bg-opacity-70"></div>
+            {/* Multi-layered gradient overlays for cinematic effect */}
+            <div className="absolute inset-0 z-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
+            <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.6)_0%,transparent_70%)]" />
 
             {/* Transition Effect */}
             <TransitionEffect />
 
             <motion.div
-               className="relative flex flex-col lg:flex-row items-center justify-between gap-10 w-full max-w-6xl mx-auto flex-grow"
+               className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-10 w-full max-w-6xl mx-auto flex-grow"
                initial={{ opacity: 0, y: 30 }}
                animate={{ opacity: 1, y: 0 }}
                transition={{ delay: 0.4, duration: 0.6, ease: "easeOut" }}
             >
                <div className="flex flex-col items-start gap-4 max-w-[800px] text-center lg:text-left">
-                  <h2 className="text-4xl lg:text-5xl font-bold font-heading max-w-[1100px] leading-tight text-white">
+                  <h2 className="text-4xl lg:text-5xl font-bold font-heading max-w-[1100px] leading-tight text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.7)]">
                      Harnessing the Inherent Potential of{" "}
                      <span
                         className="text-[#FFD700] font-extrabold"
@@ -45,7 +46,7 @@ const Home = ({ home }) => {
                      Resources to Advance Groundbreaking Phytomedical Innovations
                   </h2>
 
-                  <p className="text-gray-200">{subHeading}</p>
+                  <p className="text-gray-200 drop-shadow-[0_1px_6px_rgba(0,0,0,0.5)] italic">{subHeading}</p>
 
                   <Link to={`/medicines`}>
                      <Button title="See Medicines" />
