@@ -160,8 +160,8 @@ const Medicines = ({ medicines }) => {
                <div className="inline-block bg-gradient-to-r from-blue-600 to-teal-500 text-white text-lg font-semibold px-8 py-4 rounded-full shadow-lg animate-pulse">
                   🚀 More breakthroughs loading... Stay tuned.
                </div>
-            </div>
-         </div> */}
+            </div>*/}
+         </div> 
          {/* ✅ GLASSY "COMING SOON" CARD */}
             <div className="mt-24 flex justify-center">
                <motion.div
