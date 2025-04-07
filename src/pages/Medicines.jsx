@@ -19,7 +19,7 @@ const Medicines = ({ medicines }) => {
          {/* Hero Section */}
          <div
             className="relative text-center py-20 px-6 md:px-20 bg-cover bg-center"
-            style={{ backgroundImage: 'url(/images/product-bg.jpg)' }}
+            style={{ backgroundImage: 'url(/product-bg.jpg)' }}
          >
             <div className="relative z-10">
                <h1 className="text-4xl md:text-6xl font-bold font-heading tracking-tight text-white drop-shadow-md">
