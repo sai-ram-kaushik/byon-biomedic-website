@@ -178,7 +178,7 @@ const Medicines = ({ medicines }) => {
                   </p>
                </motion.div>
             </div>
-         </section>
+         {/* </section> */}
 
          {/* Popup Modal */}
          {selectedProduct && (
