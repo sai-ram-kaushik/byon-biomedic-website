@@ -51,9 +51,6 @@ const Medicines = ({ medicines }) => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8 }}
                />
-               <p className="text-xs text-gray-400 mt-2 md:mt-0 md:absolute md:bottom-4">
-                  Image shown is a conceptual representation and may not reflect the final product packaging or design.
-               </p>
 
                <motion.div
                   className="space-y-6"
@@ -71,6 +68,11 @@ const Medicines = ({ medicines }) => {
                </motion.div>
             </div>
 
+            <p className="text-xs text-gray-400 mt-4 text-center md:text-left md:pl-4">
+               Image shown is a conceptual representation and may not reflect the final product packaging or design.
+            </p>
+
+            {/* Damoxin Details */}
             <div className="mt-16 grid md:grid-cols-3 gap-12">
                <motion.div className="space-y-4" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
                   <h3 className="text-xl font-semibold flex items-center gap-2">
@@ -106,34 +108,12 @@ const Medicines = ({ medicines }) => {
             </div>
          </div>
 
-         {/* New Science-Nature Fusion Section */}
-         <div className="bg-[#f9fafb] py-24 px-6 md:px-32 text-center">
-            <motion.div
-               initial={{ opacity: 0, y: 30 }}
-               whileInView={{ opacity: 1, y: 0 }}
-               transition={{ duration: 1 }}
-               className="max-w-4xl mx-auto space-y-6"
-            >
-               <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-                  Harnessing Nature’s Healing Power for Modern Medicine
-               </h2>
-               <p className="text-gray-700 text-lg leading-relaxed">
-                  We merge ancient botanical wisdom with cutting-edge science to unlock plant-derived therapies for today’s health challenges. By analyzing plants at the molecular level and deploying AI-driven research and precision extraction, we isolate bioactive compounds with proven therapeutic value. These discoveries are rigorously tested and transformed into safe, standardized treatments for chronic conditions and unmet medical needs.
-               </p>
-               <p className="text-gray-700 text-lg leading-relaxed">
-                  Committed to sustainability and efficacy, we bridge traditional remedies with modern healthcare standards—ensuring quality, safety, and trust.
-               </p>
-               <p className="text-xl italic text-blue-600 font-medium">
-                  “Science Meets Nature. Innovation Meets Trust.”
-               </p>
-            </motion.div>
-         </div>
-
          {/* Other Products Grid */}
          <div className="bg-gradient-to-b from-white to-gray-100 pt-24 pb-16 px-6 md:px-20">
             <h3 className="text-center text-3xl font-bold text-gray-800 mb-12">
                Explore Other Products
             </h3>
+
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
                {products.filter((p) => p.name !== "Damoxin").map((product, idx) => (
                   <motion.div
@@ -142,28 +122,59 @@ const Medicines = ({ medicines }) => {
                      className="bg-white shadow-xl rounded-2xl overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-300 group"
                      whileHover={{ scale: 1.05 }}
                   >
-                     <img src={product.imageUrl} alt={product.name} className="w-full h-60 object-contain p-6" />
+                     <img
+                        src={product.imageUrl}
+                        alt={product.name}
+                        className="w-full h-60 object-contain p-6"
+                     />
                      <div className="p-4 text-center">
-                        <h4 className="text-lg font-semibold text-gray-800">{product.name}</h4>
-                        <p className="text-sm text-gray-500 mt-1">{product.tagline || "Click to learn more"}</p>
+                        <h4 className="text-lg font-semibold text-gray-800">
+                           {product.name}
+                        </h4>
+                        <p className="text-sm text-gray-500 mt-1">
+                           {product.tagline || "Click to learn more"}
+                        </p>
                      </div>
                   </motion.div>
                ))}
             </div>
          </div>
 
-         {/* Coming Soon Card */}
-         <div className="mt-32 mb-12 flex justify-center">
+         {/* Mission Section */}
+         <section className="bg-[#e9f3fc] py-24 px-6 md:px-28 text-center md:text-left">
             <motion.div
-               className="relative backdrop-blur-md bg-white/30 border border-gray-300 shadow-xl rounded-xl px-10 py-8 text-center max-w-xl"
+               className="max-w-5xl mx-auto"
+               initial={{ opacity: 0, y: 40 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               transition={{ duration: 1 }}
+            >
+               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                  Harnessing Nature’s Healing Power for Modern Medicine
+               </h2>
+               <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                  We merge ancient botanical wisdom with cutting-edge science to unlock plant-derived therapies for today’s health challenges. By analyzing plants at the molecular level and deploying AI-driven research and precision extraction, we isolate bioactive compounds with proven therapeutic value. These discoveries are rigorously tested and transformed into safe, standardized treatments for chronic conditions and unmet medical needs.
+               </p>
+               <p className="text-lg text-gray-700 leading-relaxed">
+                  Committed to sustainability and efficacy, we bridge traditional remedies with modern healthcare standards—ensuring quality, safety, and trust.
+               </p>
+               <p className="mt-6 text-xl italic text-gray-500">
+                  “Science Meets Nature. Innovation Meets Trust.”
+               </p>
+            </motion.div>
+         </section>
+
+         {/* Coming Soon Card */}
+         <div className="py-24 px-6 md:px-0 flex justify-center bg-gradient-to-b from-[#e9f3fc] to-[#f9fafc]">
+            <motion.div
+               className="backdrop-blur-md bg-white/30 border border-gray-300 shadow-xl rounded-2xl px-10 py-8 text-center max-w-lg"
                initial={{ opacity: 0, y: 30 }}
                whileInView={{ opacity: 1, y: 0 }}
                transition={{ duration: 0.8 }}
             >
-               <p className="text-gray-800 font-medium text-lg">
+               <h4 className="text-lg md:text-xl font-semibold text-gray-800">
                   🧪 A new formulation is under classified research.
-               </p>
-               <p className="text-gray-600 text-sm mt-1">
+               </h4>
+               <p className="text-sm text-gray-600 mt-2">
                   Coming Soon — stay tuned for what's next.
                </p>
             </motion.div>
@@ -180,9 +191,11 @@ const Medicines = ({ medicines }) => {
                   >
                      &times;
                   </button>
+
                   <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
                      {selectedProduct.name}
                   </h2>
+
                   <div className="text-gray-700 text-base leading-relaxed">
                      <img
                         src={selectedProduct.productPackage}
