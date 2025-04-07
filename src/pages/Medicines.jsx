@@ -43,14 +43,20 @@ const Medicines = ({ medicines }) => {
          {/* Featured Damoxin Section */}
          <div className="relative bg-white py-20 px-6 md:px-28 rounded-t-3xl shadow-inner z-10">
             <div className="grid md:grid-cols-2 gap-10 items-center">
-               <motion.img
-                  src={damoxin.productPackage}
-                  alt="Damoxin"
-                  className="max-h-[400px] object-contain rounded-2xl drop-shadow-xl"
+               <motion.div
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8 }}
-               />
+               >
+                  <img
+                     src={damoxin.productPackage}
+                     alt="Damoxin"
+                     className="max-h-[400px] object-contain rounded-2xl drop-shadow-xl mx-auto"
+                  />
+                  <p className="text-xs italic text-gray-500 text-center mt-2">
+                     Image shown is a conceptual representation and may not reflect the final product packaging or design.
+                  </p>
+               </motion.div>
 
                <motion.div
                   className="space-y-6"
@@ -119,8 +125,8 @@ const Medicines = ({ medicines }) => {
             </div>
          </div>
 
-         {/* Other Products */}
-         <div className="bg-gradient-to-b from-white to-gray-100 pt-24 pb-6 px-6 md:px-20">
+         {/* Other Products Grid */}
+         <div className="bg-gradient-to-b from-white to-gray-100 pt-24 pb-16 px-6 md:px-20">
             <h3 className="text-center text-3xl font-bold text-gray-800 mb-12">
                Explore Other Products
             </h3>
@@ -151,28 +157,27 @@ const Medicines = ({ medicines }) => {
             </div>
          </div>
 
-         {/* 🔥 Elite Glassy Coming Soon Card */}
-         <div className="mt-12 mb-20 flex justify-center px-6">
+         {/* Coming Soon Card */}
+         <div className="mt-16 flex justify-center px-6 md:px-0">
             <motion.div
-               className="relative backdrop-blur-2xl bg-white/10 border border-white/30 shadow-2xl rounded-2xl px-10 py-8 max-w-xl text-center transition-all duration-300 hover:shadow-[0_0_40px_#a0c4ff88]"
+               className="relative backdrop-blur-md bg-white/30 border border-gray-200 shadow-2xl rounded-2xl px-8 py-6 text-center max-w-xl"
                initial={{ opacity: 0, y: 30 }}
                whileInView={{ opacity: 1, y: 0 }}
-               transition={{ duration: 1 }}
+               transition={{ duration: 0.8 }}
             >
-               <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-100/20 via-white/10 to-purple-100/20 rounded-2xl pointer-events-none z-0" />
-               <div className="relative z-10">
-                  <h4 className="text-xl font-semibold text-gray-900 mb-2">
-                     🧪 Classified Research Underway
-                  </h4>
-                  <p className="text-gray-700 text-base">
-                     A new formulation is in the works. Engineered for precision, tested for tomorrow. <br />
-                     <span className="font-medium text-blue-500">Coming Soon...</span>
-                  </p>
+               <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-blue-500 to-teal-400 text-white text-xs px-4 py-1 rounded-full shadow-md uppercase tracking-wide">
+                  R&D Pipeline
                </div>
+               <p className="text-gray-900 font-medium text-lg mt-2">
+                  🧪 A new formulation is under classified research.
+               </p>
+               <p className="text-gray-600 text-sm mt-1">
+                  Coming Soon — stay tuned for what's next.
+               </p>
             </motion.div>
          </div>
 
-         {/* Product Modal */}
+         {/* Popup Modal */}
          {selectedProduct && (
             <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60 backdrop-blur-sm px-4">
                <div className="relative bg-white rounded-xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-xl p-6">
