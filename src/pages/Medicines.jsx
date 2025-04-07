@@ -40,6 +40,29 @@ const Medicines = ({ medicines }) => {
             </motion.div>
          </div>
 
+         {/* Mission Section - Moved Up */}
+         <section className="bg-[#e9f3fc] py-24 px-6 md:px-28 text-center md:text-left">
+            <motion.div
+               className="max-w-5xl mx-auto"
+               initial={{ opacity: 0, y: 40 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               transition={{ duration: 1 }}
+            >
+               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                  Harnessing Nature’s Healing Power for Modern Medicine
+               </h2>
+               <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                  We merge ancient botanical wisdom with cutting-edge science to unlock plant-derived therapies for today’s health challenges. By analyzing plants at the molecular level and deploying AI-driven research and precision extraction, we isolate bioactive compounds with proven therapeutic value. These discoveries are rigorously tested and transformed into safe, standardized treatments for chronic conditions and unmet medical needs.
+               </p>
+               <p className="text-lg text-gray-700 leading-relaxed">
+                  Committed to sustainability and efficacy, we bridge traditional remedies with modern healthcare standards—ensuring quality, safety, and trust.
+               </p>
+               <p className="mt-6 text-xl italic text-gray-500">
+                  “Science Meets Nature. Innovation Meets Trust.”
+               </p>
+            </motion.div>
+         </section>
+
          {/* Featured Damoxin Section */}
          <div className="relative bg-white py-20 px-6 md:px-28 rounded-t-3xl shadow-inner z-10">
             <div className="grid md:grid-cols-2 gap-10 items-center">
@@ -140,33 +163,10 @@ const Medicines = ({ medicines }) => {
             </div>
          </div>
 
-         {/* Mission Section */}
-         <section className="bg-[#e9f3fc] py-24 px-6 md:px-28 text-center md:text-left">
-            <motion.div
-               className="max-w-5xl mx-auto"
-               initial={{ opacity: 0, y: 40 }}
-               whileInView={{ opacity: 1, y: 0 }}
-               transition={{ duration: 1 }}
-            >
-               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                  Harnessing Nature’s Healing Power for Modern Medicine
-               </h2>
-               <p className="text-lg text-gray-700 leading-relaxed mb-4">
-                  We merge ancient botanical wisdom with cutting-edge science to unlock plant-derived therapies for today’s health challenges. By analyzing plants at the molecular level and deploying AI-driven research and precision extraction, we isolate bioactive compounds with proven therapeutic value. These discoveries are rigorously tested and transformed into safe, standardized treatments for chronic conditions and unmet medical needs.
-               </p>
-               <p className="text-lg text-gray-700 leading-relaxed">
-                  Committed to sustainability and efficacy, we bridge traditional remedies with modern healthcare standards—ensuring quality, safety, and trust.
-               </p>
-               <p className="mt-6 text-xl italic text-gray-500">
-                  “Science Meets Nature. Innovation Meets Trust.”
-               </p>
-            </motion.div>
-         </section>
-
          {/* Coming Soon Card */}
          <div className="py-24 px-6 md:px-0 flex justify-center bg-gradient-to-b from-[#e9f3fc] to-[#f9fafc]">
             <motion.div
-               className="backdrop-blur-md bg-gradient-to-br from-white/60 to-white/30 border border-gray-200 shadow-2xl rounded-3xl px-10 py-8 text-center max-w-lg transition-all duration-500 hover:shadow-3xl hover:scale-[1.03]"
+               className="backdrop-blur-md bg-white/40 border border-gray-300 shadow-2xl rounded-2xl px-10 py-10 text-center max-w-lg"
                initial={{ opacity: 0, y: 30 }}
                whileInView={{ opacity: 1, y: 0 }}
                transition={{ duration: 0.8 }}
