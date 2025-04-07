@@ -31,8 +31,9 @@ const Navbar = ({ navbar }) => {
                ? "bg-white/90 backdrop-blur-md border-b border-gray-200"
                : "bg-white/90 backdrop-blur-md border-b border-gray-200"
          }`}
+         style={{ height: "80px" }} // Explicit height to fix overlap issues
       >
-         <div className="flex items-center justify-between w-full h-20 px-5 lg:px-10">
+         <div className="flex items-center justify-between w-full h-full px-5 lg:px-10">
             {/* Logo + Brand Name */}
             <Link to="/">
                <div className="flex items-center gap-3">
