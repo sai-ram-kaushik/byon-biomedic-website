@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import TransitionEffect from "../utils/TransitionEffect";
-import { FaVirus, FaLungs, FaLeaf, FaBolt, FaShieldAlt } from "react-icons/fa";
+import { FaVirus, FaLungs, FaLeaf, FaBolt, FaShieldAlt, FaFlask } from "react-icons/fa";
 
 const Medicines = ({ medicines }) => {
    const { heading, products } = medicines;
@@ -11,6 +11,11 @@ const Medicines = ({ medicines }) => {
    const closePopup = () => setSelectedProduct(null);
 
    const damoxin = products.find((p) => p.name === "Damoxin");
+
+   // Set minimum number of cards (filled or placeholders)
+   const minimumCards = 6;
+   const otherProducts = products.filter((p) => p.name !== "Damoxin");
+   const placeholdersNeeded = Math.max(0, minimumCards - otherProducts.length);
 
    return (
       <div className="w-full bg-gradient-to-br from-[#f3f4f6] to-[#e0ecf7] text-gray-900 overflow-x-hidden">
@@ -23,10 +28,7 @@ const Medicines = ({ medicines }) => {
                backgroundImage: `url('/product-bg.jpg')`,
             }}
          >
-            {/* Overlay for better text readability */}
             <div className="absolute inset-0 bg-white bg-opacity-70 backdrop-blur-sm z-0" />
-
-            {/* Hero Content */}
             <div className="relative z-10">
                <h1 className="text-4xl md:text-6xl font-bold font-heading tracking-tight text-gray-900">
                   {heading}
@@ -40,7 +42,6 @@ const Medicines = ({ medicines }) => {
          {/* --- Featured Damoxin Section --- */}
          <div className="relative bg-white py-20 px-6 md:px-28 rounded-t-3xl shadow-inner z-10">
             <div className="grid md:grid-cols-2 gap-10 items-center">
-               {/* Damoxin Image */}
                <motion.img
                   src={damoxin.productPackage}
                   alt="Damoxin"
@@ -49,8 +50,6 @@ const Medicines = ({ medicines }) => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8 }}
                />
-
-               {/* Damoxin Description */}
                <motion.div
                   className="space-y-6"
                   initial={{ opacity: 0, y: 30 }}
@@ -67,9 +66,8 @@ const Medicines = ({ medicines }) => {
                </motion.div>
             </div>
 
-            {/* Damoxin Details Grid */}
+            {/* Damoxin Details */}
             <div className="mt-16 grid md:grid-cols-3 gap-12">
-               {/* Mechanism of Action */}
                <motion.div
                   className="space-y-4"
                   initial={{ opacity: 0, y: 30 }}
@@ -86,7 +84,6 @@ const Medicines = ({ medicines }) => {
                   </ul>
                </motion.div>
 
-               {/* Clinical Benefits */}
                <motion.div
                   className="space-y-4"
                   initial={{ opacity: 0, y: 30 }}
@@ -104,7 +101,6 @@ const Medicines = ({ medicines }) => {
                   </ul>
                </motion.div>
 
-               {/* Sustainability & Ethics */}
                <motion.div
                   className="space-y-4"
                   initial={{ opacity: 0, y: 30 }}
@@ -121,14 +117,15 @@ const Medicines = ({ medicines }) => {
             </div>
          </div>
 
-         {/* --- Other Products Grid --- */}
+         {/* --- Other Products --- */}
          <div className="bg-gradient-to-b from-white to-gray-100 pt-24 pb-32 px-6 md:px-20">
             <h3 className="text-center text-3xl font-bold text-gray-800 mb-12">
                Explore Other Products
             </h3>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-               {products.filter((p) => p.name !== "Damoxin").map((product, idx) => (
+               {/* Actual Products */}
+               {otherProducts.map((product, idx) => (
                   <motion.div
                      key={idx}
                      onClick={() => openPopup(product)}
@@ -148,6 +145,21 @@ const Medicines = ({ medicines }) => {
                            {product.tagline || "Click to learn more"}
                         </p>
                      </div>
+                  </motion.div>
+               ))}
+
+               {/* Placeholders */}
+               {Array.from({ length: placeholdersNeeded }).map((_, i) => (
+                  <motion.div
+                     key={`placeholder-${i}`}
+                     className="bg-white/30 border border-white/50 shadow-inner rounded-2xl backdrop-blur-xl flex flex-col items-center justify-center text-center px-6 py-12 hover:scale-105 transition-transform duration-300"
+                     whileHover={{ scale: 1.03 }}
+                  >
+                     <FaFlask className="text-blue-500 text-4xl mb-4 animate-pulse" />
+                     <h4 className="text-xl font-semibold text-gray-700">Coming Soon</h4>
+                     <p className="text-sm text-gray-500 mt-2 italic">
+                        A new formula is under development.
+                     </p>
                   </motion.div>
                ))}
             </div>
