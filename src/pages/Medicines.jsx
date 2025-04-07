@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import TransitionEffect from "../utils/TransitionEffect";
-import { FaVirus, FaLungs, FaLeaf, FaBolt, FaShieldAlt, FaFlask } from "react-icons/fa";
+import { FaVirus, FaLungs, FaLeaf, FaBolt, FaShieldAlt } from "react-icons/fa";
 
 const Medicines = ({ medicines }) => {
    const { heading, products } = medicines;
@@ -12,34 +12,27 @@ const Medicines = ({ medicines }) => {
 
    const damoxin = products.find((p) => p.name === "Damoxin");
 
-   // Set minimum number of cards (filled or placeholders)
-   const minimumCards = 6;
-   const otherProducts = products.filter((p) => p.name !== "Damoxin");
-   const placeholdersNeeded = Math.max(0, minimumCards - otherProducts.length);
-
    return (
       <div className="w-full bg-gradient-to-br from-[#f3f4f6] to-[#e0ecf7] text-gray-900 overflow-x-hidden">
          <TransitionEffect />
 
-         {/* --- Hero Section with Background Image --- */}
+         {/* Hero Section */}
          <div
-            className="relative text-center py-20 px-6 md:px-20 bg-cover bg-center bg-no-repeat"
-            style={{
-               backgroundImage: `url('/product-bg.jpg')`,
-            }}
+            className="relative text-center py-20 px-6 md:px-20 bg-cover bg-center"
+            style={{ backgroundImage: 'url(/images/product-bg.jpg)' }}
          >
-            <div className="absolute inset-0 bg-white bg-opacity-70 backdrop-blur-sm z-0" />
             <div className="relative z-10">
-               <h1 className="text-4xl md:text-6xl font-bold font-heading tracking-tight text-gray-900">
+               <h1 className="text-4xl md:text-6xl font-bold font-heading tracking-tight text-white drop-shadow-md">
                   {heading}
                </h1>
-               <p className="mt-4 text-xl text-gray-700 max-w-2xl mx-auto">
+               <p className="mt-4 text-xl text-gray-200 max-w-2xl mx-auto drop-shadow-sm">
                   A new era of phytomedicine rooted in ancient wisdom and scientific precision.
                </p>
             </div>
+            <div className="absolute inset-0 bg-black/30 z-0" />
          </div>
 
-         {/* --- Featured Damoxin Section --- */}
+         {/* Featured Damoxin Section */}
          <div className="relative bg-white py-20 px-6 md:px-28 rounded-t-3xl shadow-inner z-10">
             <div className="grid md:grid-cols-2 gap-10 items-center">
                <motion.img
@@ -50,6 +43,7 @@ const Medicines = ({ medicines }) => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8 }}
                />
+
                <motion.div
                   className="space-y-6"
                   initial={{ opacity: 0, y: 30 }}
@@ -68,6 +62,7 @@ const Medicines = ({ medicines }) => {
 
             {/* Damoxin Details */}
             <div className="mt-16 grid md:grid-cols-3 gap-12">
+               {/* Mechanism of Action */}
                <motion.div
                   className="space-y-4"
                   initial={{ opacity: 0, y: 30 }}
@@ -84,6 +79,7 @@ const Medicines = ({ medicines }) => {
                   </ul>
                </motion.div>
 
+               {/* Clinical Benefits */}
                <motion.div
                   className="space-y-4"
                   initial={{ opacity: 0, y: 30 }}
@@ -101,6 +97,7 @@ const Medicines = ({ medicines }) => {
                   </ul>
                </motion.div>
 
+               {/* Sustainability */}
                <motion.div
                   className="space-y-4"
                   initial={{ opacity: 0, y: 30 }}
@@ -117,15 +114,14 @@ const Medicines = ({ medicines }) => {
             </div>
          </div>
 
-         {/* --- Other Products --- */}
-         <div className="bg-gradient-to-b from-white to-gray-100 pt-24 pb-32 px-6 md:px-20">
+         {/* Other Products Grid */}
+         <div className="bg-gradient-to-b from-white to-gray-100 pt-24 pb-16 px-6 md:px-20">
             <h3 className="text-center text-3xl font-bold text-gray-800 mb-12">
                Explore Other Products
             </h3>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-               {/* Actual Products */}
-               {otherProducts.map((product, idx) => (
+               {products.filter((p) => p.name !== "Damoxin").map((product, idx) => (
                   <motion.div
                      key={idx}
                      onClick={() => openPopup(product)}
@@ -147,25 +143,17 @@ const Medicines = ({ medicines }) => {
                      </div>
                   </motion.div>
                ))}
+            </div>
 
-               {/* Placeholders */}
-               {Array.from({ length: placeholdersNeeded }).map((_, i) => (
-                  <motion.div
-                     key={`placeholder-${i}`}
-                     className="bg-white/30 border border-white/50 shadow-inner rounded-2xl backdrop-blur-xl flex flex-col items-center justify-center text-center px-6 py-12 hover:scale-105 transition-transform duration-300"
-                     whileHover={{ scale: 1.03 }}
-                  >
-                     <FaFlask className="text-blue-500 text-4xl mb-4 animate-pulse" />
-                     <h4 className="text-xl font-semibold text-gray-700">Coming Soon</h4>
-                     <p className="text-sm text-gray-500 mt-2 italic">
-                        A new formula is under development.
-                     </p>
-                  </motion.div>
-               ))}
+            {/* Elite Placeholder Below Grid */}
+            <div className="mt-20 text-center">
+               <div className="inline-block bg-gradient-to-r from-blue-600 to-teal-500 text-white text-lg font-semibold px-8 py-4 rounded-full shadow-lg animate-pulse">
+                  🚀 More breakthroughs loading... Stay tuned.
+               </div>
             </div>
          </div>
 
-         {/* --- Popup Modal --- */}
+         {/* Popup Modal */}
          {selectedProduct && (
             <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60 backdrop-blur-sm px-4">
                <div className="relative bg-white rounded-xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-xl p-6">
