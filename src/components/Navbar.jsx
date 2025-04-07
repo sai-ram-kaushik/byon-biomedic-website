@@ -26,8 +26,10 @@ const Navbar = ({ navbar }) => {
          initial={{ y: -80, opacity: 0 }}
          animate={{ y: 0, opacity: 1 }}
          transition={{ duration: 0.6, ease: "easeOut" }}
-         className={`w-full fixed top-0 z-50 transition-all duration-300 ${
-            isScrolled ? "backdrop-blur-md bg-white/70 border-b shadow-sm" : "bg-transparent"
+         className={`w-full fixed top-0 z-50 transition-all duration-300 shadow-xl ${
+            isScrolled
+               ? "bg-white/90 backdrop-blur-md border-b border-gray-200"
+               : "bg-white/90 backdrop-blur-md border-b border-gray-200"
          }`}
       >
          <div className="flex items-center justify-between w-full h-20 px-5 lg:px-10">
@@ -52,14 +54,14 @@ const Navbar = ({ navbar }) => {
                      <Link
                         key={idx}
                         to={navlink.path}
-                        className={`relative transition duration-200 ${
+                        className={`relative group transition duration-200 ${
                            isActive ? "text-[#FFD700]" : "hover:text-[#FFD700]"
                         }`}
                      >
                         <span className="relative z-10">{navlink.label}</span>
                         <span
-                           className={`absolute left-0 bottom-0 h-[2px] w-full bg-[#FFD700] scale-x-0 origin-left transition-transform duration-300 ${
-                              isActive ? "scale-x-100" : "group-hover:scale-x-100"
+                           className={`absolute left-0 bottom-0 h-[2px] w-full bg-[#FFD700] scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100 ${
+                              isActive ? "scale-x-100" : ""
                            }`}
                         />
                      </Link>
@@ -81,7 +83,7 @@ const Navbar = ({ navbar }) => {
                   animate={{ x: 0 }}
                   exit={{ x: "100%" }}
                   transition={{ duration: 0.4, ease: "easeOut" }}
-                  className="fixed inset-0 z-40 bg-white/90 backdrop-blur-md flex flex-col justify-center items-center gap-8 text-xl font-semibold text-[#182A40]"
+                  className="fixed inset-0 z-40 bg-white/95 backdrop-blur-xl flex flex-col justify-center items-center gap-8 text-xl font-semibold text-[#182A40]"
                >
                   {navlinks.map((navlink, idx) => (
                      <Link
