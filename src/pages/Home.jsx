@@ -11,7 +11,7 @@ const Home = ({ home }) => {
    return (
       <>
          <div
-            className="w-full px-5 md:px-10 pt-16 lg:pt-20 min-h-[80vh] flex flex-col justify-center items-center bg-cover bg-center relative"
+            className="w-full px-5 md:px-10 pt-16 lg:pt-20 min-h-[80vh] flex flex-col justify-center items-center bg-cover bg-center relative overflow-hidden"
             style={{
                backgroundImage: "url('/hero-bg.webp')",
                backgroundAttachment: "fixed",
@@ -19,9 +19,26 @@ const Home = ({ home }) => {
                backgroundPosition: "center",
             }}
          >
-            {/* Multi-layered gradient overlays for cinematic effect */}
+            {/* Static overlays */}
             <div className="absolute inset-0 z-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
             <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.6)_0%,transparent_70%)]" />
+
+            {/* 🌈 Animated gradient overlay */}
+            <motion.div
+               className="absolute inset-0 z-0 opacity-20"
+               initial={{ scale: 1, x: "-10%", y: "-10%" }}
+               animate={{ scale: 1.4, x: "10%", y: "10%" }}
+               transition={{
+                  duration: 20,
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                  ease: "easeInOut",
+               }}
+               style={{
+                  background: "radial-gradient(circle at center, #FFD70022 0%, #1f2937 60%, transparent 100%)",
+                  mixBlendMode: "screen",
+               }}
+            />
 
             {/* Transition Effect */}
             <TransitionEffect />
