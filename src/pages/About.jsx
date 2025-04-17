@@ -3,7 +3,7 @@ import TransitionEffect from "../utils/TransitionEffect";
 import { motion } from "framer-motion";
 
 // Optional: Import a molecule-like SVG background or use a CSS pattern generator
-import MoleculePattern from "molecule-bg.svg"; // ensure this file exists
+import MoleculePattern from "/molecule-bg.svg"; // ensure this file exists
 
 const About = ({ about }) => {
   const { imageUrl, imageUrl2, vision, mission } = about;
