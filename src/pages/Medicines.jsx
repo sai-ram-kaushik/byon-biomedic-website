@@ -69,7 +69,7 @@ const Medicines = ({ medicines }) => {
           <img
             src="/molecule-bg.jpg"
             alt="Molecule background"
-            className="w-full h-full object-cover opacity-10"
+            className="w-full h-full object-cover opacity-40"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-white/90 to-gray-50/80 backdrop-blur-md" />
         </div>
