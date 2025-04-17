@@ -18,26 +18,37 @@ const About = ({ about }) => {
       <TransitionEffect />
 
       {/* 🎯 Hero Section */}
-      <motion.div
-        whileInView={{ opacity: 1, y: 0 }}
-        initial={{ opacity: 0, y: -40 }}
-        transition={{ duration: 0.8 }}
-        className="text-center max-w-5xl mx-auto mb-20"
-      >
-        <h1 className="text-6xl font-extrabold text-primary mb-6 tracking-tight leading-tight">
-          Transforming Nature into Healing
-        </h1>
-        <p className="text-lg leading-relaxed text-gray-700 max-w-3xl mx-auto">
-          At <span className="font-semibold text-primary">Byon Biomedic Malaysia Sdn. Bhd.</span>, we are committed to
-          revolutionizing healthcare through the power of nature. By merging traditional botanical wisdom with modern
-          scientific rigor, we develop <span className="font-bold text-gray-900">innovative phytomedicines</span> that
-          are both safe and effective. Our mission extends beyond medicine—we uphold{" "}
-          <span className="font-bold text-gray-900">ethical sourcing</span>,{" "}
-          <span className="font-bold text-gray-900">sustainability</span>, and a steadfast dedication to{" "}
-          <span className="font-bold text-gray-900">improving global health</span>. Through natural therapies, we aspire
-          to shape a future where <span className="font-bold text-gray-900">healing is holistic, accessible, and transformative</span>.
-        </p>
-      </motion.div>
+      <div
+         className="relative text-center py-28 px-6 md:px-20 bg-cover bg-center"
+         style={{ backgroundImage: "url('/about-hero.jpg')" }} // Replace with your actual image path
+         >
+         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60 z-0">
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.6)_0%,transparent_70%)]" />
+         </div>
+
+         <motion.div
+            className="relative z-10"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+         >
+            <h1 className="text-4xl md:text-6xl font-bold font-heading tracking-tight text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.7)]">
+               About Us
+            </h1>
+            <p className="mt-6 text-lg md:text-xl text-gray-200 max-w-4xl mx-auto drop-shadow-[0_1px_6px_rgba(0,0,0,0.5)]">
+               At <span className="font-semibold text-white">Byon Biomedic Malaysia Sdn. Bhd.</span>, we are committed to revolutionizing
+               healthcare through the power of nature. By merging traditional botanical wisdom with modern scientific rigor, we develop
+               <span className="font-bold text-white"> innovative phytomedicines</span> that are both safe and effective.
+               <br className="hidden md:block" />
+               We uphold <span className="font-bold text-white">ethical sourcing</span>, 
+               <span className="font-bold text-white"> sustainability</span>, and a deep commitment to
+               <span className="font-bold text-white"> improving global health</span>.
+               Through natural therapies, we aspire to a future where 
+               <span className="font-bold text-white"> healing is holistic, accessible, and transformative</span>.
+            </p>
+         </motion.div>
+      </div>
+
 
       {/* 🌿 Core Values Section with subtle background */}
       <motion.div
