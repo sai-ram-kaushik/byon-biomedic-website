@@ -48,7 +48,7 @@ const About = ({ about }) => {
       >
         {/* Decorative background */}
         <div
-          className="absolute inset-0 opacity-10 pointer-events-none"
+          className="absolute inset-0 opacity-40 pointer-events-none"
           style={{
             backgroundImage: `url(${MoleculePattern})`,
             backgroundRepeat: "no-repeat",
