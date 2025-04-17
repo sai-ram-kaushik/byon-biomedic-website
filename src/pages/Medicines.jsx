@@ -67,7 +67,7 @@ const Medicines = ({ medicines }) => {
         {/* Background layer */}
         <div className="absolute inset-0 -z-10">
           <img
-            src="/molecule-bg.png"
+            src="/molecule-bg.jpg"
             alt="Molecule background"
             className="w-full h-full object-cover opacity-10"
           />
