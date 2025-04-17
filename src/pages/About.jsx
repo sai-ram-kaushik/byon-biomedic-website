@@ -2,26 +2,31 @@ import React from "react";
 import TransitionEffect from "../utils/TransitionEffect";
 import { motion } from "framer-motion";
 
+// Optional: Import a molecule-like SVG background or use a CSS pattern generator
+import MoleculePattern from "molecule-bg.svg"; // ensure this file exists
+
 const About = ({ about }) => {
-  const { imageUrl,imageUrl2, vision, mission } = about;
+  const { imageUrl, imageUrl2, vision, mission } = about;
 
   return (
     <motion.section
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="w-full px-6 py-20 md:px-16 lg:px-28 bg-gray-50 text-gray-900"
+      className="relative w-full px-6 py-20 md:px-16 lg:px-28 bg-gray-50 text-gray-900 overflow-hidden"
     >
       <TransitionEffect />
 
-      {/* About Us Section */}
+      {/* 🎯 Hero Section */}
       <motion.div
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -40 }}
         transition={{ duration: 0.8 }}
         className="text-center max-w-5xl mx-auto mb-20"
       >
-        <h3 className="text-5xl font-extrabold text-primary mb-6 tracking-tight">About Us</h3>
+        <h1 className="text-6xl font-extrabold text-primary mb-6 tracking-tight leading-tight">
+          Transforming Nature into Healing
+        </h1>
         <p className="text-lg leading-relaxed text-gray-700 max-w-3xl mx-auto">
           At <span className="font-semibold text-primary">Byon Biomedic Malaysia Sdn. Bhd.</span>, we are committed to
           revolutionizing healthcare through the power of nature. By merging traditional botanical wisdom with modern
@@ -34,34 +39,63 @@ const About = ({ about }) => {
         </p>
       </motion.div>
 
-      {/* Core Values */}
+      {/* 🌿 Core Values Section with subtle background */}
       <motion.div
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: 40 }}
         transition={{ duration: 0.8 }}
-        className="max-w-6xl mx-auto mb-20 px-2"
+        className="relative max-w-6xl mx-auto mb-20 px-2"
       >
-        <h3 className="text-4xl font-extrabold text-primary mb-10 text-center tracking-tight">Core Values</h3>
-        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-lg text-gray-700">
-          <motion.li whileHover={{ scale: 1.03 }} className="p-6 bg-white shadow-xl rounded-xl">
-            <strong className="text-gray-900">🚀 Innovation:</strong> Pioneering the future of phytomedicine through <span className="font-bold text-gray-900">cutting-edge research</span> and development.
-          </motion.li>
-          <motion.li whileHover={{ scale: 1.03 }} className="p-6 bg-white shadow-xl rounded-xl">
-            <strong className="text-gray-900">🛡️ Integrity:</strong> Upholding the <span className="font-bold text-gray-900">highest standards</span> of transparency, ethics, and scientific validation.
-          </motion.li>
-          <motion.li whileHover={{ scale: 1.03 }} className="p-6 bg-white shadow-xl rounded-xl">
-            <strong className="text-gray-900">🌱 Sustainability:</strong> Committed to <span className="font-bold text-gray-900">ethical wildcrafting</span> and sustainable agriculture for a greener future.
-          </motion.li>
-          <motion.li whileHover={{ scale: 1.03 }} className="p-6 bg-white shadow-xl rounded-xl">
-            <strong className="text-gray-900">🤝 Collaboration:</strong> Partnering with <span className="font-bold text-gray-900">leading researchers</span> and industry experts to merge tradition with science.
-          </motion.li>
-          <motion.li whileHover={{ scale: 1.03 }} className="p-6 bg-white shadow-xl rounded-xl">
-            <strong className="text-gray-900">🏆 Excellence:</strong> Striving for <span className="font-bold text-gray-900">superior quality</span> in every formulation, every breakthrough, and every outcome.
-          </motion.li>
+        {/* Decorative background */}
+        <div
+          className="absolute inset-0 opacity-10 pointer-events-none"
+          style={{
+            backgroundImage: `url(${MoleculePattern})`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "contain",
+            backgroundPosition: "center",
+          }}
+        />
+
+        <h3 className="text-4xl font-extrabold text-primary mb-10 text-center tracking-tight z-10 relative">
+          Core Values
+        </h3>
+        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-lg text-gray-700 relative z-10">
+          {[
+            {
+              title: "🚀 Innovation",
+              desc: "Pioneering the future of phytomedicine through cutting-edge research and development.",
+            },
+            {
+              title: "🛡️ Integrity",
+              desc: "Upholding the highest standards of transparency, ethics, and scientific validation.",
+            },
+            {
+              title: "🌱 Sustainability",
+              desc: "Committed to ethical wildcrafting and sustainable agriculture for a greener future.",
+            },
+            {
+              title: "🤝 Collaboration",
+              desc: "Partnering with leading researchers and industry experts to merge tradition with science.",
+            },
+            {
+              title: "🏆 Excellence",
+              desc: "Striving for superior quality in every formulation, breakthrough, and outcome.",
+            },
+          ].map((value, index) => (
+            <motion.li
+              key={index}
+              whileHover={{ scale: 1.03 }}
+              className="p-6 bg-white shadow-xl rounded-xl"
+            >
+              <strong className="text-gray-900">{value.title}</strong>{" "}
+              <span className="text-gray-700">{value.desc}</span>
+            </motion.li>
+          ))}
         </ul>
       </motion.div>
 
-      {/* Vision + Mission Section */}
+      {/* 🌐 Vision & Mission Section */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-7xl mx-auto items-center">
         {/* Vision */}
         <motion.div
