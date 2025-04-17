@@ -70,49 +70,48 @@ const About = ({ about }) => {
         </ul>
       </motion.div>
 
-      {/* Vision and Mission Section – L + inverse L layout */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-stretch">
-        {/* Bottom-left image and Mission */}
-        <div className="flex flex-col justify-end gap-8 lg:col-span-1">
-          <motion.img
-            src={imageUrl}
-            className="rounded-xl w-full h-auto shadow-2xl object-cover"
-            whileInView={{ opacity: 1, scale: 1 }}
-            initial={{ opacity: 0, scale: 0.8 }}
-            transition={{ duration: 0.8 }}
-          />
+      {/* Vision + Mission Section – Elite & Responsive */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto items-center">
+        {/* Left: Vision Card + Image */}
+        <div className="flex flex-col gap-8 order-2 lg:order-1">
           <motion.div
+            className="bg-white p-6 rounded-xl shadow-xl"
             whileInView={{ opacity: 1, y: 0 }}
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 30 }}
             transition={{ duration: 0.8 }}
-            className="p-6 bg-white shadow-xl rounded-xl"
-          >
-            <h3 className="text-3xl font-bold text-primary mb-2">🎯 Mission</h3>
-            <p className="text-lg text-gray-700 leading-relaxed">{mission}</p>
-          </motion.div>
-        </div>
-
-        {/* Spacer column (for layout balance) */}
-        <div className="hidden lg:block"></div>
-
-        {/* Vision card + top-right image */}
-        <div className="flex flex-col justify-start gap-8 lg:col-span-1">
-          <motion.div
-            whileInView={{ opacity: 1, y: 0 }}
-            initial={{ opacity: 0, y: 50 }}
-            transition={{ duration: 0.8 }}
-            className="p-6 bg-white shadow-xl rounded-xl"
           >
             <h3 className="text-3xl font-bold text-primary mb-2">🌍 Vision</h3>
             <p className="text-lg text-gray-700 leading-relaxed">{vision}</p>
           </motion.div>
           <motion.img
             src={imageUrl}
-            className="rounded-xl w-full h-auto shadow-2xl object-cover"
+            alt="Vision"
+            className="w-full h-auto rounded-xl shadow-2xl object-cover"
             whileInView={{ opacity: 1, scale: 1 }}
-            initial={{ opacity: 0, scale: 0.8 }}
+            initial={{ opacity: 0, scale: 0.9 }}
             transition={{ duration: 0.8 }}
           />
+        </div>
+
+        {/* Right: Image + Mission Card */}
+        <div className="flex flex-col gap-8 order-1 lg:order-2">
+          <motion.img
+            src={imageUrl}
+            alt="Mission"
+            className="w-full h-auto rounded-xl shadow-2xl object-cover"
+            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, scale: 0.9 }}
+            transition={{ duration: 0.8 }}
+          />
+          <motion.div
+            className="bg-white p-6 rounded-xl shadow-xl"
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h3 className="text-3xl font-bold text-primary mb-2">🎯 Mission</h3>
+            <p className="text-lg text-gray-700 leading-relaxed">{mission}</p>
+          </motion.div>
         </div>
       </div>
     </motion.section>
