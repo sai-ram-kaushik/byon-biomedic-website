@@ -3,7 +3,7 @@ import TransitionEffect from "../utils/TransitionEffect";
 import { motion } from "framer-motion";
 
 const About = ({ about }) => {
-  const { imageUrl, vision, mission } = about;
+  const { imageUrl,imageUrl2, vision, mission } = about;
 
   return (
     <motion.section
@@ -76,7 +76,7 @@ const About = ({ about }) => {
           </div>
           <div className="overflow-hidden rounded-xl">
             <motion.img
-              src={imageUrl}
+              src={imageUrl2}
               alt="Vision"
               className="w-full h-[260px] md:h-[280px] lg:h-[300px] object-cover object-center rounded-xl shadow-md"
               whileInView={{ opacity: 1, scale: 1 }}
