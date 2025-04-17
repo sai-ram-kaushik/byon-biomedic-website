@@ -70,7 +70,7 @@ const Medicines = ({ medicines }) => {
           <img
             src="/molecule-bg.jpg"
             alt="Molecule background"
-            className="w-full h-full object-cover opacity-70"
+            className="w-full h-full object-cover opacity-20"
           />
         </div>
         <div className="grid md:grid-cols-2 gap-10 items-center">
