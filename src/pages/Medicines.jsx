@@ -63,7 +63,16 @@ const Medicines = ({ medicines }) => {
       </section>
 
       {/* Featured Damoxin Section */}
-      <div className="relative bg-white py-20 px-6 md:px-28 rounded-t-3xl shadow-inner z-10">
+      <div className="relative py-20 px-6 md:px-28 z-10 overflow-hidden">
+        {/* Background layer */}
+        <div className="absolute inset-0 -z-10">
+          <img
+            src="/molecule-bg.png"
+            alt="Molecule background"
+            className="w-full h-full object-cover opacity-10"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-white/90 to-gray-50/80 backdrop-blur-md" />
+        </div>
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <motion.img
             src={damoxin.productPackage}
