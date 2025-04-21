@@ -20,7 +20,7 @@ const Team = ({ about }) => {
          {/* Section Title */}
          <motion.div className="text-center py-6" variants={fadeIn}>
             <h3 className="text-4xl font-extrabold text-gray-900">
-               <span className="text-primary">Corporate </span> Management Team
+               <span className="text-primary">Management </span>Team
             </h3>
          </motion.div>
 
@@ -56,7 +56,7 @@ const Team = ({ about }) => {
          {/* Technical Advisory Group Section */}
          <motion.div className="text-center py-10 mt-6" variants={fadeIn}>
             <h3 className="text-3xl lg:text-4xl font-bold text-gray-900">
-               Technical and Advisory <span className="text-primary">Committee</span>
+               Technical - Advisory <span className="text-primary">Committee</span>
             </h3>
          </motion.div>
 

@@ -9,7 +9,7 @@ const faqs = [
     },
     {
         question: 'Where is Byon Biomedic located?',
-        answer: 'Byon Biomedic is headquartered in Malaysia and operates state-of-the-art R&D and production facilities through strategic partnership to advance its mission of delivering science-backed phyto-medicines'
+        answer: 'Yes, Byon Biomedic invests in Research and Development (R&D), collaborating with experts to validate the efficacy and safety of its plant-based therapies for diverse medical conditions.'
     },
     {
         question: 'What products does Byon Biomedic specialize in?',

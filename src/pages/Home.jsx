@@ -13,7 +13,7 @@ const Home = ({ home }) => {
          <div
             className="w-full px-5 md:px-10 pt-16 lg:pt-20 min-h-[80vh] flex flex-col justify-center items-center bg-cover bg-center relative"
             style={{
-               backgroundImage: "url('/hero-bg.webp')",
+               backgroundImage: "url('/hero-bg.jpg')",
                backgroundAttachment: "fixed",
                backgroundSize: "cover",
                backgroundPosition: "center",
@@ -52,16 +52,16 @@ const Home = ({ home }) => {
                {/* Hero Text Block with Optional Backdrop Blur */}
                <div className="flex flex-col items-start gap-4 max-w-[800px] text-center lg:text-left backdrop-blur-sm bg-black/20 p-6 rounded-xl">
                   <h2 className="text-4xl lg:text-5xl font-bold font-heading max-w-[1100px] leading-tight text-white drop-shadow-lg">
-                     Harnessing the Inherent Potential of{" "}
+                     Leveraging Phyto-Scientific Research to Explore the{" "}
                      <span
                         className="text-[#FFD700] font-extrabold"
                         style={{
                            textShadow: "1px 1px 6px rgba(0, 0, 0, 0.8)",
                         }}
                      >
-                        Natural Botanical
+                        Pharmacological Potential
                      </span>{" "}
-                     Resources to Advance Groundbreaking Phytomedical Innovations
+                     of Plant-Derived Compounds
                   </h2>
 
                   <p className="text-gray-200">{subHeading}</p>

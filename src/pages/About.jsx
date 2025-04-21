@@ -75,23 +75,25 @@ const About = ({ about }) => {
           <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-lg text-gray-700 relative z-10">
             {[
               {
-                title: "🚀 Innovation",
+                title: "Innovation", //🚀
                 desc: "Pioneering the future of phytomedicine through cutting-edge research and development.",
-              },
-              {
-                title: "🛡️ Integrity",
-                desc: "Upholding the highest standards of transparency, ethics, and scientific validation.",
-              },
-              {
-                title: "🌱 Sustainability",
+                title: "Sustainability",//🌱
                 desc: "Committed to ethical wildcrafting and sustainable agriculture for a greener future.",
               },
               {
-                title: "🤝 Collaboration",
+                title: "Integrity", //🛡️
+                desc: "Upholding the highest standards of transparency, ethics, and scientific validation.",
+              },
+              /*{
+                title: "Sustainability",//🌱
+                desc: "Committed to ethical wildcrafting and sustainable agriculture for a greener future.",
+              },*/
+              {
+                title: "Collaboration",//🤝
                 desc: "Partnering with leading researchers and industry experts to merge tradition with science.",
               },
               {
-                title: "🏆 Excellence",
+                title: "Excellence",//🏆
                 desc: "Striving for superior quality in every formulation, breakthrough, and outcome.",
               },
             ].map((value, index) => (
@@ -117,7 +119,7 @@ const About = ({ about }) => {
             transition={{ duration: 0.8 }}
           >
             <div className="bg-white p-8 rounded-2xl shadow-md">
-              <h3 className="text-3xl font-bold text-primary mb-3">🌍 Vision</h3>
+              <h3 className="text-3xl font-bold text-primary mb-3">Vision</h3> {/*🌍*/}
               <p className="text-lg text-gray-700 leading-relaxed">{vision}</p>
             </div>
             <div className="overflow-hidden rounded-xl">
@@ -150,7 +152,7 @@ const About = ({ about }) => {
               />
             </div>
             <div className="bg-white p-8 rounded-2xl shadow-md">
-              <h3 className="text-3xl font-bold text-primary mb-3">🎯 Mission</h3>
+              <h3 className="text-3xl font-bold text-primary mb-3">Mission</h3>{/*🎯 */}
               <p className="text-lg text-gray-700 leading-relaxed">{mission}</p>
             </div>
           </motion.div>

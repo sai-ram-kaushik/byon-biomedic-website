@@ -3,7 +3,7 @@
      "logo": "/ByonLogo.png",
      "navlinks": [
        { "label": "Home", "path": "/" },
-       { "label": "About", "path": "/about" },
+       { "label": "About Us", "path": "/about" },
        { "label": "Team", "path": "/team" },
        { "label": "Products", "path": "/medicines" },
        { "label": "Contact Us", "path": "/contact" }
@@ -11,7 +11,7 @@
    },
  
    "home": {
-     "subHeading": "By synergizing cutting-edge phytoscientific research with industry-leading expertise, we are dedicated to pioneering the development of evidence-based phytotherapeutic solutions. Through collaborative innovation, we aim to deliver transformative phytomedical advancements that address unmet clinical needs and elevate patient care standards.",
+     "subHeading": "Through rigorous clinical investigation and multidisciplinary collaboration, we aim to transform plant-based compounds into scientifically validated phytomedicines. Our work bridges traditional knowledge with modern biomedical research, delivering innovative, effective, and safe therapeutic solutions for global healthcare needs.",
      "imageUrl": "/home.svg"
    },
  
@@ -40,16 +40,16 @@
          "name": "Dr. Furizat",
          "imageUrl": "/team/furizat.jpg",
          "designation": "Director of Product Innovation and Compliance",
-         "bio": "Dr. Furizat Yahya, PhD\nN.D., D.H.D (AM), D.O.H.M. (AM), ABE (London)\n\nPioneer in Phytomedicine Innovation & Natural Healthcare Leadership.\n\nDr. Furizat Yahya is a distinguished leader in phytomedicine and natural healthcare, renowned for her expertise in merging traditional knowledge with modern scientific rigor, and a Doctor of Natural Medicine (N.D.) from the Indian Board of Alternative Medicine, she specializes in sustainable commercialization strategies for plant-derived medicines.\n\nProfessional Leadership:\n- Co-Founder & Chief Scientific Officer, Bio-Spectra, a trailblazing brand delivering evidence-based, plant-derived therapeutic solutions.\n- Secretary General, Malaysia Association of Natural Medicine Practitioners (MANMP) – Championing ethical standards, education, and policy reform in natural healthcare.\n\nKey Contributions:\n- Spearheaded the design and commercialization of breakthrough phytopharmaceutical formulations.\n- Advocate for regulatory advancements in Southeast Asia’s natural medicine sector.\n\nResearch Focus:\n- Clinical validation of traditional phytomedicines.\n- Scalable business models for natural product industries.\n- Integrative approaches to holistic healthcare."
+         "bio": "Dr. Furizat Yahya, PhD\nN.D., D.H.D (AM), D.O.H.M. (AM), ABE (London)\n\nDr. Furizat Yahya is a pioneering figure in phytomedicine, recognized for integrating traditional wisdom with scientific validation. As Co-Founder & Chief Scientific Officer of Bio-Spectra and Secretary General of the Malaysia Association of Natural Medicine Practitioners (MANMP), she leads innovation in evidence-based plant therapeutics and advocates for regulatory advancement across Southeast Asia. Her work centers on clinical validation, ethical standards, and scalable models for natural healthcare solutions."
        }
      ],
  
      "teamMembersPartSecond": [
        {
-         "name": "P. Vasanthan",
+         "name": "P. Vassanthan",
          "imageUrl": "/team/vasan.jpg",
          "designation": "Corporate Operations Director",
-         "bio": "With over a decade of experience in corporate operations and business strategy, Vasanthan specializes in driving efficiency, optimizing processes, and ensuring seamless cross-functional collaboration. He holds a Diploma in Corporate Operations & Business Management and is a certified expert in corporate strategy and process optimization.\n\nAs a leader in operational efficiency and process innovation, he has successfully streamlined workflows, reduced costs, and implemented automation strategies that boosted productivity. His expertise extends to stakeholder management, corporate governance, supply chain optimization, and crisis mitigation, ensuring business continuity in dynamic environments.\n\nVasanthan’s strategic vision and leadership enable organizations to scale efficiently while maintaining operational excellence."
+         "bio": "P. Vassanthan brings over a decade of expertise in corporate operations, process innovation, and strategic execution. With a strong foundation in Corporate Operations & Business Management, he has led transformative initiatives to streamline workflows, enhance productivity, and ensure organizational resilience. His proficiency spans cross-functional collaboration, supply chain optimization, stakeholder engagement, and crisis management—enabling scalable growth and sustained operational excellence."
        },
        {
          "name": "Dr. Krishnaveni Kunji Raman",
@@ -58,7 +58,7 @@
          "bio": "Qualifications:\n- Doctorate in Business Administration, Lincoln University College (DBA)\n- EMBA (Open University Malaysia)\n\nExperience & Achievements:\n- 30+ Years’ Experience: Leading corporate communications, brand strategy, and stakeholder engagement for multinational organizations like Sime Darby (Caterpillar).\n- Global Leadership: Directed APAC-wide communication strategies for 23+ branches, aligning brands like Caterpillar with regional markets.\n- Award-Winning Expertise: Inspirational LinkedIn Icons (Malaysia).\n- Top Corporate Communication Voice."
        },
        {
-         "name": "Mr. Govindaraju",
+         "name": "M. Govindaraju",
          "imageUrl": "/team/govindaraju.jpg",
          "designation": "Senior Quality Systems Manager",
          "bio": "Leadership in GMP & Compliance: Extensive experience ensuring *Good Manufacturing Practice (GMP), ISO standards, and regulatory compliance in multinational manufacturing environments."
@@ -69,13 +69,13 @@
        {
          "name": "Dr. Parasuraman",
          "imageUrl": "/team/parasuraman.jpg",
-         "designation": "Technical and Advisory Committee Member",
+         "designation": "International Advisor on Sustainable Agriculture and Biodiversity Governance",
          "bio": "Dr. N. Parasuraman is a distinguished scientist specializing in sustainable agriculture policy, biodiversity conservation, and rural development. He has held key leadership roles, including serving on the Planning Boards of Pondicherry and Periyar Universities and as a Senate Member for Bharathiar, Madras, and Bharathidasan Universities.\n\nHe has contributed to national policy as a member of the National Biodiversity Authority of India and the Tamil Nadu Government's 12th Five-Year Plan Committee. Internationally, he is a long-standing member of the International Water Resources Association and a Fellow of the Indian Academy of Social Sciences.\n\nDr. Parasuraman actively advises governments and institutions on agriculture, environment, and rural development, reinforcing his commitment to sustainable growth and youth empowerment. He is also affiliated with the Indian Science Congress Association, the Centre for Agriculture & Rural Development, and ICAR-NRC on Biotechnology."
        },
        {
          "name": "Datuk Dr. Mukundan Pillay",
          "imageUrl": "/team/datuk.jpg",
-         "designation": "Technical and Advisory Committee Member",
+         "designation": "Public Health Advisor",
          "bio": "Datuk Dr. Mukundan Pillay is a distinguished leader renowned for his transformative contributions to healthcare systems in Malaysia and globally. Over a 32-year career with the Malaysian Ministry of Health, he spearheaded critical initiatives in health infrastructure, policy, and research. Post-retirement, he extended his expertise to international organizations, including the World Bank in Bahrain and the World Health Organization (WHO) in China, while remaining actively engaged in advancing Malaysia’s healthcare landscape."
        }
      ],
@@ -84,14 +84,20 @@
        {
          "name": "Prof. Gurjeet Kaur Chawla",
          "imageUrl": "/team/gurjeet.jpg",
-         "designation": "Technical and Advisory Committee Member",
+         "designation": "Leader in Health Promotion and Community Wellness",
          "bio": "PROFESSOR (DR.) GURJEET KAUR CHAWLA\nHealth Promotion Leader | Global Collaborator\n\n- PhD (Health Promotion) | MBA, MSc, BSc, B.Ed (First Division)\n- Certifications: Imperial College London, Yale University, HarvardX\n\n- Professor & Dean (Student Welfare), MRIIRS Faridabad.\n- Advisor, Foundation of Global Community Health (USA)\n- Speaker: WHO, GoFPEP Forums (Turkey/South Africa)\n- Research Lead: UNICEF/NDDB-Funded Public Health Projects\n\nAWARDS & RECOGNITION\n- Best Research Proposal Award (University of Tsukuba, Japan)\n- Commendations: Indian Red Cross (COVID-19 Relief), Faridabad Administration (Public Safety)\n\n- Workplace Wellness Strategies | Nutrition Interventions | COVID-19 Lifestyle Impact Studies\n\n25+ years driving public health innovation through research, education, and grassroots advocacy. Pioneered social change via community radio and global health partnerships."
+       },
+       {
+        "name": "S. Sarvinnah Haran",
+        "imageUrl": "/team/haran.jpg",
+        "designation": "Graduate Research Assistant & Biomedical Scientist.",
+        "bio": "Sarvinnah is a passionate biomedical scientist with a Master of Science from Taylor's University, specializing in IFN-γ signalling and LAG-3 in non-small cell lung carcinoma. With experience in clinical microbiology, diagnostics, and cancer research, she currently serves as a Graduate Research Assistant and Laboratory Tutor.\n\nAn active science communicator, she has emceed national scientific events and holds leadership roles in postgraduate councils. Her accolades include Best Poster Presenter at the Graduate Research Symposium 2024."
        },
        {
          "name": "Dr. Sunita",
          "imageUrl": "/team/sunita.jpg",
-         "designation": "Technical and Advisory Committee Member",
-         "bio": "Dr. Sunita Vidyarthi is a leading expert in sustainable energy and crisis leadership, with a PhD in Solar Energy from Uttarakhand Technical University and an Honorary PhD in Sustainable Development from Maryland State University, USA. She holds dual M.Tech degrees in Renewable Energy (NIT Kurukshetra) and Control Systems (GEU, Dehradun).\n\nAs the Regional Coordinator for I-STEM (IISc, Bengaluru), she plays a key role in advancing STEM innovation and infrastructure across India.\n\nDuring the COVID-19 pandemic, Dr. Vidyarthi demonstrated leadership by facilitating national virtual conferences and spearheading digital outreach initiatives for crisis communication. Her expertise spans renewable energy systems, STEM policy, and strategic communication in high-impact scenarios."
+         "designation": "Global Advocate for Sustainable Innovation in Public Health",
+         "bio": "Dr. Sunita Vidyarthi brings a unique blend of expertise in renewable energy, STEM innovation, and public health leadership. With a PhD in Solar Energy and international recognition in sustainable development, she has played a pivotal role in national STEM infrastructure (I-STEM, IISc Bengaluru) and public health outreach during crisis scenarios. Her work bridges technology and community well-being, shaping the future of sustainable development and health communication in India and beyond."
        }
      ]
    },
