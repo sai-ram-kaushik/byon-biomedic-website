@@ -56,12 +56,12 @@ const Navbar = ({ navbar }) => {
                         key={idx}
                         to={navlink.path}
                         className={`relative group transition duration-200 ${
-                           isActive ? "text-[#FFD700]" : "hover:text-[#FFD700]"
+                           isActive ? "text-[#159EEC]" : "hover:text-[#159EEC]"
                         }`}
                      >
                         <span className="relative z-10">{navlink.label}</span>
                         <span
-                           className={`absolute left-0 bottom-0 h-[2px] w-full bg-[#FFD700] scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100 ${
+                           className={`absolute left-0 bottom-0 h-[2px] w-full bg-[#159EEC] scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100 ${
                               isActive ? "scale-x-100" : ""
                            }`}
                         />
@@ -92,7 +92,7 @@ const Navbar = ({ navbar }) => {
                         to={navlink.path}
                         onClick={() => setNav(false)}
                         className={`transition-colors duration-200 ${
-                           location.pathname === navlink.path ? "text-[#FFD700]" : "hover:text-[#FFD700]"
+                           location.pathname === navlink.path ? "text-[#159EEC]" : "hover:text-[#159EEC]"
                         }`}
                      >
                         {navlink.label}

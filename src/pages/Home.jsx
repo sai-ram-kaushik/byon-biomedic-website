@@ -54,7 +54,7 @@ const Home = ({ home }) => {
                   <h2 className="text-4xl lg:text-5xl font-bold font-heading max-w-[1100px] leading-tight text-white drop-shadow-lg">
                      Leveraging Phyto-Scientific Research to Explore the{" "}
                      <span
-                        className="text-[#FFD700] font-extrabold"
+                        className="text-[#159EEC] font-extrabold"
                         style={{
                            textShadow: "1px 1px 6px rgba(0, 0, 0, 0.8)",
                         }}
