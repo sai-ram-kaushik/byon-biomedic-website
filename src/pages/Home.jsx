@@ -6,96 +6,82 @@ import Faq from "../components/Faq";
 import { motion } from "framer-motion";
 
 const Home = ({ home }) => {
-  const { subHeading } = home;
+   const { subHeading } = home;
 
-  return (
-    <>
-      {/* HERO: Immersive Cinematic Gradient-Driven Section */}
-      <section className="relative w-full min-h-[100vh] flex items-center justify-center overflow-hidden px-6 md:px-12 pt-28 pb-20 bg-black">
-        {/* BACKGROUND LAYERS */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0d0f1b] via-[#0f111f] to-[#0d0f1b] z-0" />
+   return (
+      <>
+         <div className="relative min-h-[90vh] w-full bg-black text-white overflow-hidden">
+            {/* Background layers */}
+            <div
+               className="absolute inset-0 bg-gradient-to-br from-[#0f1115] via-[#0c131b] to-[#0b0f17] z-0"
+               style={{ backgroundImage: "url('/hero-bg.jpg')", backgroundSize: "cover", backgroundPosition: "center", backgroundBlendMode: "overlay" }}
+            ></div>
 
-        {/* Organic gradient blob */}
-        <motion.div
-          className="absolute -top-20 -left-20 w-[80vw] h-[80vw] rounded-full bg-gradient-to-br from-[#159EEC] via-transparent to-transparent opacity-20 blur-[120px]"
-          initial={{ scale: 1 }}
-          animate={{ scale: 1.2 }}
-          transition={{
-            duration: 14,
-            repeat: Infinity,
-            repeatType: "mirror",
-            ease: "easeInOut",
-          }}
-        />
+            {/* Glow ring background for sci-fi feel */}
+            <div className="absolute top-1/2 left-1/2 w-[1500px] h-[1500px] bg-[#159EEC44] rounded-full opacity-10 blur-3xl transform -translate-x-1/2 -translate-y-1/2 z-0" />
 
-        {/* Grid Light Overlay */}
-        <div className="absolute inset-0 bg-[radial-gradient(#ffffff11_1px,transparent_1px)] [background-size:40px_40px] opacity-5 z-0" />
+            {/* Overlay effect */}
+            <div className="absolute inset-0 bg-black bg-opacity-60 backdrop-blur-[2px] z-10" />
 
-        {/* Transition Entry */}
-        <TransitionEffect />
+            <TransitionEffect />
 
-        {/* TEXT + CTA */}
-        <motion.div
-          className="relative z-10 max-w-7xl mx-auto text-center lg:text-left flex flex-col lg:flex-row items-center lg:items-start gap-12"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, ease: "easeOut" }}
-        >
-          {/* TEXT BLOCK */}
-          <div className="flex-1 flex flex-col items-center lg:items-start gap-6">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white tracking-tight drop-shadow-[0_2px_12px_rgba(0,0,0,0.6)] max-w-4xl">
-              Leveraging{" "}
-              <span className="text-[#159EEC] font-extrabold drop-shadow-[0_0_20px_#159EEC88]">
-                Phyto-Scientific
-              </span>{" "}
-              Research to Explore the Pharmacological Potential of Plant-Derived Compounds
-            </h1>
+            {/* Hero Content */}
+            <div className="relative z-20 flex flex-col lg:flex-row justify-between items-center max-w-7xl mx-auto px-6 pt-24 pb-20 gap-12">
 
-            <p className="text-lg text-gray-300 max-w-xl">{subHeading}</p>
+               {/* Left: Text Content */}
+               <motion.div
+                  className="flex-1 max-w-2xl flex flex-col gap-6"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, ease: "easeOut" }}
+               >
+                  <div className="uppercase tracking-widest text-[#159EEC] text-sm font-semibold">BYON BIOMEDIC</div>
 
-            <Link to="/medicines">
-              <Button title="See Medicines" />
-            </Link>
-          </div>
+                  <h1 className="text-5xl md:text-6xl font-extrabold leading-tight font-heading">
+                     Leveraging <span className="text-[#159EEC]">Phyto-Scientific</span> Research<br /> to Explore the Pharmacological Potential of Plant-Derived Compounds
+                  </h1>
 
-          {/* VISUAL EXPERIENCE (abstract science visual + blend) */}
-          <motion.div
-            className="flex-1 relative w-full h-[400px] lg:h-[500px] flex items-center justify-center"
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 1 }}
-          >
-            {/* Abstract animated blob + SVG lines */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <img
-                src="/hero-visual.svg"
-                alt="Scientific Visualization"
-                className="w-full h-full object-contain opacity-80"
-              />
+                  <p className="text-gray-300 text-lg leading-relaxed">{subHeading}</p>
+
+                  <div className="mt-4">
+                     <Link to="/medicines">
+                        <Button title="See Medicines" />
+                     </Link>
+                  </div>
+               </motion.div>
+
+               {/* Right: Custom Visual */}
+               <motion.div
+                  className="flex-1 flex items-center justify-center relative"
+                  initial={{ scale: 0.95, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  transition={{ duration: 0.9, delay: 0.4 }}
+               >
+                  <div className="relative">
+                     <img
+                        src="/hero-visual.svg"
+                        alt="Scientific Discovery Visual"
+                        className="w-[520px] h-auto max-w-full drop-shadow-[0_15px_25px_rgba(21,158,236,0.3)]"
+                     />
+                     {/* Floating Orb Effect */}
+                     <div className="absolute -top-10 -right-10 w-24 h-24 bg-[#159EEC88] rounded-full blur-3xl animate-pulse opacity-30" />
+                  </div>
+               </motion.div>
             </div>
+         </div>
 
-            {/* Glow ring (pulsing aura) */}
-            <motion.div
-              className="absolute w-60 h-60 rounded-full bg-[#159EEC33] blur-3xl opacity-40"
-              animate={{ scale: [1, 1.15, 1] }}
-              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-            />
-          </motion.div>
-        </motion.div>
-      </section>
-
-      {/* FAQ Section */}
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, ease: "easeOut" }}
-        viewport={{ once: true }}
-        className="w-full"
-      >
-        <Faq />
-      </motion.div>
-    </>
-  );
+         {/* FAQ Section */}
+         <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            viewport={{ once: true }}
+            className="w-full bg-[#0e1219] text-white py-16"
+         >
+            <Faq />
+         </motion.div>
+      </>
+   );
 };
 
 export default Home;
