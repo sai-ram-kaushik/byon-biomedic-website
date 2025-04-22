@@ -9,20 +9,23 @@ const Home = ({ home }) => {
   const { subHeading } = home;
 
   return (
-    <>
+     <>
       {/* Hero Section */}
       <section
         className="relative w-full min-h-[90vh] flex items-center justify-center overflow-hidden bg-[#0b0f19] px-6 md:px-12 pt-24 pb-20"
         style={{
-          backgroundImage: "url('/hero-bg.jpg')",
-          backgroundAttachment: "fixed",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
+           backgroundImage: "url('/hero-bg.jpg')",
+           backgroundAttachment: "fixed",
+           backgroundSize: "cover",
+           backgroundPosition: "center",
+         }}
       >
         {/* Dark overlay for contrast */}
         <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-[#0b0f19]/70 to-[#0b0f19]/90 z-0" />
 
+        {/* Page transition entry effect */}
+        <TransitionEffect />
+        
         {/* Animated ambient overlay */}
         <motion.div
           className="absolute inset-0 bg-no-repeat bg-cover opacity-5 z-0"
@@ -45,8 +48,6 @@ const Home = ({ home }) => {
         {/* Subtle light beam effect */}
         <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[90vw] h-[120%] bg-gradient-to-b from-[#159EEC55] via-transparent to-transparent opacity-10 blur-3xl pointer-events-none z-0" />
 
-        {/* Page transition entry effect */}
-        <TransitionEffect />
 
         {/* Content */}
         <motion.div
