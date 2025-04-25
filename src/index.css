@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+/* @font-face {
+   font-family: Palatino;
+   src: url(./fonts/palr45w.ttf);
+} */
+
+@layer base {
+   body {
+      @apply bg-background font-bodyContent text-black absolute inset-0 -z-10 h-full w-full bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]
+   }
+
+   h1 {
+      @apply text-3xl lg:text-4xl font-bold;
+   }
+
+   span {
+      @apply text-secondary;
+   }
+}
+
+/* .piheight { padding-top: 25rem; padding-bottom: 2.5rem; } */
+
+::-webkit-scrollbar {
+   width: 0.2rem;
+}
+
+::-webkit-scrollbar-track {
+   background-color: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+   background-color: #159eec;
+   border-radius: 1rem;
+   background-clip: content-box;
+}
