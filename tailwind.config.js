@@ -10,7 +10,18 @@ export default {
             accent: "#7A91D2",
             black: "#1A1D26",
          },
-
+         
+         animation: {
+            float: 'float 8s ease-in-out infinite',
+            pulse: 'pulse 6s ease-in-out infinite',
+         },
+         keyframes: {
+           float: {
+             '0%, 100%': { transform: 'translateY(0px)' },
+             '50%': { transform: 'translateY(-20px)' },
+           },
+         },
+          
          fontFamily: {
             bodyContent: ["Inter", "sans-serif"],
          },

@@ -84,23 +84,40 @@ const Navbar = ({ navbar }) => {
                   animate={{ x: 0 }}
                   exit={{ x: "100%" }}
                   transition={{ duration: 0.4, ease: "easeOut" }}
-                  className="fixed inset-0 z-40 bg-white/95 backdrop-blur-xl flex flex-col justify-center items-center gap-8 text-xl font-semibold text-[#182A40]"
+                  className="fixed top-0 left-0 w-full h-screen z-[999] bg-white text-[#182A40] flex flex-col px-6 pt-10 pb-6"
                >
+                  {/* Close Button */}
+                  <div className="flex justify-end mb-6">
+                  <button
+                     onClick={toggleMenu}
+                     className="p-2 rounded-md hover:bg-gray-100 transition"
+                     aria-label="Close menu"
+                  >
+                     <FiX size={28} />
+                  </button>
+                  </div>
+
+                  {/* Nav Links */}
+                  <div className="flex flex-col justify-center items-center gap-8 text-lg font-semibold flex-grow">
                   {navlinks.map((navlink, idx) => (
                      <Link
                         key={idx}
                         to={navlink.path}
                         onClick={() => setNav(false)}
                         className={`transition-colors duration-200 ${
-                           location.pathname === navlink.path ? "text-[#159EEC]" : "hover:text-[#159EEC]"
+                        location.pathname === navlink.path ? "text-[#159EEC]" : "hover:text-[#159EEC]"
                         }`}
                      >
                         {navlink.label}
                      </Link>
                   ))}
+                  </div>
                </motion.div>
             )}
          </AnimatePresence>
+
+
+
       </motion.div>
    );
 };
