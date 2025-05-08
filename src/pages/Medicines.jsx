@@ -1,16 +1,24 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import TransitionEffect from "../utils/TransitionEffect";
-import { FaVirus, FaLungs, FaLeaf, FaBolt, FaShieldAlt } from "react-icons/fa";
+import {
+  FaVirus,
+  FaLungs,
+  FaLeaf,
+  FaBolt,
+  FaShieldAlt,
+} from "react-icons/fa";
 
 const Medicines = ({ medicines }) => {
   const { heading, products } = medicines;
   const [selectedProduct, setSelectedProduct] = useState(null);
+  const damoxin = products.find((p) => p.name === "Damoxin");
 
   const openPopup = (product) => setSelectedProduct(product);
   const closePopup = () => setSelectedProduct(null);
 
-  const damoxin = products.find((p) => p.name === "Damoxin");
+  const { scrollY } = useScroll();
+  const bgOpacity = useTransform(scrollY, [0, 300], [0.2, 0.7]);
 
   return (
     <div className="w-full bg-gradient-to-br from-[#f3f4f6] to-[#e0ecf7] text-gray-900 overflow-x-hidden">
@@ -51,10 +59,18 @@ const Medicines = ({ medicines }) => {
             Harnessing Nature’s Healing Power for Modern Medicine
           </h2>
           <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-            We merge ancient botanical wisdom with cutting-edge science to unlock plant-derived therapies for today’s health challenges. By analyzing plants at the molecular level and deploying AI-driven research and precision extraction, we isolate bioactive compounds with proven therapeutic value. These discoveries are rigorously tested and transformed into safe, standardized treatments for chronic conditions and unmet medical needs.
+            We merge ancient botanical wisdom with cutting-edge science to
+            unlock plant-derived therapies for today’s health challenges. By
+            analyzing plants at the molecular level and deploying AI-driven
+            research and precision extraction, we isolate bioactive compounds
+            with proven therapeutic value. These discoveries are rigorously
+            tested and transformed into safe, standardized treatments for
+            chronic conditions and unmet medical needs.
           </p>
           <p className="text-lg text-gray-700 leading-relaxed">
-            Committed to sustainability and efficacy, we bridge traditional remedies with modern healthcare standards—ensuring quality, safety, and trust.
+            Committed to sustainability and efficacy, we bridge traditional
+            remedies with modern healthcare standards—ensuring quality, safety,
+            and trust.
           </p>
           <p className="mt-6 text-xl italic text-blue-600 font-semibold">
             “Science Meets Nature. Innovation Meets Trust.”
@@ -64,20 +80,34 @@ const Medicines = ({ medicines }) => {
 
       {/* Featured Damoxin Section */}
       <div className="relative py-20 px-6 md:px-28 z-10 overflow-hidden">
-        {/* Background layer */}
+        {/* Light motion gradient on scroll */}
+        <motion.div
+          className="absolute inset-0 h-[65%] z-0 pointer-events-none"
+          style={{
+            background: "linear-gradient(to bottom, #e0f7fa, #d1ecf1, transparent)",
+            opacity: bgOpacity,
+          }}
+        />
+
+        {/* Molecule background & blur */}
         <div className="absolute inset-0 -z-10">
           <div className="absolute inset-0 bg-gradient-to-b from-white/90 to-gray-50/80 backdrop-blur-md" />
           <img
             src="/molecule-bg.jpg"
             alt="Molecule background"
-            className="w-full h-full object-cover opacity-20"
+            className="w-full h-full object-cover opacity-25 rotate-[250deg]"
           />
         </div>
-        <div className="grid md:grid-cols-2 gap-10 items-center">
+
+        <motion.div
+          whileHover={{ scale: 1.01 }}
+          transition={{ type: "spring", stiffness: 100 }}
+          className="grid md:grid-cols-2 gap-10 items-center relative z-10 transition-all duration-300"
+        >
           <motion.img
             src={damoxin.productPackage}
             alt="Damoxin"
-            className="max-h-[400px] object-contain rounded-2xl drop-shadow-xl"
+            className="max-h-[400px] object-contain rounded-2xl drop-shadow-xl hover:scale-[1.03] transition-transform duration-300"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -91,19 +121,23 @@ const Medicines = ({ medicines }) => {
           >
             <h2 className="text-3xl font-bold text-gray-900">Damoxin™</h2>
             <p className="text-lg text-gray-700 leading-relaxed">
-              A revolutionary phytomedicine designed to target COVID-19 through multi-layered mechanisms — offering safety, precision, and sustainability.
+              A revolutionary phytomedicine designed to target COVID-19 through
+              multi-layered mechanisms — offering safety, precision, and
+              sustainability.
             </p>
             <blockquote className="italic text-gray-500 border-l-4 border-blue-500 pl-4">
               “An evolution in herbal science for pandemic-era healthcare.”
             </blockquote>
           </motion.div>
-        </div>
+        </motion.div>
 
-        <p className="text-sm text-gray-400 mt-4 text-center">
-          Image shown is a conceptual representation and may not reflect the final product packaging or design.
+        <p className="text-sm text-gray-500 mt-6 text-center relative z-10">
+          Image shown is a conceptual representation and may not reflect the
+          final product packaging or design.
         </p>
 
-        <div className="mt-16 grid md:grid-cols-3 gap-12">
+        {/* INFO CARDS */}
+        <div className="mt-16 grid md:grid-cols-3 gap-12 relative z-10">
           <motion.div
             className="space-y-4"
             initial={{ opacity: 0, y: 30 }}
@@ -111,7 +145,7 @@ const Medicines = ({ medicines }) => {
             transition={{ delay: 0.2 }}
           >
             <h3 className="text-xl font-semibold flex items-center gap-2">
-              <FaBolt className="text-blue-600" /> Mechanism of Action
+              {/* <FaBolt className="text-blue-600" />*/} Mechanism of Action 
             </h3>
             <ul className="list-disc list-inside space-y-2 text-gray-600">
               <li><strong>Antiviral:</strong> Inhibits replication by blocking 3CL protease and viral attachment.</li>
@@ -127,7 +161,7 @@ const Medicines = ({ medicines }) => {
             transition={{ delay: 0.4 }}
           >
             <h3 className="text-xl font-semibold flex items-center gap-2">
-              <FaShieldAlt className="text-green-600" /> Clinical Benefits
+              {/* <FaShieldAlt className="text-green-600" />*/} Clinical Benefits
             </h3>
             <ul className="list-disc list-inside space-y-2 text-gray-600">
               <li>Speeds up recovery from fever, fatigue, and other symptoms.</li>
@@ -144,7 +178,7 @@ const Medicines = ({ medicines }) => {
             transition={{ delay: 0.6 }}
           >
             <h3 className="text-xl font-semibold flex items-center gap-2">
-              <FaLeaf className="text-teal-600" /> Sustainability & Ethics
+              {/* <FaLeaf className="text-teal-600" />*/} Sustainability & Ethics 
             </h3>
             <p className="text-gray-600">
               Damoxin is crafted through eco-friendly wildcrafting and regenerative agriculture. Every dose supports a healthier planet and a fairer future.
