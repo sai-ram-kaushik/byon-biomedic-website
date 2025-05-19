@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import Button from "../elements/Button";
 import TransitionEffect from "../utils/TransitionEffect";
+import FluidBackground from "../components/FluidBackground";
 import Faq from "../components/Faq";
 import { motion } from "framer-motion";
 import gsap from "gsap";
@@ -14,14 +15,6 @@ const Home = ({ home }) => {
   const threeContainer = useRef(null);
 
   useEffect(() => {
-    // const lenis = new Lenis();
-    // function raf(time) {
-    //   lenis.raf(time);
-    //   requestAnimationFrame(raf);
-    // }
-    // requestAnimationFrame(raf);
-
-    // Canvas
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
     canvas.width = window.innerWidth;
@@ -36,7 +29,7 @@ const Home = ({ home }) => {
 
     const drawParticles = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = "#ffffff22";
+      ctx.fillStyle = "#ffffff80";
       for (let p of particles) {
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
@@ -51,7 +44,6 @@ const Home = ({ home }) => {
     };
     drawParticles();
 
-    // Three.js
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(
       75,
@@ -99,11 +91,18 @@ const Home = ({ home }) => {
         ref={canvasRef}
         className="fixed inset-0 z-0 pointer-events-none"
       />
+
+      {/* Hero Section */}
       <div className="relative w-full min-h-screen bg-[#0a0a0a] text-white flex flex-col items-center justify-center px-6 lg:px-20 overflow-hidden">
         <div
           ref={threeContainer}
           className="absolute inset-0 z-10 pointer-events-none"
         ></div>
+
+        {/* Fluid Background inside Hero only but full width */}
+        <div className="absolute inset-0 z-5 pointer-events-none overflow-hidden">
+          <FluidBackground />
+        </div>
 
         {/* Background Blobs */}
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#13ADC7] blur-[120px] opacity-20 rounded-full z-10 animate-pulse-slow" />
@@ -111,15 +110,7 @@ const Home = ({ home }) => {
 
         <TransitionEffect />
 
-        {/* Overlay Block Behind Text */}
-        {/* <div className="absolute z-20 px-6 py-10 rounded-xl backdrop-blur-md bg-white/5 mix-blend-overlay max-w-5xl text-center border border-white/10 shadow-lg" /> */}
-        {/* Responsive Hero Block Background */}
-        {/* gpt - <div className="relative z-20 w-full px-6 py-24 sm:py-32 lg:py-40 max-w-6xl mx-auto rounded-2xl bg-white/5 backdrop-blur-[5px] border border-white/10 shadow-md" /> */}
-
-		    {/* works on pc - <div className="absolute z-20 inset-x-0 top-1/2 -translate-y-1/2 px-6 piheight max-w-6xl mx-auto rounded-2xl bg-white/5 backdrop-blur-[5px] border border-white/10 shadow-md" /> */}
-
         {/* Hero Content */}
-        {/* earlier - <div className="relative z-30 max-w-5xl w-full flex flex-col items-center justify-center text-center space-y-6"> */}
         <div className="relative z-30 w-full px-6 py-10 sm:py-6 lg:py-4 max-w-6xl mx-auto rounded-2xl bg-white/5 backdrop-blur-[5px] border border-white/10 shadow-md flex flex-col items-center justify-center text-center space-y-6">
           <motion.h2
             className="text-3xl md:text-5xl font-extrabold leading-snug bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 via-purple-400 to-white"
