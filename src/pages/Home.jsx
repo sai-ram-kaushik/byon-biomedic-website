@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import Button from "../elements/Button";
 import TransitionEffect from "../utils/TransitionEffect";
+import FluidBackground from "../components/FluidBackground";
 import Faq from "../components/Faq";
 import { motion } from "framer-motion";
 import gsap from "gsap";
@@ -12,10 +13,8 @@ const Home = ({ home }) => {
   const { subHeading } = home;
   const canvasRef = useRef(null);
   const threeContainer = useRef(null);
-  const waveRef = useRef(null);
 
   useEffect(() => {
-    // Particle Canvas
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
     canvas.width = window.innerWidth;
@@ -30,13 +29,14 @@ const Home = ({ home }) => {
 
     const drawParticles = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = "#ffffff22";
+      ctx.fillStyle = "#ffffff80";
       for (let p of particles) {
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
         ctx.fill();
         p.x += p.vx;
         p.y += p.vy;
+
         if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
         if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
       }
@@ -44,7 +44,6 @@ const Home = ({ home }) => {
     };
     drawParticles();
 
-    // Three.js animation
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(
       75,
@@ -84,18 +83,6 @@ const Home = ({ home }) => {
       renderer.render(scene, camera);
     };
     animate();
-
-    // Blue Wave Animation (CodePen)
-    const path = waveRef.current.querySelector("path");
-    gsap.to(path, {
-      duration: 4,
-      repeat: -1,
-      ease: "sine.inOut",
-      attr: {
-        d: "M0 67 C 273,183 822,-40 1920.00,106 V 359 H 0 V 67 Z",
-      },
-      yoyo: true,
-    });
   }, []);
 
   return (
@@ -104,28 +91,17 @@ const Home = ({ home }) => {
         ref={canvasRef}
         className="fixed inset-0 z-0 pointer-events-none"
       />
+
+      {/* Hero Section */}
       <div className="relative w-full min-h-screen bg-[#0a0a0a] text-white flex flex-col items-center justify-center px-6 lg:px-20 overflow-hidden">
         <div
           ref={threeContainer}
           className="absolute inset-0 z-10 pointer-events-none"
-        />
+        ></div>
 
-        {/* Blue Wave Animation from CodePen */}
-        <div
-          className="absolute top-0 left-0 w-full overflow-hidden z-20 pointer-events-none"
-          ref={waveRef}
-        >
-          <svg
-            viewBox="0 0 1920 330"
-            preserveAspectRatio="none"
-            className="w-full h-[30vh]"
-          >
-            <path
-              d="M0 77 C 473,283 1222,-40 1920.00,116 V 359 H 0 V 67 Z"
-              fill="#0af"
-              opacity="0.3"
-            />
-          </svg>
+        {/* Fluid Background inside Hero only but full width */}
+        <div className="absolute inset-0 z-5 pointer-events-none overflow-hidden">
+          <FluidBackground />
         </div>
 
         {/* Background Blobs */}
@@ -134,7 +110,7 @@ const Home = ({ home }) => {
 
         <TransitionEffect />
 
-        {/* Hero Section */}
+        {/* Hero Content */}
         <div className="relative z-30 w-full px-6 py-10 sm:py-6 lg:py-4 max-w-6xl mx-auto rounded-2xl bg-white/5 backdrop-blur-[5px] border border-white/10 shadow-md flex flex-col items-center justify-center text-center space-y-6">
           <motion.h2
             className="text-3xl md:text-5xl font-extrabold leading-snug bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 via-purple-400 to-white"
@@ -160,10 +136,7 @@ const Home = ({ home }) => {
             transition={{ delay: 0.7, duration: 0.5 }}
           >
             <Link to={`/medicines`}>
-              <Button
-                title="See Medicines"
-                className="border-white text-white bg-transparent hover:bg-white hover:text-black"
-              />
+              <Button title="See Medicines" className="border-white text-white bg-transparent hover:bg-white hover:text-black" />
             </Link>
           </motion.div>
         </div>
