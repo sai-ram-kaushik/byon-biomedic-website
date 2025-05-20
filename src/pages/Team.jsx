@@ -15,6 +15,7 @@ const Team = ({ about }) => {
    };
 
    return (
+      <motion.div className="w-full py-10 px-4 lg:px-8 bg-gray-50 relative z-10" initial="hidden" animate="visible">
       <section className="relative">
          {/* Hexagon background overlay */}
          <div
@@ -26,7 +27,6 @@ const Team = ({ about }) => {
             }}
          />
          
-         <motion.div className="w-full py-10 px-4 lg:px-8 bg-gray-50 relative z-10" initial="hidden" animate="visible">
             <TransitionEffect />
 
             {/* Section Title */}
@@ -106,8 +106,8 @@ const Team = ({ about }) => {
                   </div>
                </div>
             )}
-         </motion.div>
       </section>
+      </motion.div>
    );
 };
 
