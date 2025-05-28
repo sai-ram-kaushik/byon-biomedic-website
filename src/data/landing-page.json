@@ -28,7 +28,7 @@
          "name": "Datuk Dr. Mukundan Pillay",
          "imageUrl": "/team/datuk.jpg",
          "designation": "Chairman",
-         "bio": "Datuk Dr. Mukundan Pillay is a distinguished leader renowned for his transformative contributions to healthcare systems in Malaysia and globally. Over a 32-year career with the Malaysian Ministry of Health, he spearheaded critical initiatives in health infrastructure, policy, and research. Post-retirement, he extended his expertise to international organizations, including the World Bank in Bahrain and the World Health Organization (WHO) in China, while remaining actively engaged in advancing Malaysia’s healthcare landscape."
+         "bio": "Datuk Dr. Mukundan Pillai is a highly respected public health expert and policy leader with over 32 years of service in the Malaysian Ministry of Health, where he served as Deputy Director General (DDG). Throughout his career, he has led major reforms in health infrastructure, policy development, and regulatory systems. His expertise has been sought by international bodies, including the World Bank, the World Health Organization (WHO), and the Supreme Council of Health of Bahrain. He currently serves as Chairman of the ASEAN Medical Devices Consultative Committee, continuing to shape health innovation and governance across the region."
        },
        {
          "name": "M. Paramesswaran",
@@ -39,8 +39,8 @@
        {
          "name": "Dr. Furizat",
          "imageUrl": "/team/furizat.jpg",
-         "designation": "Director of Product Innovation and Compliance",
-         "bio": "Dr. Furizat Yahya, PhD\nN.D., D.H.D (AM), D.O.H.M. (AM), ABE (London)\n\nDr. Furizat Yahya is a pioneering figure in phytomedicine, recognized for integrating traditional wisdom with scientific validation. As Co-Founder & Chief Scientific Officer of Bio-Spectra and Secretary General of the Malaysia Association of Natural Medicine Practitioners (MANMP), she leads innovation in evidence-based plant therapeutics and advocates for regulatory advancement across Southeast Asia. Her work centers on clinical validation, ethical standards, and scalable models for natural healthcare solutions."
+         "designation": "Director Product Innovation and Compliance",
+         "bio": "Dr. Furizat Yahya, PhD\nN.D., D.H.D (AM), D.O.H.M. (AM), ABE (London)\n\nDr. Furizat Yahya is a pioneering leader in the field of phytomedicine, known for bridging traditional healing knowledge with modern scientific validation. As the Co-Founder and Chief Scientific Officer of Bio-Spectra, and Secretary General of the Malaysian Association of Natural Medicine Practitioners (MANMP), she is at the forefront of developing evidence-based plant therapeutics.\n\nHer work focuses on advancing clinical validation, upholding ethical standards, and creating scalable, regulatory-compliant models for natural healthcare. Dr. Furizat continues to play a key role in shaping the future of integrative medicine across Southeast Asia."
        }
      ],
  
@@ -54,52 +54,58 @@
        {
          "name": "Dr. Krishnaveni Kunji Raman",
          "imageUrl": "/team/krishnaveni.jpg",
-         "designation": "Director of Corporate Affairs & Communications",
+         "designation": "Director Corporate Affairs & Communications",
          "bio": "Qualifications:\n- Doctorate in Business Administration, Lincoln University College (DBA)\n- EMBA (Open University Malaysia)\n\nExperience & Achievements:\n- 30+ Years’ Experience: Leading corporate communications, brand strategy, and stakeholder engagement for multinational organizations like Sime Darby (Caterpillar).\n- Global Leadership: Directed APAC-wide communication strategies for 23+ branches, aligning brands like Caterpillar with regional markets.\n- Award-Winning Expertise: Inspirational LinkedIn Icons (Malaysia).\n- Top Corporate Communication Voice."
        },
        {
          "name": "M. Govindaraju",
          "imageUrl": "/team/govindaraju.jpg",
-         "designation": "Senior Quality Systems Manager",
-         "bio": "Leadership in GMP & Compliance: Extensive experience ensuring *Good Manufacturing Practice (GMP), ISO standards, and regulatory compliance in multinational manufacturing environments."
+         "designation": "Senior Quality Systems Officer",
+         "bio": "Leadership in GMP & Compliance: Extensive experience ensuring Good Manufacturing Practice (GMP), ISO standards, and regulatory compliance in multinational manufacturing environments."
        }
      ],
  
      "advisoryGroupPartOne": [
        {
-         "name": "Dr. Parasuraman",
-         "imageUrl": "/team/parasuraman.jpg",
-         "designation": "International Advisor on Sustainable Agriculture and Biodiversity Governance",
-         "bio": "Dr. N. Parasuraman is a distinguished scientist specializing in sustainable agriculture policy, biodiversity conservation, and rural development. He has held key leadership roles, including serving on the Planning Boards of Pondicherry and Periyar Universities and as a Senate Member for Bharathiar, Madras, and Bharathidasan Universities.\n\nHe has contributed to national policy as a member of the National Biodiversity Authority of India and the Tamil Nadu Government's 12th Five-Year Plan Committee. Internationally, he is a long-standing member of the International Water Resources Association and a Fellow of the Indian Academy of Social Sciences.\n\nDr. Parasuraman actively advises governments and institutions on agriculture, environment, and rural development, reinforcing his commitment to sustainable growth and youth empowerment. He is also affiliated with the Indian Science Congress Association, the Centre for Agriculture & Rural Development, and ICAR-NRC on Biotechnology."
-       },
-       {
          "name": "Datuk Dr. Mukundan Pillay",
          "imageUrl": "/team/datuk.jpg",
          "designation": "Public Health Advisor",
-         "bio": "Datuk Dr. Mukundan Pillay is a distinguished leader renowned for his transformative contributions to healthcare systems in Malaysia and globally. Over a 32-year career with the Malaysian Ministry of Health, he spearheaded critical initiatives in health infrastructure, policy, and research. Post-retirement, he extended his expertise to international organizations, including the World Bank in Bahrain and the World Health Organization (WHO) in China, while remaining actively engaged in advancing Malaysia’s healthcare landscape."
+         "bio": "Datuk Dr. Mukundan Pillai is a highly respected public health expert and policy leader with over 32 years of service in the Malaysian Ministry of Health, where he served as Deputy Director General (DDG). Throughout his career, he has led major reforms in health infrastructure, policy development, and regulatory systems. His expertise has been sought by international bodies, including the World Bank, the World Health Organization (WHO), and the Supreme Council of Health of Bahrain. He currently serves as Chairman of the ASEAN Medical Devices Consultative Committee, continuing to shape health innovation and governance across the region."
+       },
+       {
+         "name": "Dr. N. Parasuraman",
+         "imageUrl": "/team/parasuraman.jpg",
+         "designation": "Chief Scientific Officer",
+         "bio": "Dr. N. Parasuraman is a distinguished scientist specializing in sustainable agriculture policy, biodiversity conservation, and rural development. He has held key leadership roles, including serving on the Planning Boards of Pondicherry and Periyar Universities and as a Senate Member for Bharathiar, Madras, and Bharathidasan Universities.\n\nHe has contributed to national policy as a member of the National Biodiversity Authority of India and the Tamil Nadu Government's 12th Five-Year Plan Committee. Internationally, he is a long-standing member of the International Water Resources Association and a Fellow of the Indian Academy of Social Sciences.\n\nDr. Parasuraman actively advises governments and institutions on agriculture, environment, and rural development, reinforcing his commitment to sustainable growth and youth empowerment. He is also affiliated with the Indian Science Congress Association, the Centre for Agriculture & Rural Development, and ICAR-NRC on Biotechnology."
+       },
+       {
+         "name": "Prof. Dr. Gurjeet Kaur Chawla",
+         "imageUrl": "/team/gurjeet.jpg",
+         "designation": "Leader in Health Promotion and Community Wellness",
+         "bio": "PROFESSOR (DR.) GURJEET KAUR CHAWLA\nHealth Promotion Leader | Global Collaborator\n\n- PhD (Health Promotion) | MBA, MSc, BSc, B.Ed (First Division)\n- Certifications: Imperial College London, Yale University, HarvardX\n\n- Professor & Dean (Student Welfare), MRIIRS Faridabad.\n- Advisor, Foundation of Global Community Health (USA)\n- Speaker: WHO, GoFPEP Forums (Turkey/South Africa)\n- Research Lead: UNICEF/NDDB-Funded Public Health Projects\n\nAWARDS & RECOGNITION\n- Best Research Proposal Award (University of Tsukuba, Japan)\n- Commendations: Indian Red Cross (COVID-19 Relief), Faridabad Administration (Public Safety)\n\n- Workplace Wellness Strategies | Nutrition Interventions | COVID-19 Lifestyle Impact Studies\n\n25+ years driving public health innovation through research, education, and grassroots advocacy. Pioneered social change via community radio and global health partnerships."
        }
      ],
  
      "advisoryGroupPartSecond": [
        {
-         "name": "Prof. Gurjeet Kaur Chawla",
-         "imageUrl": "/team/gurjeet.jpg",
-         "designation": "Leader in Health Promotion and Community Wellness",
-         "bio": "PROFESSOR (DR.) GURJEET KAUR CHAWLA\nHealth Promotion Leader | Global Collaborator\n\n- PhD (Health Promotion) | MBA, MSc, BSc, B.Ed (First Division)\n- Certifications: Imperial College London, Yale University, HarvardX\n\n- Professor & Dean (Student Welfare), MRIIRS Faridabad.\n- Advisor, Foundation of Global Community Health (USA)\n- Speaker: WHO, GoFPEP Forums (Turkey/South Africa)\n- Research Lead: UNICEF/NDDB-Funded Public Health Projects\n\nAWARDS & RECOGNITION\n- Best Research Proposal Award (University of Tsukuba, Japan)\n- Commendations: Indian Red Cross (COVID-19 Relief), Faridabad Administration (Public Safety)\n\n- Workplace Wellness Strategies | Nutrition Interventions | COVID-19 Lifestyle Impact Studies\n\n25+ years driving public health innovation through research, education, and grassroots advocacy. Pioneered social change via community radio and global health partnerships."
-       },
-       {
-        "name": "S. Sarvinnah Haran",
-        "imageUrl": "/team/haran.jpg",
-        "designation": "Graduate Research Assistant & Biomedical Scientist.",
-        "bio": "Sarvinnah is a passionate biomedical scientist with a Master of Science from Taylor's University, specializing in IFN-γ signalling and LAG-3 in non-small cell lung carcinoma. With experience in clinical microbiology, diagnostics, and cancer research, she currently serves as a Graduate Research Assistant and Laboratory Tutor.\n\nAn active science communicator, she has emceed national scientific events and holds leadership roles in postgraduate councils. Her accolades include Best Poster Presenter at the Graduate Research Symposium 2024."
-       },
-       {
-         "name": "Dr. Sunita",
-         "imageUrl": "/team/sunita.jpg",
-         "designation": "Global Advocate for Sustainable Innovation in Public Health",
-         "bio": "Dr. Sunita Vidyarthi brings a unique blend of expertise in renewable energy, STEM innovation, and public health leadership. With a PhD in Solar Energy and international recognition in sustainable development, she has played a pivotal role in national STEM infrastructure (I-STEM, IISc Bengaluru) and public health outreach during crisis scenarios. Her work bridges technology and community well-being, shaping the future of sustainable development and health communication in India and beyond."
-       }
-     ]
+         "name": "S. Sarvinnah Haran",
+         "imageUrl": "/team/haran.jpg",
+         "designation": "Graduate Research Assistant & Biomedical Scientist.",
+         "bio": "Ms. S. Sarvinnah is a biomedical researcher and science communicator with a focus on cancer immunology and diagnostic innovation. She holds a Master of Science in Biomedical Science from Taylor’s University, where her research investigated IFN-γ signalling and LAG-3 expression in non-small cell lung carcinoma (NSCLC).\n\nWith a strong foundation in medical microbiology and translational research, Sarvinnah brings valuable insight into scientific strategy, regulatory awareness, and clinical relevance. Her multidisciplinary experience spans laboratory research, health advocacy, and public engagement, positioning her as a key contributor to the committee's mission of advancing evidence-based healthcare solutions across the ASEAN region."
+        },
+        {
+          "name": "Dr. Sunita Vidyarthi",
+          "imageUrl": "/team/sunita.jpg",
+          "designation": "Global Advocate for Sustainable Innovation in Public Health",
+          "bio": "Dr. Sunita Vidyarthi brings a unique blend of expertise in renewable energy, STEM innovation, and public health leadership. With a PhD in Solar Energy and international recognition in sustainable development, she has played a pivotal role in national STEM infrastructure (I-STEM, IISc Bengaluru) and public health outreach during crisis scenarios. Her work bridges technology and community well-being, shaping the future of sustainable development and health communication in India and beyond."
+        },
+        {
+          "name": "Dr. Srivalli Narayanaswamy",
+          "imageUrl": "/team/srivalli.jpg",
+          "designation": "Leader in Integrative & Natural Medicine",
+          "bio": "Dr. Srivalli Narayanaswamy is a renowned expert in integrative and natural medicine with over 40 years of experience. She holds an M.B.B.S. from Madras Medical University, along with advanced degrees in phytomedicine, naturopathy, and alternative medicine. A long-standing member of the Malaysian Red Crescent Society, she also serves in key roles within national and international councils for complementary medicine, driving progress in evidence-based natural healthcare."
+        }
+      ]
    },
  
    "ourServices": {

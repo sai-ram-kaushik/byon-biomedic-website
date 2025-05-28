@@ -33,7 +33,7 @@ const faqs = [
     },
     {
         question: 'Is DAMOXIN clinically tested?',
-        answer: 'DAMOXIN has undergone preclinical studies and is progressing through structured clinical trials to validate its safety and therapeutic efficacy for regulatory approval.'
+        answer: 'DAMOXIN has undergone clinical studies and is progressing through structured clinical trials to validate its safety and therapeutic efficacy for regulatory approval.'
     },
     {
         question: 'Where can I purchase DAMOXIN?',
