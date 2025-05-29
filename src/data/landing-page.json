@@ -37,7 +37,7 @@
          "bio": "Public Health Advocate.\n\n- Spearheaded community-based health initiatives for 15+ years, promoting plant-based wellness and preventive care as sustainable, accessible alternatives to conventional healthcare, reaching 500+ individuals annually through workshops, seminars, and one-on-one consultations.\n- Collaborated with local NGOs, wellness centers, and holistic health practitioners to design culturally sensitive educational programs on phyto-based medicine, improving health literacy in underserved communities.\n- Advocated for integrative health policies by partnering with regional public health coalitions, contributing research on phytotherapy’s role in chronic disease prevention to inform community health strategies."
        },
        {
-         "name": "Dr. Furizat",
+         "name": "Dr. Furizat Yahya",
          "imageUrl": "/team/furizat.jpg",
          "designation": "Director Product Innovation and Compliance",
          "bio": "Dr. Furizat Yahya, PhD\nN.D., D.H.D (AM), D.O.H.M. (AM), ABE (London)\n\nDr. Furizat Yahya is a pioneering leader in the field of phytomedicine, known for bridging traditional healing knowledge with modern scientific validation. As the Co-Founder and Chief Scientific Officer of Bio-Spectra, and Secretary General of the Malaysian Association of Natural Medicine Practitioners (MANMP), she is at the forefront of developing evidence-based plant therapeutics.\n\nHer work focuses on advancing clinical validation, upholding ethical standards, and creating scalable, regulatory-compliant models for natural healthcare. Dr. Furizat continues to play a key role in shaping the future of integrative medicine across Southeast Asia."
@@ -52,7 +52,7 @@
          "bio": "P. Vassanthan brings over a decade of expertise in corporate operations, process innovation, and strategic execution. With a strong foundation in Corporate Operations & Business Management, he has led transformative initiatives to streamline workflows, enhance productivity, and ensure organizational resilience. His proficiency spans cross-functional collaboration, supply chain optimization, stakeholder engagement, and crisis management—enabling scalable growth and sustained operational excellence."
        },
        {
-         "name": "Dr. Krishnaveni Kunji Raman",
+         "name": "Dr. Krishnaveni",
          "imageUrl": "/team/krishnaveni.jpg",
          "designation": "Director Corporate Affairs & Communications",
          "bio": "Qualifications:\n- Doctorate in Business Administration, Lincoln University College (DBA)\n- EMBA (Open University Malaysia)\n\nExperience & Achievements:\n- 30+ Years’ Experience: Leading corporate communications, brand strategy, and stakeholder engagement for multinational organizations like Sime Darby (Caterpillar).\n- Global Leadership: Directed APAC-wide communication strategies for 23+ branches, aligning brands like Caterpillar with regional markets.\n- Award-Winning Expertise: Inspirational LinkedIn Icons (Malaysia).\n- Top Corporate Communication Voice."
@@ -88,9 +88,15 @@
  
      "advisoryGroupPartSecond": [
        {
+          "name": "Dr. Srivalli Narayanaswamy",
+          "imageUrl": "/team/srivalli.jpg",
+          "designation": "Leader in Integrative & Natural Medicine",
+          "bio": "Dr. Srivalli Narayanaswamy is a renowned expert in integrative and natural medicine with over 40 years of experience. She holds an M.B.B.S. from Madras Medical University, along with advanced degrees in phytomedicine, naturopathy, and alternative medicine. A long-standing member of the Malaysian Red Crescent Society, she also serves in key roles within national and international councils for complementary medicine, driving progress in evidence-based natural healthcare."
+        },
+       {
          "name": "S. Sarvinnah Haran",
          "imageUrl": "/team/haran.jpg",
-         "designation": "Graduate Research Assistant & Biomedical Scientist.",
+         "designation": "Biomedical Research Assistant",
          "bio": "Ms. S. Sarvinnah is a biomedical researcher and science communicator with a focus on cancer immunology and diagnostic innovation. She holds a Master of Science in Biomedical Science from Taylor’s University, where her research investigated IFN-γ signalling and LAG-3 expression in non-small cell lung carcinoma (NSCLC).\n\nWith a strong foundation in medical microbiology and translational research, Sarvinnah brings valuable insight into scientific strategy, regulatory awareness, and clinical relevance. Her multidisciplinary experience spans laboratory research, health advocacy, and public engagement, positioning her as a key contributor to the committee's mission of advancing evidence-based healthcare solutions across the ASEAN region."
         },
         {
@@ -98,13 +104,8 @@
           "imageUrl": "/team/sunita.jpg",
           "designation": "Global Advocate for Sustainable Innovation in Public Health",
           "bio": "Dr. Sunita Vidyarthi brings a unique blend of expertise in renewable energy, STEM innovation, and public health leadership. With a PhD in Solar Energy and international recognition in sustainable development, she has played a pivotal role in national STEM infrastructure (I-STEM, IISc Bengaluru) and public health outreach during crisis scenarios. Her work bridges technology and community well-being, shaping the future of sustainable development and health communication in India and beyond."
-        },
-        {
-          "name": "Dr. Srivalli Narayanaswamy",
-          "imageUrl": "/team/srivalli.jpg",
-          "designation": "Leader in Integrative & Natural Medicine",
-          "bio": "Dr. Srivalli Narayanaswamy is a renowned expert in integrative and natural medicine with over 40 years of experience. She holds an M.B.B.S. from Madras Medical University, along with advanced degrees in phytomedicine, naturopathy, and alternative medicine. A long-standing member of the Malaysian Red Crescent Society, she also serves in key roles within national and international councils for complementary medicine, driving progress in evidence-based natural healthcare."
         }
+        
       ]
    },
  
